@@ -30,7 +30,6 @@ function ConsulatingBaner({ img, title, description }) {
     const closeModal = () => {
         setShowModal(false);
     };
-
     const team = [
         {
             "image": alexLogachevName, "name": "Alex Logachev", "position": "CEO", "qr": qrAlex,
@@ -131,7 +130,7 @@ function ConsulatingBaner({ img, title, description }) {
                 </div>
 
                 <div className="leave-a-request" onClick={setShowModal}>
-                    Consultation
+                    {t("consultation_button")}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M16.172 10.9997L10.808 5.63568L12.222 4.22168L20 11.9997L12.222 19.7777L10.808 18.3637L16.172 12.9997H4V10.9997H16.172Z" fill="white" />
                     </svg>
@@ -144,5 +143,4 @@ function ConsulatingBaner({ img, title, description }) {
         </div >
     )
 }
-
 export default ConsulatingBaner

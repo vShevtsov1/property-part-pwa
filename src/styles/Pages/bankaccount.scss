@@ -1,0 +1,615 @@
+.bank-acc-wrapper {
+    .bank-acc-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 64px;
+
+        .bank-baner-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .percent-hours {
+            display: flex;
+            justify-content: space-between;
+            padding: 32px 64px 64px 64px;
+            gap: 24px;
+
+            .time-perc {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                gap: 64px;
+                width: 100%;
+                padding: 24px;
+                position: relative;
+
+                .title {
+                    color: #191C38;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+
+                img {
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+
+                    gap: 16px;
+
+                    div:first-child {
+                        color: #000;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 119%;
+                        /* 26.18px */
+                        letter-spacing: -0.44px;
+                    }
+
+                    div:last-child {
+                        color: #717171;
+                        font-family: HelveticaRegular, sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: -0.32px;
+                    }
+                }
+            }
+
+        }
+
+        .reliable-box {
+            padding: 64px 0px 32px 0px;
+        }
+
+        .provide-box {
+            padding: 32px 0px;
+        }
+
+        .no-texes-box {
+            padding: 32px 0px;
+        }
+
+        .access {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 64px 64px 128px 64px;
+            gap: 48px;
+
+            .title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .blocks-container {
+                display: flex;
+                gap: 16px;
+                height: 210px;
+                width: 100%;
+
+                .block {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-color: #fff;
+                    padding: 24px;
+                    flex: 1;
+
+                    img {
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                    .descr {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        div:first-child {
+                            color: #191C38;
+                            font-family: HelveticaBold, sans-serif;
+                            font-size: 22px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 119%;
+                            letter-spacing: -0.44px;
+                        }
+
+                        div:last-child {
+                            color: #6D6D6D;
+                            font-family: HelveticaLight, sans-serif;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: -0.32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .forbse-container {
+            display: none;
+        }
+
+        .interesting-facts {
+            display: flex;
+            padding: 32px 64px 32px 64px;
+            flex-direction: column;
+            gap: 24px;
+
+            .title {
+                color: #000;
+
+                font-family: HelveticaBold, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                /* 38.4px */
+            }
+
+            .block-fact-container {
+                display: flex;
+                gap: 16px;
+                width: 100%;
+                flex-wrap: wrap;
+
+                .elem {
+                    display: flex;
+                    align-items: center;
+
+
+                    div:first-child {
+                        color: #FFF;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: Helvetica;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0px 15px;
+                        height: 48px;
+                        background: #C29773;
+                    }
+
+                    div:last-child {
+                        color: #191C38;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: Helvetica;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.32px;
+
+                        padding: 0px 16px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0px 10px;
+                        height: 48px;
+                        background: #C29773;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .fortune {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px 64px 64px 64px;
+
+            .title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            .stat-container {
+                display: flex;
+                width: 100%;
+                gap: 24px;
+
+                .inflation {
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #fff;
+                    gap: 34px;
+                    width: 100%;
+
+                    .inflation-title {
+                        color: #191C38;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .stable {
+                    width: 100%;
+
+                    display: flex;
+                    padding: 24px;
+                    flex-direction: column;
+                    background-color: #fff;
+                    gap: 34px;
+
+                    .stable-title {
+                        color: #191C38;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%;
+                        /* 26.4px */
+                    }
+
+                    .image-cont {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .blog {
+            display: flex;
+            flex-direction: column;
+            padding: 64px 64px 64px 64px;
+
+            gap: 24px;
+
+            .title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                /* 38.4px */
+            }
+
+            .blog-card-container {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .blog-card {
+                    display: flex;
+                    width: 100%;
+
+                    .blog-content {
+                        padding: 24px;
+                        background-color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 50%;
+
+                        div:first-child {
+                            color: #8F8F8F;
+                            font-family: HelveticaRegular, sans-serif;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+
+                            display: flex;
+                            justify-content: space-between;
+
+
+                            img {
+                                width: 28px;
+                                cursor: pointer;
+                            }
+
+                            /* 28.8px */
+                        }
+
+                        div:last-child {
+                            color: #000;
+                            font-family: HelveticaBold, sans-serif;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                            /* 38.4px */
+                        }
+                    }
+
+                    .blog-image {
+                        width: 50%;
+
+                        img {
+                            width: 100%;
+
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .bank-acc-wrapper {
+        .bank-acc-container {
+            .bank-baner-guide {
+                gap: 24px;
+            }
+
+
+            .percent-hours {
+                padding: 32px 16px 32px 16px;
+                gap: 8px;
+
+                .time-perc {
+                    padding: 16px;
+
+                    .title {
+
+                        svg {
+                            width: 107px;
+                            height: 33px;
+                        }
+                    }
+
+
+                    img {}
+
+                    .content {
+                        gap: 8px;
+
+                        div:first-child {
+                            font-size: 16px;
+                        }
+
+                        div:last-child {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+
+            .reliable-box {
+                padding: 32px 0px 16px 0px;
+            }
+
+            .provide-box {
+                padding: 32px 0px 32px 0px;
+            }
+
+            .no-texes-box {
+                padding: 32px 0px 16px 0px;
+            }
+
+            .interesting-facts {
+                padding: 32px 16px 16px 16px;
+            }
+
+            .fortune {
+                padding: 32px 16px 32px 16px;
+            }
+
+            .blog {
+                padding: 32px 16px 32px 16px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .blog-card-container {
+
+                    .blog-card {
+                        height: 340px;
+
+                        .blog-image {
+                            img {
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .blog-content {
+                            div:first-child {
+                                font-size: 14px;
+                            }
+
+                            div:last-child {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 876px) {
+    .bank-acc-wrapper {
+        .bank-acc-container {
+            .bank-baner-guide {
+                gap: 32px;
+
+                .bank-free-baner {
+                    height: auto;
+                }
+            }
+
+            .percent-hours {
+                flex-direction: column;
+                padding: 32px 0px 32px 0px;
+                gap: 8px;
+
+                .time-perc {
+                    padding: 16px;
+
+                    .title {
+
+                        svg {
+                            width: 81px;
+                            height: 33px;
+                        }
+                    }
+
+                    img {}
+                }
+            }
+
+            .reliable-box {
+                padding: 32px 0px 16px 0px;
+            }
+
+            .provide-box {
+                padding: 16px 0px 32px 0px;
+            }
+
+            .no-texes-box {
+                padding: 32px 0px 16px 0px;
+            }
+
+            .interesting-facts {
+                padding: 32px 16px 16px 16px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .block-fact-container {
+
+                    .elem {
+                        display: flex;
+                        align-items: center;
+
+
+                        div:first-child {
+                            height: auto;
+                            padding: 9px 15px;
+                            font-size: 16px;
+
+                        }
+
+                        div:last-child {
+                            padding: 9px 15px;
+                            height: auto;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+
+            .fortune {
+                padding: 32px 16px 32px 16px;
+
+
+                .stat-container {
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .inflation {
+                        font-size: 14px;
+                    }
+
+                    .stable {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .blog {
+                padding: 32px 16px 32px 16px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .blog-card-container {
+
+                    .blog-card {
+                        flex-direction: column;
+                        height: auto;
+
+                        .blog-image {
+                            width: 100%;
+
+                            img {
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .blog-content {
+                            width: 100%;
+                            gap: 16px;
+
+                            div:first-child {
+                                font-size: 14px;
+
+                                svg {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+
+                            div:last-child {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

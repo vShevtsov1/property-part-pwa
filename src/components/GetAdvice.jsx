@@ -1,25 +1,28 @@
 import { useTranslation } from "react-i18next";
 import "../styles/getAdvice.scss"
 
-function GetAdvice() {
+function GetAdvice({title}) {
     const { t } = useTranslation();
     return (
         <div className="help-orange">
             <div className="help-content brown-color">
-                <div>Get advice from an expert</div>
+                <div>{t("get-advice.1")}</div>
                 <div className="list">
-                    <div className="list-elem">01. All about business administration in the UAE</div>
-                    <div className="list-elem">02. Choice between FreeZone or Mainland</div>
-                    <div className="list-elem">03. Structuring RF-UAE cash flows</div>
-                    <div className="list-elem">04. Opening personal and corporate accounts in the UAE</div>
-                    <div className="list-elem">05. AML/KYC</div>
-                    <div className="list-elem">06. CFC issues</div>
-                    <div className="list-elem">07. Exchange of tax information with Russia</div>
+                    <div className="list-elem">01. {t("get-advice.2")}</div>
+                    <div className="list-elem">02. {t("get-advice.3")}</div>
+                    <div className="list-elem">03. {t("get-advice.4")}</div>
+                    <div className="list-elem">04. {t("get-advice.5")}</div>
+                    <div className="list-elem">05. {t("get-advice.6")}</div>
+                    <div className="list-elem">06. {t("get-advice.7")}</div>
+                    <div className="list-elem">07. {t("get-advice.8")}</div>
                 </div>
             </div>
             <div className="free-consult-form">
                 <div className="contact-us-form">
                     <div className="form">
+                        <div className="get-in-touch">
+                            {title}
+                        </div>
                         <div className="form-input">
                             <input placeholder={t("j_title42")} type="text" />
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

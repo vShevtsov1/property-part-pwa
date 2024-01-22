@@ -1,0 +1,324 @@
+.agent {
+  .feedback {
+    padding: 15px;
+  }
+
+  .content {
+    flex: 1;
+
+    padding: 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .back {
+        display: flex;
+        padding: 12px 24px 12px 12px;
+        align-items: center;
+        gap: 24px;
+        background: #191c38;
+        color: #fff;
+        font-family: HelveticaBold, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        transition: 200ms;
+
+        &:hover {
+          background: #21254B;
+        }
+
+      }
+
+      .socials {
+        display: flex;
+        gap: 20px;
+
+        svg {
+          height: 38px;
+          width: 38px;
+        }
+      }
+    }
+
+    .broker-info {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      max-height: 76vh;
+
+      .images-container {
+        height: 76vh;
+        position: relative;
+        object-fit: cover;
+        background: url("../../assets/agentBackground.png"), lightgray 0px -11px / 100% 109.278% no-repeat;
+        width: 40%;
+
+        img {
+          object-fit: cover;
+          object-position: top;
+        }
+
+        .qr-code {
+          position: absolute;
+          bottom: 0;
+          max-width: 150px;
+          right: 0;
+        }
+      }
+
+      .broker-information {
+        flex: 1;
+        padding: 20px 30px;
+        background: white;
+        justify-content: space-around;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .general-info {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+
+          .name {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            div:first-child {
+              color: #191C38;
+              font-family: HelveticaBold, sans-serif;
+              font-size: 48px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%;
+              /* 57.6px */
+            }
+
+            div:last-child {
+              color: #575757;
+              font-family: Helvetica, sans-serif;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 120%;
+              /* 28.8px */
+            }
+          }
+
+          .buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .button:first-child {
+              cursor: pointer;
+
+              display: flex;
+              height: 45px;
+              padding: 10px 24px 11px 24px;
+              justify-content: space-between;
+              align-items: center;
+              background: #C29773;
+              color: #FFF;
+              text-align: center;
+              font-family: Helvetica, sans-serif;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              transition: 200ms;
+
+              &:hover {
+                background: #B78F6D;
+              }
+            }
+
+            .button:last-child {
+              cursor: pointer;
+              display: flex;
+              height: 45px;
+
+              padding: 10px 24px 11px 24px;
+              justify-content: space-between;
+              align-items: center;
+              background: #C29773;
+              color: #FFF;
+              text-align: center;
+              font-family: Helvetica, sans-serif;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            div:first-child {
+              color: #191C38;
+              font-family: HelveticaBold, sans-serif;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%;
+              /* 28.8px */
+            }
+
+            div:last-child {
+              color: #575757;
+              font-family: Helvetica, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+
+          .form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .form-input {
+              display: flex;
+              padding: 16px;
+              align-items: center;
+              gap: 24px;
+              align-self: stretch;
+              border: 1px solid #CACACA;
+
+              input {
+                background: unset;
+                width: 95%;
+                border: none;
+                color: #8F8F8F;
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.64px;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+
+            .form-button {
+              display: flex;
+              padding: 18px 16px 16px 16px;
+              justify-content: space-between;
+              align-items: center;
+              align-self: stretch;
+              background: #191C38;
+              color: #FFF;
+              font-family: HelveticaRegualr, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              cursor: pointer;
+              transition: 200ms;
+              svg {
+                margin: 0px 0px 2px 0px;
+              }
+
+              &:hover {
+                background: #21254B;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .agent {
+    .feedback {
+      display: none
+    }
+
+    .content {
+      padding: 16px;
+
+      .header {
+        align-items: center;
+      }
+
+      .broker-info {
+        flex-direction: column;
+        gap: 25px;
+
+        .images-container {
+          width: 100%;
+        }
+
+        .broker-information {
+          padding: 10px;
+          gap: 25px;
+
+          .general-info {
+            gap: 20px;
+
+            .name {
+              div:first-child {
+                font-size: 30px;
+              }
+
+              div:last-child {
+                font-size: 22px;
+              }
+            }
+
+            .buttons {
+              justify-content: space-between;
+
+              .button:first-child,
+              .button:last-child {
+                font-size: 16px;
+                flex-wrap: nowrap;
+                flex: 1;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .agent {
+    .content {
+      .broker-info {
+        flex-direction: column;
+
+        .images-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

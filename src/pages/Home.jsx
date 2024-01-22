@@ -1,6 +1,6 @@
 import Header from "../components/Header.jsx";
 import homeMain from "../assets/homeMain.png";
-import "../styles/home.css"
+import "../styles/Pages/home.scss"
 import collection1 from "../assets/collection1.jpg";
 import collection2 from "../assets/collection2.jpg";
 import collection3 from "../assets/collection3.jpg";
@@ -40,12 +40,14 @@ import kristinaSokolovskaya from '../assets/teams/qr/kristina-sokolovskaya.png';
 import propertyPartnersDynin from '../assets/teams/qr/property-partners-dynin.png';
 import qrAlex from '../assets/teams/qr/qr-alex.svg';
 import tykhovaTatiana from '../assets/teams/qr/tykhova-tatiana.png';
-
-
+import React, { useEffect } from "react";
 import MaxLengthText from "../components/MaxLengthText.jsx";
 import { useTranslation } from "react-i18next";
 import PDFmodal from "../components/PDFmodal.jsx";
 import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
 const Home = ({ openModal }) => {
     const [activeKind, setActiveKind] = useState(null);
     const [visibleMembers, setVisibleMembers] = useState(4);
@@ -152,13 +154,22 @@ const Home = ({ openModal }) => {
     ]
     const displayedMembers = team.slice(0, visibleMembers);
     const [showModal, setShowModal] = useState(false);
-    const [modalContent, setModalContent] = useState("rent")
+    const [modalContent, setModalContent] = useState("")
+
     const handleTypeClick = (kind) => {
         setActiveKind((prevActiveKind) => (prevActiveKind === kind ? null : kind));
     };
     const closeModal = () => {
         setShowModal(false)
     }
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    const navigationNextRef = React.useRef(null)
+    const navigationPrevRef = React.useRef(null)
+
     return (<div className={"home-page"}>
         <Header />
         <div className="home-banner">
@@ -336,12 +347,12 @@ const Home = ({ openModal }) => {
                             <div style={{
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: 16
+                                gap: 16,
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("rent"))
                                         setShowModal(true)
-                                        modalContent("family")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -353,8 +364,8 @@ const Home = ({ openModal }) => {
                                         {t("proj_1")}
                                     </div>
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("rent"))
                                         setShowModal(true)
-                                        modalContent("family")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -367,8 +378,8 @@ const Home = ({ openModal }) => {
                                 </div>
 
                                 <div className="button" onClick={() => {
+                                    setModalContent(t("rent"))
                                     setShowModal(true)
-                                    modalContent("family")
                                 }}>
                                     {t("selection")}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -397,8 +408,8 @@ const Home = ({ openModal }) => {
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("family"))
                                         setShowModal(true)
-                                        modalContent("rent")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -410,8 +421,8 @@ const Home = ({ openModal }) => {
                                         {t("proj_2")}
                                     </div>
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("family"))
                                         setShowModal(true)
-                                        modalContent("rent")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -423,8 +434,8 @@ const Home = ({ openModal }) => {
                                     </div>
                                 </div>
                                 <div className="button" onClick={() => {
+                                    setModalContent(t("family"))
                                     setShowModal(true)
-                                    modalContent("rent")
                                 }}>
                                     {t("selection")}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -443,7 +454,7 @@ const Home = ({ openModal }) => {
                     <div className="image"><img src={collection3} /></div>
                     <div className="content">
                         <div className="collection-info">
-                            <div className="tittle" style={{ fontSize: 36 }}>
+                            <div className="tittle" style={{ fontSize: 28 }}>
                                 {t("sel_3")}
                             </div>
                             <div style={{
@@ -453,8 +464,8 @@ const Home = ({ openModal }) => {
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("vila"))
                                         setShowModal(true)
-                                        modalContent("villa")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -466,8 +477,8 @@ const Home = ({ openModal }) => {
                                         {t("proj_3")}
                                     </div>
                                     <div className="property" onClick={() => {
+                                        setModalContent(t("vila"))
                                         setShowModal(true)
-                                        modalContent("villa")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -479,8 +490,8 @@ const Home = ({ openModal }) => {
                                     </div>
                                 </div>
                                 <div className="button" onClick={() => {
+                                    setModalContent(t("vila"))
                                     setShowModal(true)
-                                    modalContent("villa")
                                 }}>
                                     {t("selection")}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -510,8 +521,8 @@ const Home = ({ openModal }) => {
 
                                 <div className="properties">
                                     <div className="property" onClick={() => {
+                                        setModalContent("resale")
                                         setShowModal(true)
-                                        modalContent("resale")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -523,8 +534,8 @@ const Home = ({ openModal }) => {
                                         {t("proj_4")}
                                     </div>
                                     <div className="property" onClick={() => {
+                                        setModalContent("resale")
                                         setShowModal(true)
-                                        modalContent("resale")
                                     }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
@@ -537,8 +548,8 @@ const Home = ({ openModal }) => {
                                 </div>
 
                                 <div className="button" onClick={() => {
+                                    setModalContent("resale")
                                     setShowModal(true)
-                                    modalContent("resale")
                                 }}>
                                     {t("selection")}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -556,19 +567,63 @@ const Home = ({ openModal }) => {
             </div>
         </div>
         <div className="partners">
-            <img src={emar} alt="EMAR Partner" />
-
-            <img src={meraas} alt="Meraas Partner" />
-            <img src={sobha} alt="Sobha Partner" />
-            <img src={ellington} alt="Ellington Partner" />
-            <img src={danube} alt="Danube Partner" />
-
-            <img src={mjl} alt="MJL Partner" />
-
-
-            <img src={damac} alt="Damac Partner" />
-
+            <div className="partners-swiper">
+                {/* <div ref={navigationPrevRef}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                        <path d="M0.268818 6.44528C0.26315 6.44528 0.260779 6.43803 0.265351 6.43468L8.85305 0.140115C8.95955 0.0620521 9.08619 0.0145153 9.21878 0.00283114C9.35137 -0.00885301 9.48467 0.0157771 9.60374 0.0739618C9.72281 0.132146 9.82295 0.221587 9.89294 0.332261C9.96293 0.442934 10 0.570469 10 0.700574V13.3109C9.9996 13.4403 9.96255 13.567 9.89296 13.6771C9.82337 13.7871 9.72395 13.8762 9.60573 13.9344C9.49117 13.9866 9.36452 14.0083 9.23863 13.9972C9.11274 13.9861 8.99208 13.9427 8.88889 13.8714L0.28674 7.56619C0.19771 7.50094 0.125449 7.41632 0.0756804 7.31904C0.0259115 7.22176 3.97824e-07 7.1145 3.97824e-07 7.00574C3.97824e-07 6.89697 0.0259115 6.78971 0.0756804 6.69243C0.122753 6.60042 0.189947 6.51974 0.272418 6.45605C0.276905 6.45259 0.274487 6.44528 0.268818 6.44528V6.44528Z" fill="#C29773" />
+                    </svg>
+                </div> */}
+                <Swiper
+                    spaceBetween={10}
+                    className={"swiper-simillar"}
+                    slidesPerView={6} style={{ zIndex: -999 }}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    onInit={(swiper) => {
+                        swiper.params.navigation.prevEl = navigationPrevRef.current;
+                        swiper.params.navigation.nextEl = navigationNextRef.current;
+                        swiper.navigation.init();
+                        swiper.navigation.update();
+                    }}
+                    loop
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        900: {
+                            slidesPerView: 4,
+                            spaceBetween: 10,
+                        },
+                        1300: {
+                            slidesPerView: 6,
+                            spaceBetween: 10,
+                        },
+                        1440: {
+                            slidesPerView: 6,
+                            spaceBetween: 20,
+                        },
+                    }}
+                >
+                    <SwiperSlide><img src={emar} alt="EMAR Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={meraas} alt="Meraas Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={sobha} alt="Sobha Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={ellington} alt="Ellington Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={danube} alt="Danube Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={mjl} alt="MJL Partner" /></SwiperSlide>
+                    <SwiperSlide><img src={damac} alt="Damac Partner" /></SwiperSlide>
+                </Swiper>
+                {/* <div ref={navigationNextRef} >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                        <path d="M9.73118 6.44528C9.73685 6.44528 9.73922 6.43803 9.73465 6.43468L1.14695 0.140115C1.04045 0.0620521 0.913811 0.0145153 0.781223 0.00283114C0.648634 -0.00885301 0.515335 0.0157771 0.396263 0.0739618C0.27719 0.132146 0.177049 0.221587 0.10706 0.332261C0.0370714 0.442934 0 0.570469 0 0.700574L0 13.3109C0.000401222 13.4403 0.0374506 13.567 0.107042 13.6771C0.176633 13.7871 0.276047 13.8762 0.394265 13.9344C0.508831 13.9866 0.635481 14.0083 0.761372 13.9972C0.887264 13.9861 1.00792 13.9427 1.11111 13.8714L9.71326 7.56619C9.80229 7.50094 9.87455 7.41632 9.92432 7.31904C9.97409 7.22176 10 7.1145 10 7.00574C10 6.89697 9.97409 6.78971 9.92432 6.69243C9.87725 6.60042 9.81005 6.51974 9.72758 6.45605C9.72309 6.45259 9.72551 6.44528 9.73118 6.44528V6.44528Z" fill="#C29773" />
+                    </svg>
+                </div> */}
+            </div>
         </div>
+
         <div className="why-dubai">
             <div className={"div1"}><img src={whyDubaiMain} /></div>
             <div className={"dark"}>{t("square1")}</div>
@@ -665,39 +720,50 @@ const Home = ({ openModal }) => {
                 <div className="image">
                     <img src={visa} />
                 </div>
+
                 <div className="consulting-content">
-                    <div className="consult">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
-                                fill="#C29773" />
-                        </svg>
-                        {t("feat1")}
-                    </div>
-                    <div className="consult">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
-                                fill="#C29773" />
-                        </svg>
-                        {t("feat2")}
-                    </div>
-                    <div className="consult">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
-                                fill="#C29773" />
-                        </svg>
-                        {t("feat3")}
-                    </div>
-                    <div className="consult">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
-                                fill="#C29773" />
-                        </svg>
-                        {t("feat4")}
-                    </div>
+
+                    <Link to='/general'>
+                        <div className="consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
+                                    fill="#C29773" />
+                            </svg>
+                            {t("feat1")}
+                        </div>
+                    </Link>
+                    <Link to='/visa'>
+                        <div className="consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
+                                    fill="#C29773" />
+                            </svg>
+                            {t("feat2")}
+                        </div>
+                    </Link>
+                    <Link to='/employment'>
+                        <div className="consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
+                                    fill="#C29773" />
+                            </svg>
+                            {t("feat3")}
+                        </div>
+                    </Link>
+                    <Link to='/main-land'>
+                        <div className="consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z"
+                                    fill="#C29773" />
+                            </svg>
+                            {t("feat4")}
+                        </div>
+                    </Link>
+
                 </div>
             </div>
         </div>

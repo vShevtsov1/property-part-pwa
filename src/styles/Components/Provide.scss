@@ -1,0 +1,168 @@
+.provide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 23px;
+    padding: 0px 64px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        div:first-child {
+            color: #000;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        div:last-child {
+            color: #717171;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    .blocks-container {
+        display: flex;
+        gap: 16px;
+        height: 210px;
+        width: 100%;
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 24px;
+            flex: 1;
+            position: relative;
+
+            img:first-child {
+                height: 24px;
+                width: 24px;
+            }
+
+            .bh {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .descr {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                div:first-child {
+                    color: #000;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 119%;
+                    letter-spacing: -0.44px;
+                }
+
+                div:last-child {
+                    color: #6D6D6D;
+                    font-family: HelveticaLight, sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.32px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .provide {
+        gap: 16px;
+        padding: 0px 16px;
+
+        .title {
+            gap: 8px;
+
+            div:first-child {
+                font-size: 24px;
+            }
+
+            div:last-child {
+                font-size: 14px;
+            }
+        }
+
+        .blocks-container {
+            height: 178px;
+
+            .block {
+                padding: 16px;
+
+                img:first-child {}
+
+                .bh {}
+
+                .descr {
+                    gap: 8px;
+
+                    div:first-child {
+                        font-size: 16px;
+                    }
+
+                    div:last-child {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .provide {
+        gap: 23px;
+        padding: 0px 0px;
+
+        .title {
+            display: none;
+        }
+
+        .blocks-container {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .block {
+                padding: 16px;
+                min-width: calc(50% - 4px);
+                gap: 32px;
+
+                img:first-child {}
+
+                .bh {}
+
+                .descr {
+                    gap: 8px;
+
+                    div:first-child {}
+
+                    div:last-child {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

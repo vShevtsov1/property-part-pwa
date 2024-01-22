@@ -1,182 +1,171 @@
-.project {
+.project-sim {
   cursor: pointer;
-  height: 50%;
-  width: 48%;
-  background: #fff;
+  height: 60%;
+  width: calc(50% - 8px);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  box-shadow: 0px 2px 65.3px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px 0px 15px 0px;
+  gap: 15px;
 
-  .image-container {
+  border-radius: 7px;
+  background: #FFF;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+
+  .img-container {
+    padding: 0px 10px;
+    height: 100%;
     width: 100%;
-    position: relative;
-    height: 90%;
-    background: linear-gradient(0deg, #000 -58.46%, rgba(0, 0, 0, 0.00) 96.51%),
-    url("../assets/project.png") lightgray 50% / cover no-repeat;
 
-    .information {
+    .image{
+      height: 100%;
+      width: 100%;
+
+      border-radius: 7px;
+      background: linear-gradient(137deg, rgba(0, 0, 0, 0.20) 14.34%, rgba(0, 0, 0, 0.00) 28.63%), linear-gradient(1deg, rgba(0, 0, 0, 0.40) 15.72%, rgba(0, 0, 0, 0.00) 91.54%), url(<path-to-image>), lightgray -68.75px -14.837px / 148.427% 114.674% no-repeat;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+
+    white-space: nowrap;
+
+    .price {
+      color: #191C38;
+
+      font-family: Onest;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.5px;
+
+      span {
+        color: #818181;
+        font-family: Onest;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      color: #818181;
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.5px;
+      gap: 4px;
+    }
+  }
+
+  .description {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0px 20px;
+
+    border-top: 1px #CBCBCB solid;
+
+    .info {
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      width: 100%;
-      height: 100%;
+      gap: 10px;
 
-
-      justify-content: flex-end;
-
-
-
-      .name {
-        color: #fff;
-        font-family: HelveticaBold, sans-serif;
-        font-size: 22px;
-        white-space: nowrap;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
-        margin-left: 10px;
+      svg:nth-child(1) {
+        height: 24px;
+        width: 24px;
       }
 
-      .bedrooms {
-        color: #fff;
-        font-family: Helvetica, sans-serif;
+
+      .text {
+        color: #191C38;
+        font-family: Onest;
         font-size: 16px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
-        margin-left: 10px;
-        margin-bottom: 12px;
-      }
-    }
-  }
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
 
-  .project-info {
-    flex: 1;
-
-    padding-bottom: 16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    .project-information{
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      .location{
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        color: #000;
-        font-family: Helvetica,sans-serif;
-        font-size: 1vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        white-space: nowrap;
-      }
-      .price{
-        color: #000;
-        leading-trim: both;
-        text-edge: cap;
-        font-family: HelveticaBold,sans-serif;
-        font-size: 1vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        white-space: nowrap;
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  .project{
-    width: 48%!important;
-    height: 200px!important;
-    .image-container{
-      .information{
-        .name{
-          font-size: 14px!important;
-
-        }
-        .bedrooms{
-          font-size: 14px!important;
-
-        }
-      }
-    }
-    .project-info{
-      .project-information{
-        flex-direction: column;
-        align-items: flex-start;
-          .price{
-            order: 1;
-            font-size: 16px;
-
-          }
-        .location{
-          order: 2;
-          font-size: 14px;
-          svg{
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 1300px) {
-  .project{
-    height: 250px;
-    .image-container{
-      .information{
-        gap: 0px;
-
-        .name{
+        span {
+          color: #191C38;
+          font-family: Onest;
           font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.5px;
         }
-        .bedrooms{
-          font-size: 14px;
-          margin-bottom: 8px;
-        }
-      }
-
-    }
-    .project-info{
-      .project-information{
-
       }
     }
   }
 }
-@media (max-width: 870px) {
-  .project{
-    height: 40%;
-    .image-container{
-      .information{
-        gap: 0px;
 
-        .name{
-          font-size: 25px;
-        }
-        .bedrooms{
-          font-size: 20px;
-          margin-bottom: 8px;
+@media (max-width: 1300px) {
+  .project-sim {
+    height: 300px;
+    gap: 8px;
+    padding: 10px 0px 8px 0px;
+    .img-container {
+      .image{
+      }
+    }
+
+    .project-content {
+      .price {
+        font-size: 18px;
+        span {
+          font-size: 14px;
         }
       }
 
+      .name {
+        font-size: 14px;
+      }
     }
-    .project-info{
-      .project-information{
-        .location{
-          font-size: 17px;
+
+    .description {
+      .info {
+        gap: 5px;
+        svg:nth-child(1) {
         }
-        .price{
-          font-size: 17px;
+
+        .text {
+          font-size: 14px;
+          span {
+            font-size: 14px;
+          }
         }
       }
     }
+  }
+}
+
+@media (max-width: 1150px) {
+  .project-sim {
+    .project-content {
+      .name {
+        font-size: 12px;
+      }
+    }
+    .description {
+      .info:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .project-sim {
+    width: 100%;
   }
 }

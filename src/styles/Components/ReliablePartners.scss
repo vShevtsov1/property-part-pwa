@@ -1,0 +1,198 @@
+.reliable-partner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0px 64px;
+
+    .title {
+        color: #fff;
+        font-family: HelveticaBold, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 45%;
+        background: #191C38;
+        padding: 16px;
+
+        display: none;
+    }
+
+    .blocks-container {
+        display: flex;
+        gap: 16px;
+        height: 210px;
+        width: 100%;
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 24px;
+            flex: 1;
+
+            img {
+                height: 24px;
+                width: 24px;
+            }
+
+            .descr {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                div:first-child {
+                    color: #000;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 119%;
+                    letter-spacing: -0.44px;
+                }
+
+                div:last-child {
+                    color: #6D6D6D;
+                    font-family: HelveticaLight, sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.32px;
+                }
+            }
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #191C38;
+            padding: 24px;
+            flex: 2;
+
+            img {
+                height: 24px;
+                width: 24px;
+            }
+
+
+            .descr {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                div {
+                    color: #FFF;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 119%;
+                    letter-spacing: -0.44px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .reliable-partner {
+        padding: 0px 16px;
+
+        .title {}
+
+        .blocks-container {
+            gap: 8px;
+            height: auto;
+
+            .block {
+                gap: 35px;
+
+                img {}
+
+                .descr {
+                    gap: 8px;
+
+                    div:first-child {
+                        font-size: 18px;
+                    }
+
+                    div:last-child {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .main-block {
+
+
+                img {}
+
+
+                .descr {
+
+
+                    div {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reliable-partner {
+        padding: 0px 0px;
+
+        .title {}
+
+        .blocks-container {
+            gap: 8px;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .block {
+                gap: 16px;
+                min-width: calc(50% - 8px);
+                justify-content: flex-start;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                .descr {
+                    gap: 8px;
+
+                    div:first-child {
+                        font-size: 18px;
+                    }
+
+                    div:last-child {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .main-block {
+                flex: 1;
+
+                img {}
+
+
+                .descr {
+
+
+                    div {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

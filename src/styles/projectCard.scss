@@ -1,7 +1,6 @@
 .project-card {
   .feedback {
     padding: 16px !important;
-
   }
 
   .content {
@@ -27,7 +26,8 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 24px; /* 150% */
+        line-height: 24px;
+        /* 150% */
       }
 
       .link {
@@ -39,9 +39,11 @@
         background: #191C38;
       }
     }
-  .images-container-phone{
-  display: none;
-}
+
+    .images-container-phone {
+      display: none;
+    }
+
     .images-container {
       max-height: 70vh;
       width: 100%;
@@ -119,7 +121,8 @@
       }
     }
 
-    .project-information,.project-information-phone {
+    .project-information,
+    .project-information-phone {
 
 
       padding: 24px;
@@ -149,7 +152,8 @@
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
-            line-height: 43px; /* 107.5% */
+            line-height: 43px;
+            /* 107.5% */
           }
 
           div:last-child {
@@ -163,7 +167,8 @@
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px; /* 120% */
+            line-height: 24px;
+            /* 120% */
           }
         }
 
@@ -179,17 +184,20 @@
           gap: 15px;
 
           div:first-child {
-            span{
+            span {
               font-size: 30px;
             }
+
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: HelveticaBold, sans-serif;
+            font-family: HelveticaBold,
+            sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
-            line-height: 43px; /* 107.5% */
+            line-height: 43px;
+            /* 107.5% */
           }
 
           div:last-child {
@@ -203,7 +211,8 @@
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px; /* 120% */
+            line-height: 24px;
+            /* 120% */
           }
         }
       }
@@ -253,13 +262,16 @@
         }
       }
     }
-    .project-information-phone{
+
+    .project-information-phone {
       display: none;
     }
-    .project-description{
+
+    .project-description {
       background: white;
       padding: 24px;
       width: 100%;
+
       .header {
         color: #191C38;
         leading-trim: both;
@@ -268,22 +280,25 @@
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        line-height: 120%; /* 38.4px */
+        line-height: 120%;
+        /* 38.4px */
       }
-      .about-project{
+
+      .about-project {
         color: black;
-        font-family: Helvetica,sans-serif;
+        font-family: Helvetica, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
       }
-      .show{
+
+      .show {
         cursor: pointer;
         display: flex;
         justify-content: flex-end;
         color: #191C38;
-        font-family: Helvetica,sans-serif;
+        font-family: Helvetica, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -291,6 +306,7 @@
 
       }
     }
+
     .manager-plan-wrapper {
 
       display: flex;
@@ -445,13 +461,16 @@
             display: flex;
             gap: 7px;
             align-items: flex-end;
-            span{
+
+            span {
               color: #939393;
               font-size: 15px;
             }
+
             color: #FFF;
             text-align: right;
-            font-family: Helvetica, sans-serif;
+            font-family: Helvetica,
+            sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -539,7 +558,8 @@
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        line-height: 120%; /* 38.4px */
+        line-height: 120%;
+        /* 38.4px */
       }
 
       .navigations {
@@ -582,7 +602,8 @@
           display: flex;
           gap: 16px;
 
-          .left-arrow, .right-arrow {
+          .left-arrow,
+          .right-arrow {
             cursor: pointer;
             border-radius: 134px;
             background: #191C38;
@@ -598,7 +619,8 @@
 
       .floor-content {
         width: 100%;
-        .swiper-simillar{
+
+        .swiper-simillar {
           max-height: 40vh;
         }
       }
@@ -618,7 +640,8 @@
         font-size: 32px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120%; /* 38.4px */
+        line-height: 120%;
+        /* 38.4px */
       }
 
       .map-container {
@@ -637,7 +660,7 @@
 
       display: flex;
       gap: 20px;
-      height: 45vh;
+      height: 300px;
       width: 100%;
       margin-bottom: 20px;
       flex-direction: column;
@@ -654,14 +677,16 @@
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
-          line-height: 120%; /* 38.4px */
+          line-height: 120%;
+          /* 38.4px */
         }
 
         .arrows {
           display: flex;
           gap: 16px;
 
-          .left-arrow, .right-arrow {
+          .left-arrow,
+          .right-arrow {
             cursor: pointer;
             border-radius: 134px;
             background: #191C38;
@@ -675,18 +700,20 @@
         }
       }
 
-      .simillar-content{
+      .simillar-content {
         flex: 1;
         height: 100%;
-        .swiper-simillar{
+
+        .swiper-simillar {
           height: 100%;
 
         }
       }
     }
-    .warning{
+
+    .warning {
       color: #8F8F8F;
-      font-family: Helvetica,sans-serif;
+      font-family: Helvetica, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -698,28 +725,34 @@
 @media (max-width: 600px) {
 
   .project-card {
-    .feedback{
+    .feedback {
       display: none;
     }
+
     .content {
       padding: 16px;
       gap: 15px;
-      .images-container{
+
+      .images-container {
         display: none;
       }
-      .images-container-phone{
+
+      .images-container-phone {
         display: unset;
-        img{
+
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      .project-information{
+
+      .project-information {
         display: none;
       }
+
       .project-information-phone {
-        padding:16px;
+        padding: 16px;
         display: flex;
         margin: unset;
         height: unset;
@@ -733,21 +766,22 @@
             width: 100%;
             display: flex;
 
-            .name-block-2{
+            .name-block-2 {
               justify-content: space-between;
               width: 100%;
 
-              div:first-child{
+              div:first-child {
                 font-size: 16px;
                 display: flex;
                 gap: 7px;
-                font-family: Helvetica,sans-serif;
+                font-family: Helvetica, sans-serif;
                 align-items: center;
               }
-              .price-block{
+
+              .price-block {
                 align-items: flex-end;
 
-                div:first-child{
+                div:first-child {
                   font-family: HelveticaBold, sans-serif;
                   font-size: 24px;
                   line-height: unset;
@@ -802,11 +836,13 @@
 
           .broker-info {
             padding: 24px;
-            .general-info{
+
+            .general-info {
               gap: 15px;
               margin-bottom: 10px;
             }
-            .additional-info{
+
+            .additional-info {
               margin-bottom: 30px;
             }
 
@@ -826,32 +862,34 @@
             align-items: center;
 
             div:first-child {
-              font-size: 22px!important;
+              font-size: 22px !important;
 
             }
 
             div:last-child {
-              font-size: 14px!important;
+              font-size: 14px !important;
 
             }
           }
 
-          .plan-type > div {
-            font-size: 16px!important;
+          .plan-type>div {
+            font-size: 16px !important;
           }
 
-          .plan-type > div.active {
-            font-size: 16px!important;
+          .plan-type>div.active {
+            font-size: 16px !important;
           }
-          .plan-content{
-            .column{
-              .header{
-                font-size: 14px!important;
+
+          .plan-content {
+            .column {
+              .header {
+                font-size: 14px !important;
 
               }
-              .values{
-                .value{
-                  font-size: 14px!important;
+
+              .values {
+                .value {
+                  font-size: 14px !important;
 
                 }
               }
@@ -859,49 +897,60 @@
           }
         }
       }
-      .floor-plans{
-        .header{
+
+      .floor-plans {
+        .header {
           font-size: 22px;
         }
+
         .navigations {
           align-items: center;
-          .floor-types>.floor-type{
+
+          .floor-types>.floor-type {
             font-size: 16px;
             padding: 16px;
           }
-          .arrows > .left-arrow,
-          .arrows>.right-arrow{
+
+          .arrows>.left-arrow,
+          .arrows>.right-arrow {
             width: 36px;
             height: 36px;
           }
         }
       }
-      .location{
-        .header{
+
+      .location {
+        .header {
           font-size: 22px;
 
         }
       }
-      .simillar{
+
+      .simillar {
 
         margin-bottom: 20px;
-        .header{
+
+        .header {
           align-items: center;
-          .tittle{
+
+          .tittle {
             font-size: 22px;
 
           }
-          .arrows > .left-arrow,
-          .arrows>.right-arrow{
+
+          .arrows>.left-arrow,
+          .arrows>.right-arrow {
             width: 36px;
             height: 36px;
           }
         }
       }
-      .project-description{
+
+      .project-description {
         background: white;
         padding: 16px;
         width: 100%;
+
         .header {
           color: #191C38;
           leading-trim: both;
@@ -910,11 +959,13 @@
           font-size: 32px;
           font-style: normal;
           font-weight: 700;
-          line-height: 120%; /* 38.4px */
+          line-height: 120%;
+          /* 38.4px */
         }
-        .about-project{
+
+        .about-project {
           color: black;
-          font-family: Helvetica,sans-serif;
+          font-family: Helvetica, sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -925,47 +976,60 @@
     }
   }
 }
+
 @media (max-width: 1300px) {
-  .project-card{
-    .content{
+  .project-card {
+    .content {
       padding: 10px 30px;
-      .manager-plan-wrapper{
+
+      .manager-plan-wrapper {
         height: max-content;
-        .manager-view{
-          .broker-info{
+
+        .manager-view {
+          .broker-info {
             padding: 10px;
-            .general-info{
+
+            .general-info {
               margin-bottom: 5px;
             }
-            .additional-info{
-              font-size:14px;
+
+            .additional-info {
+              font-size: 14px;
             }
-            .buttons-container{
-              .button:first-child,.button:last-child{
+
+            .buttons-container {
+
+              .button:first-child,
+              .button:last-child {
                 font-size: 14px;
               }
             }
           }
         }
-        .payment-plan{
-          .plan-header{
-            div:first-child{
+
+        .payment-plan {
+          .plan-header {
+            div:first-child {
               font-size: 28px;
             }
           }
-          .plan-type>div{
-font-size: 16px;
-          }
-          .plan-type>div.active{
+
+          .plan-type>div {
             font-size: 16px;
           }
-          .plan-content{
-            .column{
-              .header{
+
+          .plan-type>div.active {
+            font-size: 16px;
+          }
+
+          .plan-content {
+            .column {
+              .header {
                 font-size: 16px;
               }
-              .values{
-                .value{
+
+              .values {
+                .value {
                   font-size: 16px;
                 }
               }
@@ -973,89 +1037,107 @@ font-size: 16px;
           }
         }
       }
-      .simillar{
-        height: 400px;
+
+      .simillar {
+        height: 300px;
       }
     }
   }
 }
-@media (max-width: 820px){
-.project-card{
-  .feedback{
-    display: none;
-  }
-  .content{
-    padding: 20px 16px;
-    .images-container{
-      grid-template-rows: repeat(2, 40%) 15%;
-      grid-column-gap: 14px;
-      grid-row-gap: 14px;
-    }
-    .project-information{
-      padding: 16px;
-      .additional-information{
-        flex-wrap: wrap;
-      }
-    }
-    .manager-plan-wrapper{
-      flex-direction: column;
-      gap: 10px;
-      .manager-view{
-        width: 100%;
-      }
-      .payment-plan{
-        .plan-header{
-          div:first-child{
-            font-size: 38px;
-          }
-          div:last-child{
-            font-size: 24px;
 
-          }
+@media (max-width: 820px) {
+  .project-card {
+    .feedback {
+      display: none;
+    }
+
+    .content {
+      padding: 20px 16px;
+
+      .images-container {
+        grid-template-rows: repeat(2, 40%) 15%;
+        grid-column-gap: 14px;
+        grid-row-gap: 14px;
+      }
+
+      .project-information {
+        padding: 16px;
+
+        .additional-information {
+          flex-wrap: wrap;
         }
-        .plan-type>div{
-          font-size: 24px;
+      }
+
+      .manager-plan-wrapper {
+        flex-direction: column;
+        gap: 10px;
+
+        .manager-view {
+          width: 100%;
         }
-        .plan-type>div.active{
-          font-size: 24px;
-        }
-        .plan-content{
-          .column{
-            .header{
-              font-size: 22px;
+
+        .payment-plan {
+          .plan-header {
+            div:first-child {
+              font-size: 38px;
             }
-            .values{
-              .value{
+
+            div:last-child {
+              font-size: 24px;
+
+            }
+          }
+
+          .plan-type>div {
+            font-size: 24px;
+          }
+
+          .plan-type>div.active {
+            font-size: 24px;
+          }
+
+          .plan-content {
+            .column {
+              .header {
                 font-size: 22px;
+              }
+
+              .values {
+                .value {
+                  font-size: 22px;
+                }
               }
             }
           }
         }
       }
-    }
-    .project-description{
-      background: white;
-      padding: 16px;
-      width: 100%;
-      .header {
-        color: #191C38;
-        leading-trim: both;
-        text-edge: cap;
-        font-family: HelveticaBold, sans-serif;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%; /* 38.4px */
-      }
-      .about-project{
-        color: black;
-        font-family: Helvetica,sans-serif;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+
+      .project-description {
+        background: white;
+        padding: 16px;
+        width: 100%;
+
+        .header {
+          color: #191C38;
+          leading-trim: both;
+          text-edge: cap;
+          font-family: HelveticaBold, sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          /* 38.4px */
+        }
+
+        .about-project {
+          color: black;
+          font-family: Helvetica, sans-serif;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
       }
     }
   }
-}
 }

@@ -1,6 +1,6 @@
 import Header from "../components/Header.jsx";
 import Feedback from "../components/Feedback.jsx";
-import "../styles/projectCard.css"
+import "../styles/projectCard.scss"
 import anna from "../assets/teams/anna-horshunova-min.jpg"
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,7 @@ import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
 import ProjectSimilar from "../components/ProjectSimilar.jsx";
 import Footer from "../components/Footer.jsx";
 import { Link, useParams } from "react-router-dom";
+import Marker from "../components/Marker.jsx";
 import axios from "axios";
 import Modal from 'react-modal';
 import 'swiper/css';
@@ -99,7 +100,7 @@ const ProjectCard = () => {
                 console.log(error);
             });
     }, []);
-
+    const [currnetIndex, setCurrentIndex] = useState(null)
     useEffect(() => {
         let config = {
             method: 'get',
@@ -134,6 +135,7 @@ const ProjectCard = () => {
     const navigationPrevRefSimilar = React.useRef(null)
     const navigationNextRef = React.useRef(null)
     const navigationNextRefSimilar = React.useRef(null)
+
     const handlePlanClick = (index) => {
         setActivePlan(index);
     };
@@ -279,6 +281,7 @@ const ProjectCard = () => {
     if (project === null || randomProjects === null) {
         return null;
     }
+
     return (<div className={"project-card"}>
         <Header />
         <Feedback />
@@ -317,7 +320,6 @@ const ProjectCard = () => {
                                 d="M13.1722 11.9997L8.22217 7.04974L9.63617 5.63574L16.0002 11.9997L9.63617 18.3637L8.22217 16.9497L13.1722 11.9997Z"
                                 fill="black" />
                         </svg>
-
                     </div>
                 </div>
                 <div className={"images"}><img src={project.interiorGallery[1]} /></div>
@@ -344,6 +346,7 @@ const ProjectCard = () => {
                     <SwiperSlide><img src={project.architectureGallery[2]} /></SwiperSlide>
                 </Swiper>
             </div>
+
             <div className="project-information">
                 <div className="general-information">
                     <div className="name-block">
@@ -551,6 +554,7 @@ const ProjectCard = () => {
 
                 </div>
             </div>
+
             {/*<div className="project-description">*/}
             {/*    <div className="header">{t("projectInfo")}</div>*/}
             {/*    <div className="about-project"*/}
@@ -560,6 +564,7 @@ const ProjectCard = () => {
             {/*    />*/}
 
             {/*</div>*/}
+
             <div className="manager-plan-wrapper">
                 <div className="manager-view">
                     <div className="image-container">
@@ -583,6 +588,7 @@ const ProjectCard = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="payment-plan">
                     <div className="plan-header">
                         <div>{t("r_pay1")}</div>
@@ -594,7 +600,6 @@ const ProjectCard = () => {
                                 className={activePlan === "Studio" ? 'active' : ''}
                                 onClick={() => handlePlanClick("Studio")}
                             >
-                                S
                             </div>}
                         {project.paymentPlans["1"] &&
                             <div
@@ -615,7 +620,7 @@ const ProjectCard = () => {
                                 className={activePlan === "3" ? 'active' : ''}
                                 onClick={() => handlePlanClick("3")}
                             >
-                                3
+                            3
                             </div>}
                         {project.paymentPlans["4+"] &&
                             <div
@@ -656,7 +661,6 @@ const ProjectCard = () => {
                                     className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum3)}</div>
                                 <div
                                     className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum4)}</div>
-
                             </div>
                         </div>
                     </div>
@@ -794,6 +798,9 @@ const ProjectCard = () => {
                                     setMapZoom(ev.detail.zoom)
                                 }}
                                 mapId={"eafda8fe79279394"}
+                                onClick={event => {
+                                    setCurrentIndex(null)
+                                }}
                             >
                                 <AdvancedMarker
                                     className={"marker"}
@@ -810,20 +817,13 @@ const ProjectCard = () => {
                                     </div>
                                 </AdvancedMarker>
                                 {randomProjects.map((marker, index) => (
-                                    <AdvancedMarker
-                                        key={index}
-                                        onClick={() => window.open(`/project/${marker._id}`)}
-                                        className={"marker"}
-                                        position={{ lat: Number(marker.lat), lng: Number(marker.lng) }}>
-                                        <div style={{
-                                            borderRadius: mapZoom < 13 ? 20 : 5,
-                                            padding: mapZoom < 13 ? 7 : 0
-                                        }}>
-                                            <div style={{ display: mapZoom < 13 ? "none" : "block" }} className="price">
-                                                {convertPriceToShortFormat(marker.priceFrom)}
-                                            </div>
-                                        </div>
-                                    </AdvancedMarker>
+                                    <Marker key={index}
+                                        index={index}
+                                        mapZoom={mapZoom}
+                                        project={marker}
+                                        currnetIndex={currnetIndex}
+                                        setCurrentIndex={setCurrentIndex}
+                                    />
                                 ))}
                             </Map>
                         </APIProvider>
@@ -871,26 +871,26 @@ const ProjectCard = () => {
                             // when window width is >= 480px
                             480: {
                                 slidesPerView: 1,
-                                spaceBetween: 30,
+                                spaceBetween: 20,
                             },
                             // when window width is >= 768px
                             768: {
                                 slidesPerView: 2,
-                                spaceBetween: 40,
+                                spaceBetween: 20,
                             },
 
                             // when window width is >= 1024px
                             1200: {
                                 slidesPerView: 3,
-                                spaceBetween: 50,
-                            },
-                            1450: {
-                                slidesPerView: 4,
-                                spaceBetween: 50,
+                                spaceBetween: 20,
                             },
                             1400: {
                                 slidesPerView: 3,
-                                spaceBetween: 50,
+                                spaceBetween: 20,
+                            },
+                            1450: {
+                                slidesPerView: 4,
+                                spaceBetween: 20,
                             }
                         }}
                     >

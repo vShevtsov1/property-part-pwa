@@ -1,5 +1,5 @@
 import Header from "../components/Header.jsx";
-import "../styles/concierge.css"
+import "../styles/Pages/concierge.scss"
 import conciergeMain from "../assets/conciergeMain.jpg";
 import imagePerson from "../assets/teams/anna-horshunova-min.jpg";
 import aboutUs from "../assets/aboutUs.jpg";

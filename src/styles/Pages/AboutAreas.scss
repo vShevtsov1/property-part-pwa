@@ -1,0 +1,558 @@
+.about-areas {
+  display: flex;
+  flex-direction: column;
+  background: #F1F1F1;
+
+  .about-areas-container {
+    .about-dubai {
+        display: flex;
+        flex-direction: column;
+        padding: 34px 64px 24px;
+
+        .content  {
+          padding: 36px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          border-radius: 2px;
+          background: #FFF;
+          box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+
+
+          .title {
+            color: #191C38;
+            font-family: Onest;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+
+          .description {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            color: #818181;
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.64px;
+          }
+        }
+    }
+
+    .area-card-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      padding: 24px 64px 64px;
+      grid-column-gap: 32px;
+      grid-row-gap: 32px;
+
+
+      .areas-card {
+        padding: 20px;
+        background: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .header {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .name-price {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            div:first-child {
+              color: #191C38;
+              font-family: Onest;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 0.96px;
+            }
+
+            div:last-child {
+              color: #C29773;
+              text-align: right;
+              font-family: Onest;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: 0.96px;
+            }
+          }
+
+          .description {
+            color: #ABABAB;
+            font-family: Onest;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.56px;
+          }
+        }
+
+        .map-img {
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .get-consult-box {
+      padding: 32px 16px;
+    }
+
+    .statistics {
+      display: flex;
+      gap: 32px;
+      padding: 32px 64px;
+
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 36px;
+        gap: 20px;
+        width: 34%;
+
+        .title {
+          color: #191C38;
+          font-family: Onest;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          color: #818181;
+          font-family: Onest;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.64px;
+        }
+      }
+
+      .statistics-info {
+        width: 66%;
+        display: flex;
+        border-radius: 3px;
+        background: #FFF;
+        box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+
+        img {
+          padding: 45px 20px;
+          width: 100%;
+        }
+      }
+    }
+
+    .transaction {
+      display: flex;
+      gap: 41px;
+      padding: 32px 64px;
+      flex-direction: column;
+
+      .transaction-title {
+        display: flex;
+
+        background: #fff;
+        width: 100%;
+        padding: 15px 36px;
+        color: #191C38;
+        font-family: Onest;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .transaction-blocks {
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        gap: 20px;
+
+        .transaction-block {
+          display: flex;
+          height:8vh;
+          width: 100%;
+          border-radius: 3px;
+          background: #FFF;
+          box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+
+          .transaction-img {
+            width: 20%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .content-profit {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 20px;
+
+            .transaction-content {
+              display: flex;
+              gap: 32px;
+
+              .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                div:first-child {
+                  color: #191C38;
+                  font-family: Onest;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: normal;
+                  letter-spacing: 0.64px;
+                }
+
+                .description {
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 20px;
+
+                  div:first-child {
+                    color: #C29773;
+                    font-family: Onest;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1.04px;
+                  }
+
+                  div:last-child {
+                    color: #191C38;
+                    font-family: Onest;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.56px;
+
+                    padding-bottom: 5px;
+                  }
+                }
+              }
+
+              .variants {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+                width: 66px;
+
+                .variant {
+                  width: 27px;
+                  height: 27px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  color: #FFF;
+                  font-family: Onest;
+                  font-size: 8px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  letter-spacing: 0.32px;
+
+                  background: #313131;
+                }
+
+                .active {
+                  background: #C29773;
+                }
+              }
+            }
+
+            .profit {
+              display: flex;
+              gap: 10px;
+
+              color: #82BB5F;
+              font-family: Onest;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.64px;
+            }
+          }
+        }
+
+      }
+      .show-more {
+        display: flex;
+        width: fit-content;
+        padding: 15px 40px;
+        align-self: center;
+        cursor: pointer;
+
+        color: #FFF;
+        font-family: Onest;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.64px;
+
+        border-radius: 3px;
+        background: #191C38;
+        box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .about-areas {
+    .about-areas-container {
+      .about-dubai {
+        .content  {
+          .title {
+
+          }
+
+          .description {
+
+          }
+        }
+      }
+
+      .area-card-container{
+        .areas-card {
+          .header {
+            .name-price {
+
+              div:first-child {
+              }
+
+              div:last-child {
+              }
+            }
+
+            .description {
+            }
+          }
+
+          .map-img {
+            img {
+            }
+          }
+        }
+      }
+
+      .get-consult-box {
+      }
+
+      .statistics {
+        .text-content {
+          .title {
+
+          }
+
+          .description {
+          }
+        }
+
+        .statistics-info {
+          img {
+          }
+        }
+      }
+
+      .transaction {
+        display: flex;
+        gap: 41px;
+        padding: 32px 64px;
+        flex-direction: column;
+
+        .transaction-title {
+          display: flex;
+
+          background: #fff;
+          width: 100%;
+          padding: 15px 36px;
+          color: #191C38;
+          font-family: Onest;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .transaction-blocks {
+          display: flex;
+          background: #fff;
+          flex-direction: column;
+          gap: 20px;
+
+          .transaction-block {
+            display: flex;
+            height:8vh;
+            width: 100%;
+            border-radius: 3px;
+            background: #FFF;
+            box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+
+            .transaction-img {
+              width: 20%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .content-profit {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              padding: 15px 20px;
+
+              .transaction-content {
+                display: flex;
+                gap: 32px;
+
+                .text {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+
+                  div:first-child {
+                    color: #191C38;
+                    font-family: Onest;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.64px;
+                  }
+
+                  .description {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+
+                    div:first-child {
+                      color: #C29773;
+                      font-family: Onest;
+                      font-size: 26px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: normal;
+                      letter-spacing: 1.04px;
+                    }
+
+                    div:last-child {
+                      color: #191C38;
+                      font-family: Onest;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: normal;
+                      letter-spacing: 0.56px;
+
+                      padding-bottom: 5px;
+                    }
+                  }
+                }
+
+                .variants {
+                  display: flex;
+                  gap: 6px;
+                  flex-wrap: wrap;
+                  width: 66px;
+
+                  .variant {
+                    width: 27px;
+                    height: 27px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    color: #FFF;
+                    font-family: Onest;
+                    font-size: 8px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.32px;
+
+                    background: #313131;
+                  }
+
+                  .active {
+                    background: #C29773;
+                  }
+                }
+              }
+
+              .profit {
+                display: flex;
+                gap: 10px;
+
+                color: #82BB5F;
+                font-family: Onest;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.64px;
+              }
+            }
+          }
+
+        }
+        .show-more {
+          display: flex;
+          width: fit-content;
+          padding: 15px 40px;
+          align-self: center;
+          cursor: pointer;
+
+          color: #FFF;
+          font-family: Onest;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.64px;
+
+          border-radius: 3px;
+          background: #191C38;
+          box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.button-swiper {
+    display: none;
+    padding: 32px 64px 32px 64px;
+    gap: 50px;
+    flex-direction: column;
+
+    .button-swiper-content {
+        background-color: #fff;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            div:first-child {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            .buttons-container {
+                gap: 16px;
+
+                .button {
+                    display: flex;
+                    width: 48px;
+                    height: 48px;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 45px;
+                    background: #191C38;
+                }
+
+                .rotate180deg {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .card-container {
+            display: flex;
+            gap: 24px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 24px;
+                background: #F1F1F1;
+                gap: 24px;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    background: #F1F1F1;
+                    height: 100%;
+                    justify-content: space-between;
+
+                    div:first-child {
+                        color: #000;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    div:last-child {
+                        color: #000;
+                        font-family: Helvetica;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #FFF;
+                    font-family: Helvetica;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    width: fit-content;
+                    padding: 16px;
+                    background: #191C38;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+
+}

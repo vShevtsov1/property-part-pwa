@@ -1,115 +1,238 @@
 .project-similar {
-  height: 100%;
+  cursor: pointer;
+  height: 30%;
   width: 100%;
-   cursor: pointer;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
 
-  .image-container {
-
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-
-
-  }
-  .project-details{
-    flex: 1;
-    padding: 16px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    .general-info{
-      flex: 1;
-      gap: 5px;
-      height: 100%;
-      display: flex;
-
-      flex-direction: column;
-      justify-content: space-between;
-      .name{
-        color: #000;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-family: HelveticaBold, sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
-      }
-      .developer{
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        color: #8F8F8F;
-        font-family: Helvetica,sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
+  &:hover {
+    .image-container {
+      .information {
+        .price-per-meter {
+          background: #D8AA83;
+        }
       }
     }
-    .price-info{
-      flex: 1;
-      gap: 5px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      height: 100%;
-      flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background: linear-gradient(0deg, #000 -58.46%, rgba(0, 0, 0, 0.00) 96.51%),
+    url("../../assets/project.png") lightgray 50% / cover no-repeat;
+
+    .information {
       display: flex;
+      flex-direction: column;
+      gap: 3px;
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+
       justify-content: space-between;
-      .price{
-        text-align: right;
-        span{
-          color: #8F8F8F;
-          font-family: Helvetica,sans-serif;
-          font-size: 16px;
+
+      .price-per-meter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1px;
+        background: #C29773;
+        width: fit-content;
+        padding: 2px 8px;
+        border-radius: 2px;
+
+        .price {
+          color: var(--D-grey, #F2F2F7);
+          font-family: HelveticaRegular, sans-serif;
+          font-size: 14px;
           font-style: normal;
-          font-weight: 400;
-          line-height: 24px; /* 150% */
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.5px;
         }
-        color: #000;
-        font-family: HelveticaBold, sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
       }
-      .price-m2{
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        color: #8F8F8F;
-        font-family: Helvetica,sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        text-align: right;
-        line-height: 24px; /* 133.333% */
+
+      .price-name {
+        display: flex;
+        justify-content: space-between;
+
+        .name-bedrooms {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          justify-content: space-between;
+
+          .name {
+            color: #fff;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 22px;
+            white-space: nowrap;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 133.333% */
+          }
+
+          .bedrooms {
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 133.333% */
+          }
+        }
+
+        .price-from {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          justify-content: space-between;
+
+          .from {
+            color: #FFF;
+            padding-top: 2px;
+            text-align: right;
+            font-family: HelveticaLight, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            /* 171.429% */
+          }
+
+          .price {
+            color: #FFF;
+            font-family: Helvetica;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+          }
+        }
       }
     }
   }
 }
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  .project-similar {
+    width: 100% !important;
+    height: 100%;
 
-  .project-similar{
-    .project-details{
-      .general-info{
-        .name{
-          font-size: 18px;
-        }
-        .developer{
-          font-size: 16px;
-        }
-      }
-      .price-info{
-        .price{
-          span{
-            font-size: 12px;
+    .image-container {
+      .information {
+        .price-per-meter {
+          .price {
           }
-          font-size: 18px;
         }
-        .price-m2{
-          font-size: 16px;
+        .price-name {
+          .name-bedrooms {
+            .name {
+              font-size: 22px !important;
+            }
+
+            .bedrooms {
+              font-size: 18px !important;
+              font-family: HelveticaLight, sans-serif !important;
+              margin: 0;
+            }
+          }
+
+          .price-from {
+            .from {
+              font-family: HelveticaLight, sans-serif !important;
+            }
+
+            .price {
+            }
+          }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .project-similar {
+    height: 162.667px;
+    width: 100%;
+
+    .image-container {
+      .information {
+        padding: 8px;
+
+        .price-per-meter {
+          .price {
+          }
+        }
+
+        .price-name {
+          height: fit-content;
+          align-items: flex-end;
+
+          .name-bedrooms {
+            justify-content: flex-end;
+
+            .name {
+              line-height: normal;
+            }
+
+            .bedrooms {
+              line-height: normal;
+              margin: 0px
+            }
+          }
+
+          .price-from {
+            align-items: flex-end;
+
+            height: fit-content;
+
+            .from {
+              line-height: normal;
+            }
+
+            .price {
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .project-similar {
+    height: 100%;
+    box-shadow: none;
+
+    .image-container {
+      .information {
+        gap: 0px;
+
+        .name {
+          font-size: 25px;
+        }
+
+        .bedrooms {
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+      }
+
+    }
+  }
+
+  .show-more-wrapper {
+    .show-more {
+      padding: 10px 32px 11px 32px !important;
+
     }
   }
 }

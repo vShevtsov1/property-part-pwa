@@ -1,6 +1,6 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import "../styles/PowerOfAttorney.scss"
+import "../styles/Pages/PowerOfAttorney.scss"
 import accountaingBaner from "../assets/accounting-main.jpeg";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -93,6 +93,7 @@ function PowerOfAttorney() {
             }
         },
     ]
+
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState({
         tittleText: "Our expert will reach you out",

@@ -1,13 +1,15 @@
-.modal-content{
+.modal-content {
   width: 100%;
   height: 100%;
   display: flex;
-  .image-container{
+
+  .image-container {
     width: 50%;
     background-image: url("../assets/memberBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
-    img{
+
+    img {
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -15,7 +17,8 @@
       transform: scale(-1, 1);
     }
   }
-  .modal-form{
+
+  .modal-form {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -23,10 +26,11 @@
     width: 100%;
     padding: 24px 24px 35px;
 
-    .close-button{
+    .close-button {
       display: flex;
       justify-content: flex-end;
-      .close{
+
+      .close {
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -36,58 +40,68 @@
         background: #FFF;
       }
     }
-    .form{
+
+    .form {
       display: flex;
       flex-direction: column;
       gap: 48px;
-      .tittle{
+
+      .tittle {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        div:first-child{
+
+        div:first-child {
           color: #191C38;
           font-family: HelveticaBold, sans-serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
-          line-height: 120%; /* 28.8px */
+          line-height: 120%;
+          /* 28.8px */
         }
-        div:last-child{
+
+        div:last-child {
           color: #575757;
-          font-family: Helvetica,sans-serif;
+          font-family: Helvetica, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
         }
       }
-      .form-form{
+
+      .form-form {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        .form-input{
+
+        .form-input {
           border: 1px solid #CACACA;
           display: flex;
           padding: 16px;
           gap: 24px;
-          input{
+
+          input {
             border: none;
             width: 95%;
             color: #8F8F8F;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica,sans-serif;
+            font-family: Helvetica, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.64px;
-            &:focus{
+
+            &:focus {
               outline: none;
             }
           }
         }
-        .form-button{
+
+        .form-button {
           display: flex;
           padding: 16px;
           justify-content: space-between;
@@ -100,24 +114,33 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+
+          cursor: pointer;
+
+          &:hover {
+            background: #21254B;
+          }
         }
       }
     }
   }
 }
+
 @media (max-width: 600px) {
-  .modal-content{
-    .image-container{
+  .modal-content {
+    .image-container {
       display: none;
     }
   }
-  .ReactModal__Content .ReactModal__Content--after-open{
+
+  .ReactModal__Content .ReactModal__Content--after-open {
     width: auto;
   }
 }
+
 @media (max-width: 800px) {
-  .modal-content{
-    .image-container{
+  .modal-content {
+    .image-container {
       display: none;
     }
   }

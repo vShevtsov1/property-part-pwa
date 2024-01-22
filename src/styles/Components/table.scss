@@ -1,0 +1,193 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 64px;
+
+    .table-row {
+        display: flex;
+        width: 100%;
+
+        .first-table-row {
+            width: 15%;
+            padding: 16px;
+            color: #000;
+            justify-content: flex-start;
+
+            background-color: #fff;
+            border-bottom: 2px solid #D2D2D2;
+            color: #191C38;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .second-table-row {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 42.5%;
+            padding: 16px;
+            background: #C29773;
+
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .third-table-row {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 42.5%;
+            padding: 16px;
+            background-color: #fff;
+
+            color: #000;
+            text-align: center;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-bottom: 2px solid #D2D2D2;
+        }
+
+
+        .column-start {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 15%;
+
+
+            background: #fff;
+            color: #191C38;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 16px;
+        }
+
+
+        .column-def {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 42.5%;
+            padding: 16px;
+            background-color: #fff;
+
+            color: #191C38;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .first-table {
+            border-bottom: 2px solid #D2D2D2;
+        }
+
+        .second-table {
+            border-bottom: 2px solid #C29773;
+            border-right: 2px solid #C29773;
+            border-left: 2px solid #C29773;
+        }
+
+        .third-table {
+            border-bottom: 2px solid #D2D2D2;
+        }
+    }
+
+    .table-row:last-child {
+        .first-table {
+            border-bottom: 2px solid #D2D2D2;
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .table {
+        padding: 0px 16px 0px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        padding: 0px 16px;
+
+        .table-row {
+
+            .first-table-row {
+                font-size: 14px;
+            }
+
+            .second-table-row {
+                font-size: 14px;
+            }
+
+            .third-table-row {
+                font-size: 14px;
+            }
+
+
+
+            .column-start {
+                height: 120px;
+
+                font-size: 14px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .column-def {
+                height: 120px;
+                font-size: 12px;
+            }
+
+            .first-table {
+                div {
+                    transform: rotate(270deg);
+                }
+            }
+
+            .second-table {}
+
+            .third-table {}
+        }
+
+        .table-row:last-child {
+            .first-table {}
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .table {
+        padding: 0px 16px;
+
+        .table-row {
+
+            .first-table-row {
+                padding-left: 10px;
+            }
+
+        }
+    }
+}

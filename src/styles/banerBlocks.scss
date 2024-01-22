@@ -1,0 +1,98 @@
+.guide-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    padding: 0px 64px 0px 64px;
+
+    .guide-block {
+        display: flex;
+        background: #FFF;
+        width: 100%;
+        padding: 24px;
+        gap: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+
+        div:first-child {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            color: #B3B3B3;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Helvetica;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        div:last-child {
+            color: #717171;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: HelveticaRegular, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        >svg {
+            position: absolute;
+            right: 0px;
+
+            top: 0px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .guide-blocks {
+        padding: 0px 16px;
+        gap: 8px;
+
+        .guide-block {
+            padding: 16px;
+            gap: 16px;
+
+            div:first-child {
+                font-size: 16px;
+            }
+
+            div:last-child {
+                font-size: 14px;
+            }
+
+            >svg {}
+        }
+    }
+}
+
+@media (max-width: 876px) {
+    .guide-blocks {
+        padding: 0px 0px;
+        gap: 8px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(40%, 2fr));
+
+        .guide-block {
+            padding: 16px;
+            gap: 16px;
+
+            div:first-child {
+                font-size: 16px;
+            }
+
+            div:last-child {
+                font-size: 14px;
+            }
+
+            >svg {}
+        }
+    }
+}

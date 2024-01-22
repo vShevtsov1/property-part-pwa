@@ -1,4 +1,4 @@
-import "../styles/floorPlan.css"
+import "../styles/floorPlan.scss"
 import floorplan from "../assets/floorPlan.png"
 const FloorPlan = ({plan,type}) => {
     function formatNumberWithCommas(value) {
@@ -9,10 +9,12 @@ const FloorPlan = ({plan,type}) => {
             <div className="image-container"><img src={plan.imgSrc}/></div>
         <div className="plan-info">
             <div className="price-info">
-                <div>from ${formatNumberWithCommas(plan.price)}</div>
+                <div>
+                    <div>Price from </div>
+                    <div>${formatNumberWithCommas(plan.price)}</div>
+                </div>
                 <div>{plan.size} sq.ft</div>
             </div>
-            <div className="type-info">{type} {type!="Studio"&&"BD"}</div>
         </div>
     </div>)
 }

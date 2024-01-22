@@ -1,14 +1,25 @@
 import Modal from "react-modal";
 import ceo from "../assets/teams/alex-logachev-min.jpg"
-import "../styles/contactUsModal.css"
+import "../styles/contactUsModal.scss"
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 const PDFmodal = ({closeModal,showModal,type}) => {
     const types = {
-        "rent":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF-5+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2+%D0%B4%D0%BB%D1%8F+%D0%90%D1%80%D0%B5%D0%BD%D0%B4%D1%8B.pdf",
-        "family":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF-5+%D1%80%D0%B0%D0%B8%CC%86%D0%BE%D0%BD%D0%BE%D0%B2+%D0%B4%D0%BB%D1%8F+%D1%81%D0%B5%D0%BC%D0%B5%D0%B8%CC%86.pdf",
-        "vila":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF-5+%D0%92%D0%B8%D0%BB%D0%BB.pdf",
-        "resale":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2+%D0%B4%D0%BB%D1%8F+%D0%9F%D0%B5%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8.pdf"
+        "rent":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF-5%2B%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%2B%D0%B4%D0%BB%D1%8F%2B%D0%90%D1%80%D0%B5%D0%BD%D0%B4%D1%8B+(3).pdf",
+        "rentUa":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%9E%D0%9F-5+%D0%9E%D0%91'%D0%84%D0%9A%D0%A2%D0%86%D0%92+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%80%D0%B5%D0%BD%D0%B4%D0%B8.pdf",
+        "rentEn":"https://propart-pdfs.s3.me-south-1.amazonaws.com/TOP+5+rental.pdf",
+
+        "family":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF+5+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D1%96%D0%B2+%D0%B4%D0%BB%D1%8F+%D1%81%D1%96%D0%BC%D0%B5%D0%B9.pdf",
+        "familyUa":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF+5+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D1%96%D0%B2+%D0%B4%D0%BB%D1%8F+%D1%81%D1%96%D0%BC%D0%B5%D0%B9.pdf",
+        "familyEn":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF+5+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D1%96%D0%B2+%D0%B4%D0%BB%D1%8F+%D1%81%D1%96%D0%BC%D0%B5%D0%B9.pdf",
+
+        "vila":"https://propart-pdfs.s3.me-south-1.amazonaws.com/Top+5+projects.pdf",
+        "vilaUa":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF-5+%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%96%D0%B2.pdf",
+        "vilaEn":"https://propart-pdfs.s3.me-south-1.amazonaws.com/Top+5+projects.pdf",
+
+        "resale":"https://propart-pdfs.s3.me-south-1.amazonaws.com/PROPERTIES+FOR+RESALE.pdf",
+        "resaleUa":"https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%94%D0%9B%D0%AF+%D0%9F%D0%95%D0%A0%D0%95%D0%9F%D0%A0%D0%9E%D0%94%D0%90%D0%96%D0%A3.pdf",
+        "resaleEn":"https://propart-pdfs.s3.me-south-1.amazonaws.com/PROPERTIES+FOR+RESALE.pdf"
     }
     const {t} = useTranslation();
     function isMobile() {
@@ -32,6 +43,7 @@ const PDFmodal = ({closeModal,showModal,type}) => {
             zIndex: 999
         }
     };
+
     return(<Modal  isOpen={showModal} style={modalStyles} onRequestClose={closeModal}>
         <div className="modal-content">
             <div className="image-container">

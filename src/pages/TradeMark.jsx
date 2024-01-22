@@ -1,6 +1,6 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import "../styles/trademark.scss"
+import "../styles/Pages/trademark.scss"
 import accountaingBaner from "../assets/accounting-main.jpeg";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -26,11 +26,11 @@ import dmitriyKoltsovName from "../assets/teams/dmitriy-koltsov-min.jpg";
 import dmitriyKoltsov from "../assets/teams/qr/dmitriy-koltsov.png";
 import RequestModal from "../components/RequestModal.jsx";
 import ConsulatingBaner from "../components/ConsulatingBaner"
+import NewConsultBaner from "../components/NewConsultBaner"
 
 function TradeMark() {
     const { t } = useTranslation();
     const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 8));
-
     const team = [
         {
             "image": alexLogachevName, "name": "Alex Logachev", "position": "CEO", "qr": qrAlex,
@@ -95,6 +95,7 @@ function TradeMark() {
             }
         },
     ]
+
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState({
         tittleText: "Our expert will reach you out",
@@ -103,147 +104,106 @@ function TradeMark() {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    const RegisteringCard = ({ count, title, description, days }) => {
+        return (
+            <div className="registering-card">
+                <div className="title">
+                    <div>{count}</div>
+                    <div>
+                        {title}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20.5C16.9706 20.5 21 16.4706 21 11.5C21 6.52944 16.9706 2.5 12 2.5C7.02944 2.5 3 6.52944 3 11.5C3 16.4706 7.02944 20.5 12 20.5ZM12 6.75C12.4142 6.75 12.75 7.08579 12.75 7.5V11.1893L15.0303 13.4697C15.3232 13.7626 15.3232 14.2374 15.0303 14.5303C14.7374 14.8232 14.2626 14.8232 13.9697 14.5303L11.4697 12.0303C11.329 11.8897 11.25 11.6989 11.25 11.5V7.5C11.25 7.08579 11.5858 6.75 12 6.75Z" fill="#C29773" />
+                        </svg>
+                    </div>
+                </div>
+                <div className="text">
+                    <div>{description}</div>
+                    <div>{days}</div>
+                </div>
+            </div>
+        )
+    }
     return (
         <div className="trademark-wrapper">
             <Header></Header>
             <div className="trademark-container">
                 <div className="trademark-baner-guide">
-                    <ConsulatingBaner
+                    <NewConsultBaner
                         img={accountaingBaner}
-                        title="Trademark registration"
-                        description={['Assistance in opening a turnkey business in the UAE and its further support. Company registration and obtaining a residence permit, obtaining all permits and certificates, administrative and accounting support.',
-                            '']
-                        }
-                        setShowModal="showModal"
+                        title={t("trade-title")}
+                        description={[t("trade-descr.1"),
+                        t("trade-descr.2")]}
                     />
                 </div>
                 <div className="registering-trademark">
-                    <div className="page-title">Registering a trademark is an important step for business in the UAE </div>
-                    <div>Legislation and trademark registration requirements can be complicated and confusing, so having professional support is a key success factor. Our company offers expert trademark registration services in the UAE to help you protect your brand identity and maximize your competitiveness in the market.</div>
+                    <div className="page-title">{t("name506")}</div>
+                    <div>{t("name507")}</div>
                 </div>
                 <div className="register-cost">
                     <div className="registring">
                         <div className="title">
-                            <div>Registering a trademark is an important step for business in the UAE</div>
+                            <div>{t("name508")}</div>
                         </div>
                         <div className="resolve-container">
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>1</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        1-2 weeks
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>Experience and expertise in the UAE real estate market</div>
-                                </div>
-                            </div>
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>2</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        4-10 weeks
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>COST TRANSPARENCY</div>
-                                </div>
-                            </div>
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>3</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        1 month
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>Publication in the media</div>
-                                </div>
-                            </div>
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>4</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        2 weeks
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>Issue of a trademark certificate</div>
-                                </div>
-                            </div>
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>5</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        2-4 days
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>BUSINESS NETWORKING</div>
-                                </div>
-                            </div>
-                            <div className="resolve-card">
-                                <div className="resolve-title">
-                                    <div>6</div>
-                                    <div>
-                                        <img src={alarm} alt="" />
-                                        7-14 days
-                                    </div>
-                                </div>
-                                <div className="resolve-description">
-                                    <div>Construction consulting</div>
-                                </div>
-                            </div>
+                            <RegisteringCard
+                                count={t('registering-card.1.count')}
+                                title={t('registering-card.1.title')}
+                                description={t('registering-card.1.description')}
+                            />
+                            <RegisteringCard
+                                count={t('registering-card.2.count')}
+                                title={t('registering-card.2.title')}
+                                description={t('registering-card.2.description')}
+                            />
+                            <RegisteringCard
+                                count={t('registering-card.3.count')}
+                                title={t('registering-card.3.title')}
+                                description={t('registering-card.3.description')}
+                            />
                         </div>
                     </div>
                     <div className="cost">
-                        Cost: <span>25,000 AED</span>
+                        {t("name511")}: <span>25,000 AED</span>
                     </div>
                 </div>
                 <div className="interesting-facts">
                     <div className="title">
-                        Interesting facts about the UAE
+                        {t("name512")}
                     </div>
                     <div className="block-fact-container">
-                        <div className="block-fact">
+                        <div className="block-fact-container">
                             <div className="elem">
-                                <div>01</div>
-                                <div>Top 5 best cities in the world</div>
+                                <div>{t('block-fact-container.elem1.number')}</div>
+                                <div>{t('block-fact-container.elem1.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>02</div>
-                                <div>Top 3 safest countries in the world</div>
+                                <div>{t('block-fact-container.elem2.number')}</div>
+                                <div>{t('block-fact-container.elem2.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>03</div>
-                                <div>350 sunny days a yea</div>
+                                <div>{t('block-fact-container.elem3.number')}</div>
+                                <div>{t('block-fact-container.elem3.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>04</div>
-                                <div>Top 5 most visited cities in the world</div>
-                            </div>
-                        </div>
-                        <div className="block-fact">
-                            <div className="elem">
-                                <div>05</div>
-                                <div>Logistics center</div>
+                                <div>{t('block-fact-container.elem4.number')}</div>
+                                <div>{t('block-fact-container.elem4.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>06</div>
-                                <div>Top 1 in terms of money spent by tourists</div>
+                                <div>{t('block-fact-container.elem5.number')}</div>
+                                <div>{t('block-fact-container.elem5.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>07</div>
-                                <div>Dubai Airport Top 5 in terms of passenger traffic (plan Top 1)</div>
+                                <div>{t('block-fact-container.elem6.number')}</div>
+                                <div>{t('block-fact-container.elem6.description')}</div>
                             </div>
                             <div className="elem">
-                                <div>08</div>
-                                <div>Top 6 Medical Tourism Index</div>
+                                <div>{t('block-fact-container.elem7.number')}</div>
+                                <div>{t('block-fact-container.elem7.description')}</div>
+                            </div>
+                            <div className="elem">
+                                <div>{t('block-fact-container.elem8.number')}</div>
+                                <div>{t('block-fact-container.elem8.description')}</div>
                             </div>
                         </div>
                     </div>

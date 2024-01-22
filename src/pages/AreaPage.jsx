@@ -1,6 +1,6 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import "../styles/business.scss"
+import "../styles/Pages/business.scss"
 import arrowLeft from "../assets/arrow-left-fill.svg";
 import share from "../assets/share.svg";
 import GetConsult from "../components/GetConsult";
@@ -75,37 +75,45 @@ function AreaPage() {
     const { id } = useParams();
     console.log(id);
     const [showModal, setShowModal] = useState(false);
+
+    const { t } = useTranslation();
     const pageTexy = {
         "business": {
-            "title": "Business Bay",
-            "titleText": ["Business Bay is a well-known business center and a large area combining commercial, residential and business facilities. Skyscrapers, modern architecture, a concentration of luxury and prestige: everything that is associated with Dubai is located here. Initially, Business Bay was conceived as the world's largest business hub, but the popularity of the area among tourists and residents led to the emergence of a developed residential cluster."],
-            "locationText": ["The Business Bay area has a strategically advantageous location. Covering an area of about 6 square kilometers, it is surrounded on both sides by the famous Dubai Water Canal, and is adjacent to the equally famous central area of Downtown Dubai.",
-                "In its atmosphere and arrangement, the area is reminiscent of New York: the special energy of the place, many attractions in the area, and a developed business environment. And most importantly - excellent transport accessibility. Of all the areas in Dubai, Business Bay arguably has the easiest access to other communities and attractions in the emirate.",
-                "First of all, it has direct access to the largest highway, Sheikh Zayed Road and Al Khail Road, which run through the whole of Dubai. There are metro stations in the area, which make it easier to leave and travel around the city.",
-                "The Business Bay area has an excellent public transport network. There are many bus routes, as well as public water transport: from the nearest piers you can go on an excursion or take a shortcut to the desired location. Marinas for private yachts are also located here."],
-            "infrastructureText": ["Business Bay has a very developed infrastructure. Residents and guests of the city will not have to worry about spending time in everyday life. The area is home to excellent five-star hotels with premium amenities, gourmet restaurants, nightclubs and bars, SPA salons, and gyms.",
-                "According to the plans of the general developer Dubai Properties, a unique Marasi Business Bay project will be built in the area, which will become one of the main attractions. This project is a huge complex with a yacht club, places for recreation and entertainment, and a water station. At the moment, some of the facilities have already been built, and the remaining part is in the final stage of construction.",
-                "Despite the business atmosphere that prevails in the area, Business Bay is suitable for everyone. There are many social infrastructure facilities within walking distance and in the area: kindergartens and schools, universities, medical clinics."],
-            "images": [
-                apart1,
-                apart2,
-                apart3,
+            "title": t("areas-business.title"),
+            "titleText": [
+                t('areas-business.titleText.0'),
             ],
+            "locationText": [
+                t('areas-business.locationText.0'),
+                t('areas-business.locationText.1'),
+                t('areas-business.locationText.2'),
+                t('areas-business.locationText.3')
+            ],
+            "infrastructureText": [
+                t('areas-business.infrastructureText.0'),
+                t('areas-business.infrastructureText.1'),
+                t('areas-business.infrastructureText.2')
+            ],
+            "images": [apart1, apart2, apart3],
             "blocks": [
                 {
-                    "title": "Attractions",
-                    "texts": ["The main attraction of the area itself is the well-maintained embankment of the Dubai Water Canal. It is ideal for leisurely walks, sports or cycling, and spending time with the family. On the embankment there are cafes and restaurants, places for entertainment and recreation.",
-                        "Business Bay is one of the few areas that is surrounded by almost all the attractions that tourists come to Dubai for. Just steps away from the area are Opera Dubai, the famous Burj Khalifa skyscraper, the largest shopping center Dubai Mall and many others. Jumeirah, famous for its beautiful beaches, is just a 10-minute drive away.",
-                        "A landmark of the area is the unique residential complex The Pad, which is the most technologically advanced building in the world. It has a unique and recognizable architecture, attracting many tourists. A famous location is the Souk Al Bahar center - a shopping complex built in the national Arabic style. Not far from the Burj Khalifa tower is a popular musical fountain that captivates with its daily shows."]
+                    "title": t('areas-business.blocks.0.title'),
+                    "texts": [
+                        t('areas-business.blocks.0.texts.0'),
+                        t('areas-business.blocks.0.texts.1'),
+                        t('areas-business.blocks.0.texts.2')
+                    ]
                 },
                 {
-                    "title": "Property in Business Bay",
-                    "texts": ["Business Bay offers investors and buyers a very wide selection of properties. Most of the residential properties have modern architecture and are high-rise buildings. Here you can buy compact and functional studios, premium apartments with 1-4 bedrooms, luxurious duplexes and penthouses, the area of which can be over 1300 square meters.",
-                        "Some residences are rented with built-in appliances and partial furniture. The hotel apartments are completely ready for occupancy. Each residential complex features premium amenities for residents: swimming pools (including luxurious infinity pools with picturesque landscapes), modern gyms, steam rooms and SPA complexes, recreation areas, event facilities, concierge services and much more."]
+                    "title": t('areas-business.blocks.0.title'),
+                    "texts": [
+                        t('areas-business.blocks.1.texts.0'),
+                        t('areas-business.blocks.1.texts.1')
+                    ]
                 },
                 {
-                    "title": "Investment attractiveness",
-                    "texts": ["Business Bay is a premium-class area and a prestigious location, which has a limited territory, which guarantees the profitability of real estate and its growth in price. Investors are increasingly paying attention to Business Bay, since housing here is cheaper than in neighboring Downtown Dubai, but the area has a developed transport network and infrastructure."]
+                    "title": t('areas-business.blocks.2.title'),
+                    "texts": [t('areas-business.blocks.2.texts.0')]
                 }
             ]
         },
@@ -451,7 +459,6 @@ function AreaPage() {
                 }
             ]
         },
-
         "jvc": {
             "title": "JVC",
             "titleText": [
@@ -506,7 +513,6 @@ function AreaPage() {
                 }
             ]
         },
-
         "bluewaters": {
             "title": "Bluewaters",
             "titleText": [
@@ -557,7 +563,6 @@ function AreaPage() {
                 }
             ]
         },
-
         "central-park": {
             "title": "Central Park",
             "titleText": [
@@ -609,7 +614,6 @@ function AreaPage() {
                 }
             ]
         },
-
         "damac-hills": {
             "title": "Damac Hills",
             "titleText": [
@@ -657,7 +661,6 @@ function AreaPage() {
                 }
             ]
         },
-
         "dubai-hills": {
             "title": "Dubai Hills",
             "titleText": [
@@ -722,10 +725,14 @@ function AreaPage() {
         tittleText: "",
         buttonText: ""
     });
-    const { t } = useTranslation();
+
     const closeModal = () => {
         setShowModal(false);
     };
+
+    function copy(text) {
+        navigator.clipboard.writeText(text)
+    }
     return (
         <div className="areas-page-wrapper">
             <Header />
@@ -739,7 +746,7 @@ function AreaPage() {
                             Back
                         </div>
                     </Link>
-                    <div className="share">
+                    <div onClick={() => copy("http://propart.ae/areas")} className="share">
                         <img src={share} alt="" />
                     </div>
                 </div>
@@ -766,7 +773,7 @@ function AreaPage() {
                         </div>
 
                         <div className="block">
-                            <div className="title">Location Features</div>
+                            <div className="title">{t("location-features")}</div>
                             <div className="description">
                                 {locationText.map((text, index) => (
                                     <div className="text" key={index}>
@@ -781,7 +788,7 @@ function AreaPage() {
                         </div>
 
                         <div className="block">
-                            <div className="title">Infrastructure</div>
+                            <div className="title">{t("infrastructure")}</div>
                             <div className="description">
                                 {infrastructureText.map((text, index) => (
                                     <div className="text" key={index}>

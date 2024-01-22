@@ -1,4 +1,4 @@
-import "../styles/footer.css"
+import "../styles/footer.scss"
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 import { useTranslation } from "react-i18next";
@@ -141,21 +141,15 @@ const Footer = () => {
                 <Link to={"/real-estate"}>
                     <div className="menu-option">{t("foot4")}</div>
                 </Link>
+                <Link to={"/areas"}>
+                    <div className="menu-option">{t("header_option4")}</div>
+                </Link>
                 <Link to={"/accounting"}>
                     <div className="menu-option">{t("foot_consulting")}</div>
                 </Link>
                 <Link to={"/concierge"}>
                     <div className="menu-option">{t("foot_concierge")}</div>
                 </Link>
-                <ScrollLink
-                    to="collections"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={1000}
-                >
-                    <div style={{ cursor: "pointer" }} className="menu-option">{t("foot_collection")}</div>
-                </ScrollLink>
             </div>
             <div className="menu">
                 <div className="tittle">{t("foot6")}</div>
@@ -262,21 +256,15 @@ const Footer = () => {
                     <Link to={"/real-estate"}>
                         <div className="menu-option">{t("foot4")}</div>
                     </Link>
+                    <Link to={"/areas"}>
+                        <div className="menu-option">{t("header_option4")}</div>
+                    </Link>
                     <Link to={"/accounting"}>
                         <div className="menu-option">{t("foot_consulting")}</div>
                     </Link>
                     <Link to={"/concierge"}>
                         <div className="menu-option">{t("foot_concierge")}</div>
                     </Link>
-                    <ScrollLink
-                        to="collections"
-                        spy={true}
-                        smooth={true}
-                        offset={50}
-                        duration={1000}
-                    >
-                        <div style={{ cursor: "pointer" }} className="menu-option">{t("foot_collection")}</div>
-                    </ScrollLink>
                 </div>
                 <div className="menu">
                     <div className="tittle">{t("foot6")}</div>
@@ -400,21 +388,15 @@ const Footer = () => {
                     <Link to={"/real-estate"}>
                         <div className="menu-option">{t("foot4")}</div>
                     </Link>
+                    <Link to={"/areas"}>
+                        <div className="menu-option">{t("header_option4")}</div>
+                    </Link>
                     <Link to={"/accounting"}>
                         <div className="menu-option">{t("foot_consulting")}</div>
                     </Link>
                     <Link to={"/concierge"}>
                         <div className="menu-option">{t("foot_concierge")}</div>
                     </Link>
-                    <ScrollLink
-                        to="collections"
-                        spy={true}
-                        smooth={true}
-                        offset={50}
-                        duration={1000}
-                    >
-                        <div style={{ cursor: "pointer" }} className="menu-option">{t("foot_collection")}</div>
-                    </ScrollLink>
                 </div>
                 <div className="menu">
                     <div className="tittle">{t("foot6")}</div>

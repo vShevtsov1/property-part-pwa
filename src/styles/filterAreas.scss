@@ -1,0 +1,95 @@
+.search {
+    padding: 41px 0px 0px 0px;
+
+    .search-content {
+        display: flex;
+        gap: 10px;
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 16px;
+            border: 1px solid #E3E3E3;
+            position: relative;
+
+            background: #FFF;
+
+            input {
+                color: #575757;
+                text-align: left;
+                leading-trim: both;
+                text-edge: cap;
+                font-family: HelveticaRegular, sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 19px;
+
+                width: 90%;
+                background-color: transparent;
+
+                border: 0;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            svg {
+                cursor: pointer;
+            }
+
+            .filter-dropdown-search {
+                position: absolute;
+                background: white;
+                color: white;
+                width: 100%;
+                padding: 8px;
+
+                top: 100%;
+                left: 0;
+                z-index: 100;
+                overflow: auto;
+                max-height: 30vh;
+                flex-direction: column;
+
+                .location-option {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 0px;
+                    color: #000;
+                    font-family: Helvetica, sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 19px;
+                    /* 118.75% */
+                }
+            }
+        }
+
+        .areas-link {
+            display: flex;
+            padding: 12px 16px;
+            align-items: center;
+            flex-shrink: 0;
+            border: 1px solid #E3E3E3;
+            background: #FFF;
+            cursor: pointer;
+
+            color: #000;
+            text-align: center;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+}

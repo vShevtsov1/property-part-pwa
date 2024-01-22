@@ -1,0 +1,314 @@
+.about-agent-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .about-agent-container {
+        background: #F1F1F1;
+        height: 92vh;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 28px 64px 28px 64px;
+            gap: 32px;
+
+            .back-soc {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .back {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 24px 12px 12px;
+
+                    color: #FFF;
+                    font-family: Helvetica;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+
+                    background: #191C38;
+
+
+                    svg {
+                        margin-top: 2px;
+                    }
+                }
+
+                .soc {
+                    display: flex;
+                    gap: 23px;
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .agent-content {
+                display: flex;
+                gap: 12px;
+
+                .broker-img {
+                    flex: 2;
+                    height: 512px;
+
+                    .image {
+                        height: 100%;
+                        background-image: url('../../assets/agentBackground.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        #broker {
+                            height: 100%;
+                        }
+                    }
+                }
+
+
+                .text {
+                    background-color: #fff;
+                    padding: 24px;
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    .name-button {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+
+                        .name {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            div:first-child {
+                                color: #191C38;
+
+                                font-family: HelveticaBold, sans-serif;
+                                font-size: 48px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 120%;
+                                /* 57.6px */
+                            }
+
+                            div:last-child {
+                                color: #575757;
+                                font-family: Helvetica;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%;
+                                /* 21.6px */
+                            }
+                        }
+
+                        .buttons {
+                            display: flex;
+                            gap: 10px;
+
+                            .button {
+                                display: flex;
+                                width: 195px;
+                                padding: 10px 24px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 2px;
+                                background: #C29773;
+
+                                color: #FFF;
+
+                                text-align: center;
+                                font-family: Helvetica;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background: #B78F6D;
+                                }
+                            }
+
+                            .call {
+                                display: flex;
+                                padding: 5px 12px;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 24px;
+
+                                border-radius: 2px;
+                                background: #C29773;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background: #B78F6D;
+                                }
+                            }
+                        }
+
+                        .form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .title {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                div:first-child {
+                                    color: #191C38;
+
+                                    font-family: HelveticaBold, sans-serif;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 120%;
+                                    /* 28.8px */
+                                }
+
+                                div:last-child {
+                                    color: #575757;
+                                    font-family: Helvetica;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: normal;
+                                }
+                            }
+
+                            .form-input {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 16px;
+
+                                .input {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    padding: 16px;
+                                    gap: 24px;
+
+                                    input {
+                                        color: #8F8F8F;
+                                        font-family: Helvetica;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: normal;
+                                        letter-spacing: 0.64px;
+                                        border: 0;
+
+                                        &:active {
+                                            border: 0;
+                                        }
+
+                                        &:focus {
+                                            outline: 0;
+                                        }
+                                    }
+
+                                    div {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+
+                                    background-color: #fff;
+                                    border: 1px solid #CACACA;
+                                }
+
+                                .get-instant-help {
+                                    display: flex;
+                                    padding: 18px 16px 16px 16px;
+                                    justify-content: space-between;
+                                    align-items: center;
+
+                                    color: #FFF;
+                                    font-family: HelveticaBoldm, sans-serif;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: normal;
+
+                                    justify-content: space-between;
+                                    background: #191C38;
+
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background: #21254B;
+                                    }
+
+
+                                    div {
+                                        display: flex;
+                                        padding-bottom: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .guide {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    padding: 16px;
+                    background-image: url('../../assets/aboutAgent.png');
+                    background-repeat: no-repeat;
+                    width: 259px;
+
+                    .title {
+                        display: flex;
+                        justify-content: space-between;
+
+                        svg:last-child {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .guide-text {
+                        display: flex;
+                        flex-direction: column;
+
+                        gap: 8px;
+
+                        div:first-child {
+                            color: #FFF;
+                            font-family: Helvetica;
+                            font-size: 30px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+
+                        div:last-child {
+                            color: #FFF;
+                            font-family: Helvetica;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

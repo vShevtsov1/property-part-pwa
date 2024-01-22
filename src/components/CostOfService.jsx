@@ -1,116 +1,77 @@
 import { useTranslation } from "react-i18next";
 import "../styles/cost-service.scss"
-import checkFill from "../assets/check-fill.png";
+import checkGold from "../assets/registration/check-gold.png";
 
 function CostOfService() {
     const { t } = useTranslation();
+
+    const CostTemp = ({ text }) => {
+        return (
+            <div className="cost-temp">
+                <img src={checkGold} alt="" />
+                {text}
+            </div>
+        )
+    }
+
+    const CostBlock = ({ title, costTempBlocks, priceDolar, priceAED }) => {
+        return (
+            <div className="cost-block">
+                <div className="title">{title}</div>
+                <div className="cost-temp-container">
+                    {costTempBlocks.map((block, index) => (
+                        <CostTemp key={index} text={block.text} />
+                    ))}
+                </div>
+                <div className="price">
+                    <div>From {priceDolar}</div>
+                    <div>(AED {priceAED})</div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="cost-service">
-            <div className="title">
-                <div>{t("name23")}</div>
-                <div>{t("name24")}</div>
-            </div>
-            <div className="setups-container">
-                <div className="setup">
-                    <div className="setup-name">{t("name27")}</div>
-                    <div className="setup-content">
-                        <div className="setup-list">
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name25")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name26")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name28")}
-                            </div>
-                        </div>
-                        <div className="setup-price">
-                            <div>{t("name29")}</div><div>(AED 20,500)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="setup">
-                    <div className="setup-name">{t("name30")}</div>
-                    <div className="setup-content">
-                        <div className="setup-list">
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name31")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name32")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name33")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name39")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name40")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name41")}
-                            </div>
-                        </div>
-                        <div className="setup-price">
-                            <div>{t("name34")}</div><div>(AED 20,500)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="setup">
-                    <div className="setup-name blue">{t("name35")}</div>
-                    <div className="setup-content">
-                        <div className="setup-list">
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name36")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name37")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name38")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name39")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name40")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name41")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name42")}
-                            </div>
-                            <div className="setup-list-elem">
-                                <img src={checkFill} alt="" />
-                                {t("name43")}
-                            </div>
-                        </div>
-                        <div className="setup-price">
-                            <div>{t("name44")}</div><div>(AED 20,500)</div>
-                        </div>
-                    </div>
-                </div>
+            <div className="cost-block-container">
+                <CostBlock
+                    title={t("Company setup")}
+                    costTempBlocks={[
+                        { text: t("Prior authorization") },
+                        { text: t("Rent a virtual office") },
+                        { text: t("Obtaining a license") },
+                    ]}
+                    priceDolar={t("$8,800")}
+                    priceAED={t("32,000")}
+                />
+                <CostBlock
+                    title={t("Company registration + Visa processing")}
+                    costTempBlocks={[
+                        { text: t("Prior authorization") },
+                        { text: t("Rent a virtual office") },
+                        { text: t("Obtaining a license") },
+                        { text: t("Obtaining an immigration card / establishment card") },
+                        { text: t("Obtaining a labor card") },
+                        { text: t("Issuance of investor / partner visa") },
+                    ]}
+                    priceDolar={t("$8,800")}
+                    priceAED={t("32,000")}
+                />
+                <CostBlock
+                    title={t("Company registration + Visa processing + Bank account opening")}
+                    costTempBlocks={[
+                        { text: t("Prior authorization") },
+                        { text: t("Renting a virtual office") },
+                        { text: t("Obtaining a license") },
+                        { text: t("Obtaining an immigration card / establishment card") },
+                        { text: t("Obtaining a labor card") },
+                        { text: t("Investor / partner visa issuance") },
+                        { text: t("KYC walkthrough") },
+                        { text: t("Opening an account with a UAE bank") },
+                    ]}
+                    priceDolar={t("12,500")}
+                    priceAED={t("20,500")}
+                />
             </div>
         </div>
     )

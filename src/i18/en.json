@@ -3,6 +3,9 @@
   "header_option1": "Buy",
   "header_option2": "Consulting",
   "header_option3": "Concierge",
+  "header_option4": "Areas",
+  "header_option5": "About us",
+
   "title_home1": "Your Space, Your Sanctuary",
   "title_home2": "ProPart - Redefining Home Living",
   "home_box1": "15 years of experience",
@@ -22,7 +25,7 @@
   "sel_3": "Villas & Townhouses",
   "proj_3": "5 projects",
   "price_3": "from $2,100,000",
-  "sel_4": "For resale",
+  "sel_4": "Best for resale",
   "proj_4": "6 projects",
   "price_4": "from $150,000",
   "square1": "Why Dubai?",
@@ -284,6 +287,7 @@
   "service_6_description": "Supporting Developers in obtaining all building permits and opening Escrow accounts",
 
   "name1": "Ownership",
+  "name1.1": "Type",
   "name2": "Free Zone",
   "name3": "100% ownership of foreign citizens or legal persons",
   "name4": "Mainland",
@@ -445,7 +449,7 @@
     "transparentDescription": "is in touch and accompanies during the whole process and advises on emerging issues",
     "communityTitle": "Community of entrepreneurs",
     "communityTelegramIcon": "<img src={telegramIcon} alt='' />",
-    "communityDescription": "All our clients get access to a <span> closed Telegram group </span> to exchange experience, useful information and help in doing business in the UAE",
+    "communityDescription": "All our clients get access to a closed Telegram group to exchange experience, useful information and help in doing business in the UAE",
     "hideText": "Hide",
     "showAllText": "Show All",
     "days": "days",
@@ -517,7 +521,7 @@
     "name151": "Top 5 most visited cities in the world",
     "name152": "Logistics center",
     "name153": "Top 1 in terms of money spent by tourists",
-    "name154": "Dubai Airport Top 5 in terms of passenger traffic (plan Top 1)",
+    "name154": "Top 5 in terms of passenger traffic (plan Top 1)",
     "name155": "Top 6 Medical Tourism Index",
  
     "name156": "138 Fortune 500 companies open office in Dubai",
@@ -648,9 +652,13 @@
    "name290": "Employees",
    "name291": "30+",
    "name292": "Company Services for Business Owners",
+  
 
 
-
+   "propart-consult": {
+    "1": "ProPart Consulting",
+    "2": "Companies setup and business support in the UAE. We help international companies to obtain the necessary financial, legal, tax and geopolitical benefits of the UAE jurisdiction."
+   },
 
 
 
@@ -660,43 +668,45 @@
 
    "name293": "UAE Resident Visa Issuance",
    "name294": "Get a Free Consultation",
-   "name295": "Property",
-   "name296": "Investor Visa",
+   "name295": "Property Investor Visa",
+   "name296": "",
    "name297": "Talent Visa",
    "name298": "Business Visa",
    "name299": "Freelance Visa",
    "name300": "Employee Visa",
-   "name301": "We'll Detail Each Option and Assist in Choosing the Most Suitable One. The Residence Permit Process Will Be Made as Comfortable as Possible for You.",
+   "name301": "We'll detail each option and assist in choosing the most suitable one. The residence permit process will be made as comfortable as possible for you",
    "name302": "There Are More Than 10 Residence Permit Programs in the UAE",
-   "name303": "If You Get a Residence Permit Yourself",
+   "name303": "If you get a residence permit yourself",
    "name304": {
-     "1": "2-4 Months",
-     "2": "on Average, the Registration Process Takes"
+     "1": "2-4 months",
+     "2": "on avrage, the registration process takes"
    },
    "name305": {
      "1": "60-80 Hours",
-     "2": "It Is Spent on Studying All Programs and Interacting with Government Agencies."
+     "2": "It is spent on studying all programs and interacting with government agencies."
    },
    "name306": {
      "1": "100%",
-     "2": "You Will Spend Effort and Nerves in the Registration Process"
+     "2": "you will spend effort and nerves in the registration process"
    },
    "name307": "Residence Permit with ProPart Consulting",
    "name308": {
-     "1": "2-6 Weeks",
-     "2": "on Average, the Registration Process Takes"
+     "1": "2-6 weeks",
+     "2": "on average, the registration process takes"
    },
    "name309": {
-     "1": "4 Hours",
-     "2": "You Will Spend for All the Time Getting a Residence Permit. This Is the Time for Communication with Our Team"
+     "1": "4 hours",
+     "2": "you will spend for all the time getting a residence permit. This is the time for communication with our team"
    },
    "name310": {
      "1": "95%",
-     "2": "Our Team Will Take Over the Work and Nerves"
+     "2": "our team will take over the work and nerves"
    },
    "name311": {
      "1": "5%",
-     "2": "It Will Take Your Efforts to Complete the Briefing and Collect the Minimum Package of Documents"},
+     "2": "it will take your efforts to complete the briefing and collect the minimum package of documents"},
+
+    "whatResidence": "What is a residence permit in the UAE and how does it differ from a long-term or work visa",
 
    "name313": "The possibility of crossing borders and being on the territory",
    "name314": "The opportunity to find a job or run a business",
@@ -786,17 +796,17 @@
    "name395": "Or",
    "name396": "13,000 AED",
    "name397": "$1 500",
-   "name398": "7-10 business days",
-   "name399": "The cost is turnkey>>",
+   "name398": "7-10",
+   "name399": "The cost is «turnkey»",
    "name400": "Cost of renewal",
    "name401": "Date of receipt",
    "name402": "Renewal every 5 years",
    "name403": "Requirements for renewal",
    "name404": "Visiting the UAE at least 1 time in 6 months",
    "name405": "In case of violation of the requirements, it will be necessary to go through the receiving process again",
-   "name406": "7,000 AED The cost is turnkey>>",
-   "name407": "$1 500 Cost of renewal",
-   "name408": "4-5 business days",
+   "name406": "7,000 AED ",
+   "name407": "$1 500",
+   "name408": "4-5",
    "name409": "Date of receipt",
    "name410": "availability of a Trade License issued by any Free Zone of Dubai",
    "name411": "the cost of a share in the authorized capital according to the requirements of a specific Free Zone",
@@ -814,8 +824,8 @@
    "name423": "Renewal every 5/10 years",
    "name424": "In case of violation of the requirements, it will be necessary to go through the receiving process again",
    "name425": "10,000 AED",
-   "name426": "The cost is << turnkey>>",
-   "name427": "7-10 business days",
+   "name426": "The cost is «turnkey»",
+   "name427": "7-10",
    "name428": "Date of receipt",
 
    "name429": "Category 2",
@@ -825,21 +835,807 @@
    "name433": "provide an employment contract",
    "name434": "have a registered Labor Card (the employer does)",
    "name435": "7,000 AED",
-   "name436": "The cost is turnkey>>",
+   "name436": "The cost is «turnkey»",
    "name437": "Category 3",
    "name438": "Dependent Visa",
    "name439": "Conditions of receipt:",
    "name440": "Renewal every 3 years",
    "name441": "2 years",
-   "name442": "5-7 bussiness days",
+   "name442": "5-7",
    "name443": "Cost of renewal",
    "name444": "Date of receipt",
    "name445": "$2,500",
    "name446": "$1,000",
    "name447": "The sponsor must have an income of $5,000 per sponsored family member",
-   "name448": "The cost is turnkey>>",
+   "name448": "The cost is «turnkey»",
    "name449": "Cost of renewal",
    "name450": "Renewal every six months",
-   "name451": "4 weeks"
+   "name451": "4 weeks",
+   "business": "business  days",
 
+
+
+
+
+
+
+
+
+
+
+   "name452": "Accounting and Auditing Services in the UAE",
+   "name453": "Building management reporting and handling all administrative matters related to taxes and accounting",
+   "name454": "Leave a request",
+   "name455": "We will submit reports on time and without errors",
+   "name456": "Reports, declarations, contributions, and taxes under control",
+   "name457": "We will process any number of primary documents",
+   "name458": "Let's show which documents are missing and which ones affect taxes",
+   "name459": "We will handle all personnel tasks",
+   "name460": "We will calculate salaries, find jobs, arrange vacations, and submit reports correctly",
+   "name461": "Checking counterparties",
+   "name462": "We check the reliability of counterparties and inform you about risky transactions",
+   "name463": "Why choose us",
+   "name464": "Accounting and VAT support",
+   "name465": "Outsourcing of all personnel issues",
+   "name466": "Management accounting system",
+   "name467": "Quick Turnaround",
+   "name468": "Additional services",
+   "name469": "Legal support",
+   "name470": "Advocacy of interests",
+   "name471": "Your Trusted Legal Support Companion",
+   "name472": "In tax and judicial authorities",
+   "name473": "Registration of a company with the Dubai Municipality and other state bodies for the certification of goods or services and obtaining a permit for operating in the UAE, permits for import, distribution",
+   "name474": "Company registration in Dubai Customs and obtaining a customs number starting from $550 (AED 2000)",
+   "name475": "Starting from $550 (AED 2000)",
+   "name476": "Obtaining visas, employment cards, health insurance, and national identity cards for all employees starting from $3000 (AED 11000)",
+
+   "name477": "Other services",
+   "name478": "Documentation legalization",
+   "name479": "Simplified Documentation Processes",
+   "name480": "Trademark registration, protection",
+   "name481": "Protecting Your Ideas and Brands",
+   "name482": "Business advisory",
+   "name483": "Trusted Business Guidance",
+   "name484": "Attestations at various institutions",
+   "name485": "Effortless Institutional Attestations",
+   "name486": "Drafting legal agreements",
+   "name487": "Precise Legal Agreement Drafting",
+   "name488": "Out-of-court dispute resolution",
+   "name489": "Seamless Dispute Resolution",
+   "name490": "The main services of the company",
+   "name491": "Business setup and structuring in the UAE",
+   "name492": "Services for business owners",
+   "name493": "Tax planning and optimization",
+   "name494": "Support of commercial and operational activities in the UAE",
+   "name495": "22",
+   "name496": "40+",
+   "name497": "30+",
+   "name498": "employees",
+   "name499": "clients",
+   "name500": "Companies we set up in the UAE in a month",
+
+
+  "get-advice": {
+    "1": "Get advice from an expert:",
+    "2": "All about business administration in the UAE",
+    "3": "Choice between FreeZone or Mainland",
+    "4": "Structuring RF-UAE cash flows",
+    "5": "Opening personal and corporate accounts in the UAE",
+    "6": "AML/KYC",
+    "7": "CFC issues",
+    "8": "Exchange of tax information with Russia"
+  },
+
+
+  "comm7": "arreas",
+
+
+  "propart-consult": {
+    "1": "ProPart Consulting",
+    "2": "Companies setup and business support in the UAE. We help international companies to obtain the necessary financial, legal, tax and geopolitical benefits of the UAE jurisdiction."
+   },
+
+   "name501": "When considering investing in real estate in Dubai, it's essential to explore various areas to find the right fit for your investment goals. Dubai offers a diverse range of neighborhoods, each with its unique characteristics and potential for growth.",
+   "name502": "Areas to consider in Dubai",
+
+   "learn-areas": {
+    "1": "Learn about areas in Dubai for the best investment",
+    "2": "We prepared detailed description about different areas of Dubai. Each area of Dubai offers its unique blend of cultural richness, modern amenities, and distinctive lifestyle, catering to a diverse array of preferences and experiences."
+},
+
+    "comm8": "trademark",
+
+    "name503": "Complex business support and Trademark registration",
+    "name504": "Assistance in opening a turnkey business in the UAE and its further support. Company registration and obtaining a residence permit, obtaining all permits and certificates, administrative and accounting support.",
+    "name505": "If you want to protect your intellectual property and establish the rights to your trademark in the UAE, then you are in the right place.",
+
+    "name506": "Registering a trademark is an important step for business in the UAE",
+    "name507": "Legislation and trademark registration requirements can be complicated and confusing, so having professional support is a key success factor. Our company offers expert trademark registration services in the UAE to help you protect your brand identity and maximize your competitiveness in the market.",
+
+
+    "name508": "The process takes 2-5 months",
+
+    "name509": "weeks",
+    "name510": "month",
+    "name511": "cost",
+
+    "name5111": "Experience and expertise in the UAE real estate market",
+    "name5112": "Submission and consideration of an application for trademark registration",
+    "name5113": "Publication in the media",
+    "name5114": "Publication in the media",
+
+    "name512": "Interesting facts about the UAE",
+
+    "name513": "Trademark registration application",
+    "name514": "Sample design of your trademark or brand name (PDF & Image file)",
+    "name515": "Confirmation of payment of the fee",
+    "name516": "Notarial power of attorney",
+    "name517": "License",
+    "name518": "Passport and Emirates ID",
+    "name519": "Contact information",
+    "name520": "List of goods and services subject to protection",
+      "yourNamespace": {
+        "title": {
+          "line1": "Company registration",
+          "line2": "in the UAE, Legal",
+          "line3": "and Accounting Support"
+        }
+      },
+
+      "blocks-freezone": {
+        "block01": "Fully show and explain to the bank the geography of your business",
+        "block02": "We check your funds and verify you're not when you use our bank.",
+        "block03": "We offer a secure platform and ensure your transactions are safe.",
+        "block04": "Ensure your personal information is protected with our robust security measures."
+      },
+
+      "resolveContainer": {
+        "cards": [
+          {
+            "count": "1",
+            "title": "2-4 days",
+            "description": "PROMPT CUSTOMER SERVICE",
+            "days": "Our activity is aimed at timely response to the requests of our Clients, qualitative identification of needs and timely realization of fulfillment of the set tasks."
+          },
+          {
+            "count": "2",
+            "title": "7-14 days",
+            "description": "COST TRANSPARENCY",
+            "days": "We value your trust, so we provide detailed and truthful information on any service or project, in which we show the list and cost of all components, and separately the cost of our work."
+          },
+          {
+            "count": "3",
+            "title": "7-14 days",
+            "description": "SHORT TURNAROUND TIME",
+            "days": "Due to our close proximity and established relationships with government regulators and financial institutions, we have the shortest timeframes for registration, visas, and account opening."
+          },
+          {
+            "count": "4",
+            "title": "21-28 days",
+            "description": "CONCIERGE SERVICE",
+            "days": "With our help, we fully accompany our clients at all stages of service fulfillment."
+          },
+          {
+            "count": "5",
+            "title": "2-4 days",
+            "description": "BUSINESS NETWORKING",
+            "days": "Due to extensive experience in business registration and interaction with a huge number of investors."
+          },
+          {
+            "count": "6",
+            "title": "7-14 days",
+            "description": "Construction consulting",
+            "days": "Supporting Developers in obtaining all building permits and opening Escrow accounts."
+          }
+        ]
+      },
+
+      "100 % ownership of foreign": "100 % ownership of foreign",
+      "citizens or legal": "citizens or legal",
+      "persons": "persons",
+      "100 % ownership of foreign citizens": "100 % ownership of foreign citizens",
+      "or legal entities. Maybe": "or legal entities. Maybe",
+      "Adding a local agent to simplify procedures": "Adding a local agent to simplify procedures",
+      "Activities outside the UAE:": "Activities outside the UAE:",
+      "There are no restrictions within the UAE:": "There are no restrictions within the UAE:",
+      "There are restrictions": "There are restrictions",
+      "9 % income tax starting with": "9 % income tax starting with",
+      "2023r.": "2023r.",
+      "Annual reporting": "Annual reporting",
+      "The cost of employee": "The cost of employee",
+      "egistration is from $ 2.600 per 2 years": "egistration is from $ 2.600 per 2 years",
+      "The regulatory body is Frizona": "The regulatory body is Frizona",
+      "Annually": "Annually",
+
+      "Company setup": "Company setup",
+      "Prior authorization": "Prior authorization",
+      "Rent a virtual office": "Rent a virtual office",
+      "Obtaining a license": "Obtaining a license",
+      "Company registration + Visa processing": "Company registration + Visa processing",
+      "Obtaining an immigration card / establishment card": "Obtaining an immigration card / establishment card",
+      "Obtaining a labor card": "Obtaining a labor card",
+      "Issuance of investor / partner visa": "Issuance of investor / partner visa",
+      "Company registration + Visa processing + Bank account opening": "Company registration + Visa processing + Bank account opening",
+      "Renting a virtual office": "Renting a virtual office",
+      "Investor / partner visa issuance": "Investor / partner visa issuance",
+      "KYC walkthrough": "KYC walkthrough",
+      "Opening an account with a UAE bank": "Opening an account with a UAE bank",
+      "$8,800": "$8,800",
+      "32,000": "32,000",
+      "12,500": "12,500",
+      "20,500": "20,500",
+
+      "Discount 5%": "Discount 5%",
+      "for all accounting services when purchasing the tariff": "for all accounting services when purchasing the tariff",
+      "Basic": "Basic",
+      "Discount 10%": "Discount 10%",
+      "for all accounting services when purchasing a tariff": "for all accounting services when purchasing a tariff",
+      "Advanced": "Advanced",
+      "Accounting support": "Accounting support",
+      "Tariffs for accounting support for companies with more than 50 transactions per year or a turnover of more than $100,000 per year": "Tariffs for accounting support for companies with more than 50 transactions per year or a turnover of more than $100,000 per year",
+      "Silicon Oasis": "Silicon Oasis",
+      "$8,000": "$8,000",
+      "Consulting": "Consulting",
+      "Service sector": "Service sector",
+      "Commerce": "Commerce",
+      "Industry": "Industry",
+      "Real and virtual offices": "Real and virtual offices",
+      "Multi-purpose warehousing and manufacturing": "Multi-purpose warehousing and manufacturing",
+      "10 000": "10 000",
+      "Dubai Silicon Oasis is a free zone, as well as a large business and residential complex in Dubai. This is one of the most attractive places to start a business in the UAE.": "Dubai Silicon Oasis is a free zone, as well as a large business and residential complex in Dubai. This is one of the most attractive places to start a business in the UAE.",
+      "It serves as a technological center for industrial, research and development enterprises.": "It serves as a technological center for industrial, research and development enterprises.",
+      "The price/opportunity ratio is the best in the UAE. Suitable for almost any type of business.": "The price/opportunity ratio is the best in the UAE. Suitable for almost any type of business.",
+      "It is also part of the DIEZ – an association of the 3 largest free economic zones of Dubai (Silicon Oasis, Dubai Airport Free Zone, Dubai Commerce), which allows you to enjoy all the advantages of the Dubai Airport Free Zone and Dubai Commerce zones.": "It is also part of the DIEZ – an association of the 3 largest free economic zones of Dubai (Silicon Oasis, Dubai Airport Free Zone, Dubai Commerce), which allows you to enjoy all the advantages of the Dubai Airport Free Zone and Dubai Commerce zones.",
+
+      "Dubai International Financial Center": "Dubai International Financial Center",
+      "$15,000": "$15,000",
+      "Banking and brokerage services, money management": "Banking and brokerage services, money management",
+      "Capital markets": "Capital markets",
+      "Consulting": "Consulting",
+      "Real and virtual offices": "Real and virtual offices",
+      "Use of British judicial law": "Use of British judicial law",
+      "$300,000": "$300,000",
+      "Dubai International Financial Center (DIFC) stands as a preeminent financial hub in the Middle East, South Asia, Africa, and South Asia, distinguished by its private legislation and an independent judicial system.": "Dubai International Financial Center (DIFC) stands as a preeminent financial hub in the Middle East, South Asia, Africa, and South Asia, distinguished by its private legislation and an independent judicial system.",
+      "Within this zone, the transparency of an open register of shareholders and the integration of British law within its judicial framework create an ideal environment for establishing holding structures.": "Within this zone, the transparency of an open register of shareholders and the integration of British law within its judicial framework create an ideal environment for establishing holding structures.",
+      "Moreover, DIFC's unwavering dedication to innovation and state-of-the-art technological infrastructure further enhances its appeal to businesses seeking a competitive edge in the global financial landscape.": "Moreover, DIFC's unwavering dedication to innovation and state-of-the-art technological infrastructure further enhances its appeal to businesses seeking a competitive edge in the global financial landscape.",
+
+      "MeydanFreeZone": "Meydan Free Zone",
+      "$10,000": "$10,000",
+      "Consulting": "Consulting",
+      "Service sector": "Service sector",
+      "Commerce": "Commerce",
+      "Real and virtual offices": "Real and virtual offices",
+      "There is a residential complex on the territory of the zone": "There is a residential complex on the territory of the zone",
+      "$100,000": "$100,000",
+      "A modern economic free zone in the heart of Dubai, Meydan is located near the most important sights of the emirate, which gives investors a number of strategic advantages.": "A modern economic free zone in the heart of Dubai, Meydan is located near the most important sights of the emirate, which gives investors a number of strategic advantages.",
+      "It offers open office space and fully serviced offices accommodating all types of businesses, including commercial, consulting, investment and administrative companies, as well as a selection of elite residences. The free zone also has a 5-star": "It offers open office space and fully serviced offices accommodating all types of businesses, including commercial, consulting, investment and administrative companies, as well as a selection of elite residences. The free zone also has a 5-star",
+
+      "20companies": "Over 20 companies",
+      "openedAndRegisteredMonthly": "opened and registered monthly",
+      "over90percent": "Over 90%",
+      "largestFreeZonesAccredited": "of the largest free zones accredited",
+      "companySupport": "Company support",
+      "moreThan100ClientsTrustUs": "More than 100 clients trust us",
+
+      "weProvide": "We provide",
+      "accessToDatabase": "access to a database of reliable counterparties in the UAE that will help you solve your problems in the following areas",
+      "block-visa.1": "Property Investor Visa",
+      "block-visa.2": "Talent Visa",
+      "block-visa.3": "Start-up Visa",
+      "block-visa.4": "Business Visa",
+      "employee-visa": "Employee Visa",
+
+      "detail.1": "We'll detail each option and assist in choosing the most suitable one.",
+      "detail.2": "There are more than 10 residence permit programs in the UAE",
+      "visa-title": "If you get a residence permit yourself",
+
+      "residencePermit": "What is a residence permit in the UAE",
+      "differFromVisa": "and does it differ from a long-term or work visa",
+
+      "type": "Type",
+
+      "gccCountries": "In GCC countries (Saudi Arabia, Kuwait, UAE)",
+      "cardTitle": {
+        "economicDevelopment": "Economic development",
+        "highlyPaidAcademic": "You are a highly paid academic in sectors of the economy and own a property worth more than 750,000 AED"
+      },
+      "buttons": {
+        "goldenVisa": "Golden Visa",
+        "retirementVisa": "Retirement Visa",
+        "partnerInvestorVisa": "Partner/Investor Visa"
+      },
+
+      "cards": [
+        {
+          "title": {
+            "question": "Are you working",
+            "description": "You are employed and have an employment contract with an employer or are a self-employed freelancer with a high level of income"
+          },
+          "buttons": [
+            {
+              "text": "Employee Visa"
+            },
+            {
+              "text": "Remote Visa"
+            },
+            {
+              "text": "Freelance Visa"
+            }
+          ]
+        },
+        {
+          "title": {
+            "question": "Supported relative permit",
+            "description": "In the United Arab Emirates (UAE), having a close relative who is a resident can bring about both exciting opportunities and certain considerations that may need to be addressed. Whether it's related to residency, employment, legal rights, or understanding the various processes involved."
+          },
+          "buttons": [
+            {
+              "text": "Dependent Visa"
+            }
+          ]
+        },
+        {
+          "title": {
+            "question": "Other",
+            "description": "Being a student studying in the United Arab Emirates (UAE) opens up a world of opportunities, offering a rich cultural experience and top-tier educational facilities. Navigating the landscape of higher education in a new country can, however."
+          },
+          "buttons": [
+            {
+              "text": "Student Visa"
+            },
+            {
+              "text": "Medical Visa"
+            }
+          ]
+        }
+      ],
+
+      "partnerVisa": "Partner Visa",
+    "conditionsReceipt": "Conditions of receipt:",
+    "companyCapital": "25% from total company capital",
+    "shareValue": "the value of the share in the authorized capital is not less than 72,000 AED",
+    "tradeLicense": "availability of a Trade License issued by Dubai Economic Department",
+    "founderCondition": "You are the founder of a company in the UAE",
+    "orLabel": "or",
+    "zoneRequirements": "the cost of a share in the authorized capital according to the requirements of a specific Free Zone",
+
+    "visitRequirement": "Visiting the UAE at least 1 time in 6 months",
+    "violationNote": "In case of violation of the requirements, it will be necessary to go through the receiving process again",
+    "price": {
+      "aedBlock": {
+        "amount": "7,000 AED",
+        "description": "«Turnkey»"
+      },
+      "dolBlock": {
+        "amount": "$1,500",
+        "description": "Renewal"
+      },
+      "daysBlock": {
+        "duration": "4-5",
+        "businessDays": "business days",
+        "description": "Receipt"
+      }
+    },
+
+    "partnerVisaRetirement": {
+      "title": "Partner Visa",
+      "retirementVisa": "Retirement Visa"
+    },
+    "conditions": {
+      "title": "Conditions of Receipt",
+      "deposit": "Deposit in a UAE bank/brokerage company",
+      "realEstate": "Personal or commercial real estate",
+      "investments": "Investments from 2 million AED (~$650,000)",
+      "ageExperience": "Age over 55 years or work experience in the UAE over 15 years"
+    },
+    "retirementVisa": "Retirement Visa",
+
+    "visitingRequirement": "Visiting Requirement",
+    "fees": {
+      "turnkey": "«Turnkey»",
+      "duration": "7-10",
+      "businessDays": "business days",
+      "receipt": "Receipt",
+      "amount": "10,000 AED"
+    },
+
+    "residencePermitExtension": "The procedure for extending the residence permit is reduced only to the repeated payment of the state fee and is done remotely.",
+    "residencePermitViolationWarning": "Violating UAE laws or failing to comply with the requirements for each type of residence permit can have serious consequences.",
+    "visaBanerTitle": "UAE resident visa issuance",
+  
+    "visaBanerDescription": "We open a company remotely and prepare for the launch of operational activities",
+    "setUpLocalCompanyTitle": "Set up of a local company",
+    "setUpLocalCompanySubtitle": "in the UAE",
+
+    "openCompanyAndPrepare": "We open a company remotely and prepare for the launch of operational activities",
+
+    "main-land-blocks": {
+      "01": "Fully show and explain to the bank the geography of your business",
+
+      "02": "We check your funds and verify you're not when you use our bank.",
+    
+   
+      "03": "Your funds are checked and we make sure that you are not the one using our bank.",
+    
+      "04": "Our bank's app is easy to use. You can easily manage your accounts, check your balance, and perform transactions."
+  },
+
+  "the-main-services": {
+    "title": "The main services of the company",
+    "blocks": [
+      {
+        "title": "Business setup and structuring in the UAE",
+        "description": "Fully show and explain to the bank the geography of your business"
+      },
+      {
+        "title": "Support of activities in the UAE",
+        "description": "We check your funds and verify you're not when you use our bank."
+      },
+      {
+        "title": "Tax planning and optimization",
+        "description": "Your funds are checked and we make sure that you are not the one using our bank."
+      },
+      {
+        "title": "Services for business owners",
+        "description": "Our bank's app is easy to use. You can easily manage your accounts, check your balance, and perform transactions."
+      }
+    ]
+  },
+
+  "statistics": {
+    "clients": {
+      "number": "200+",
+      "text": "Clients"
+    },
+    "employees": {
+      "number": "22",
+      "text": "Employees"
+    },
+    "companies": {
+      "number": "30+",
+      "text": "Companies services for business owners"
+    }
+  },
+
+  "employment-land-blocks": {
+    "01": "Document preparation for any employee position",
+    "02": "Guidance through all employment stages",
+    "03": "Rapid residence permit acquisition. Residence obtained in 2-3 weeks",
+    "04": "Clarifying rights and obligations for employees and employers in the UAE"
+  },
+
+  "employment-banner": "Employment of employees in the UAE and obtaining a residence permit",
+  "employment-descr": "Registration of employees in a company registered in the Mainland or Free Zone",
+
+  "verification": {
+    "title": "Verification of company documents",
+    "content": "Before the start of the process, our team will check whether the company has all the documents and grounds for the employment of employees."
+  },
+  "result": {
+    "day": "1 day",
+    "description": [
+      "The result of the step",
+      "Your company will have a package of all necessary documents and will be ready to hire employees."
+    ],
+    "term": [
+      "Step term",
+      "1-2 working days, if no additional documents or procedures are required."
+    ]
+  },
+
+  "step1": {
+    "title": "2",
+    "description": {
+      "main": "Collecting information and documents for an employee",
+      "details": "At this stage, we will send a complete list of documents for each employee, based on what position you want to hire an employee for."
+    },
+    "content": {
+      "day": "1 day",
+      "results": "Your future employee has a full package of documents and is ready for employment.",
+      "term": "1-2 working days, if no additional documents are required, which the employee needs to prepare for the selected position."
+    }
+  },
+  "step2": {
+    "title": "3",
+    "description": {
+      "main": "Employee employment process",
+      "details": "At this stage, we will determine where the employee is located and, based on this, how the document submission process will take place."
+    },
+    "content": {
+      "day": "1 day",
+      "results": "Your future employee has a full package of documents and is ready for employment.",
+      "term": "10-14 working days before receiving all necessary documents including Emirates ID*"
+    }
+  },
+  "step3": {
+    "title": "4",
+    "description": {
+      "main": "Receiving documents",
+      "details": "At this stage, the employee receives the entire package of documents that are necessary for work and residence in the UAE."
+    },
+    "content": {
+      "day": "1 day",
+      "results": "Your employee has received all the documents, including the Emirates ID card, and is officially employed by the company.",
+      "term": "10-14 working days before receiving all necessary documents including Emirates ID*"
+    }
+  },
+  "registration is from $ 2.600 by 2 years": "registration is from $ 2.600 for 2 years",
+  "registration is from $ 2.600 per 2 years": "registration is from $ 2.600 for 2 years",
+
+  "9 % income tax starting from": "9 % income tax starting from",
+
+  "the-regulatory": {
+    "1": "The regulatory body is the",
+    "2": "Economic Department of the Emirate in",
+    "3": "which is registered"
+  },
+
+  "page-title-accompany": "We accompany you at every stage",
+    "page-description-accompany": "In the case of Free Zone, the registrar and the supervisory authority are loyal private companies that manage free zones. In the case of Mainland, the registering and controlling body is a state structure – the economic department of the relevant emirate. In this regard, doing business on the Mainland is subject to much more control and regulation.",
+
+
+    "accounting-land-blocks": {
+      "1": "Reports, declarations, contributions and taxes under control",
+
+      "2": "Let's show which documents are missing, and which ones affect tax.",
+   
+      "3": "We will calculate, find a job, arrange a vacation and reports correctly",
+    
+      "4": "We check the counterparties for reliability, about risky transactions"
+  },
+
+  "accounting-title": "Accounting and auditing services in the UAE",
+  "accounting-description": "Building management reporting and all administrative issues related to taxes and accounting",
+
+  "why-us":"why us",
+
+  "dubai-registration-mastery": {
+    "title": "Dubai Registration Mastery",
+    "description": "Registration of a company with the Dubai Municipality and other state bodies",
+    "price": {
+      "usd": "from $550",
+      "aed": "AED 2000"
+    }
+  },
+  "employee-legalization-express": {
+    "title": "Employee Legalization Express",
+    "description": "Obtaining visas, employment cards, health insurance, and national identity cards for all employees",
+    "price": {
+      "usd": "from $3000",
+      "aed": "AED 11000"
+    }
+  },
+  "customs-compliance-galore": {
+    "title": "Customs Compliance Galore",
+    "description": "Company registration in Dubai customs and obtaining a customs number",
+    "price": {
+      "usd": "from $550",
+      "aed": "AED 2000"
+    }
+  },
+
+  "documentationLegalization": "Documentation legalization",
+  "simplifiedDocumentationProcesses": "Simplified Documentation Processes",
+
+  "trademarkRegistrationProtection": "Trademark registration protection",
+    "protectingYourIdeasAndBrands": "Protecting Your Ideas and Brands",
+    "businessAdvisory": "Business Advisory",
+
+    "trustedBusinessGuidance": "Trusted Business Guidance",
+    "attestationsVariousInstitutions": "Attestations Various Institutions",
+
+    "effortlessInstitutionalAttestations": "Effortless Institutional Attestations",
+    "draftingLegalAgreements": "Drafting Legal Agreements",
+    
+    "outOfCourtDisputeResolution": "Out-of-Court Dispute Resolution",
+    "seamlessDisputeResolution": "Seamless Dispute Resolution",
+
+
+    "bank-account-title": {
+      "title": {
+        "1": "Bank account opening",
+        "2": "in the UAE"
+      },
+      "description": "Our job is to prove to the banks your legitimacy and transparency of your funds. Since we know how the banking system works in the UAE, we show and convince the bank the following with full confidence and step by step:"
+    },
+
+    "bank-account-block1": "Fully show and explain to the bank the geography of your business",
+    "bank-account-block2": "We check your funds and verify you're not when you use our bank.",
+    "bank-account-block3": "You do not do business or have ties to sanctioned companies the world.",
+    "bank-account-block4": "You're financially independent globally.",
+
+    "personal-manager": {
+      "title": "Personal Manager",
+      "description": "Is in touch and accompanies during the whole process and advises on emerging issues"
+    },
+
+      "transparent-pricing": {
+        "title": "Transparent Pricing",
+        "description": "of the cost of setup actions and license price"
+    },
+
+    "trade-title": "Complex business support and Trademark registration",
+
+    "trade-descr": {
+      "1": "Assistance in opening a turnkey business in the UAE and its further support.Company registration and obtaining a residence permit, obtaining all permits and certificates, administrative and accounting support.",
+      "2": "If you want to protect your intellectual property and establish the rights to your trademark in the UAE, then you are in the right place."
+    },
+
+    "registering-card": {
+      "1": {
+        "count": "1",
+        "title": "2-4 days",
+        "description": "Experience and expertise in the UAE real estate market"
+      },
+      "2": {
+        "count": "2",
+        "title": "4-10 weeks",
+        "description": "Filing trademark application for consideration"
+      },
+      "3": {
+        "count": "3",
+        "title": "3",
+        "description": "Publication in a reputable media outlet"
+      }
+    },
+
+    "block-fact-container": {
+      "elem1": {
+        "number": "01",
+        "description": "Trademark registration application"
+      },
+      "elem2": {
+        "number": "02",
+        "description": "Sample design of your trademark or brand name"
+      },
+      "elem3": {
+        "number": "03",
+        "description": "Confirmation of payment of the fee"
+      },
+      "elem4": {
+        "number": "04",
+        "description": "Notarial power of attorney"
+      },
+      "elem5": {
+        "number": "05",
+        "description": "License"
+      },
+      "elem6": {
+        "number": "06",
+        "description": "Passport and Emirates ID"
+      },
+      "elem7": {
+        "number": "07",
+        "description": "Contact information"
+      },
+      "elem8": {
+        "number": "08",
+        "description": "List of goods and services"
+      }
+    },
+
+    "about-us": {
+      "text": "A premier real estate agency based in the vibrant heart of Dubai.",
+      "since-inception": {
+        "title": "Since our inception in 2024",
+        "description": {
+          "1": "We have been committed to delivering exceptional real estate experiences to our clients.",
+          "2": "Our journey began with a simple yet profound vision: to redefine the standards of real estate brokerage in one of the world's most dynamic property markets.",
+          "3": "Our mission is rooted in the belief that every real estate transaction is not just a transaction but a stepping stone towards someone's dream. Whether it's helping families find their perfect home or assisting investors in making strategic property investments, we are dedicated to making every experience seamless and memorable."
+        }
+      }
+    },
+
+    "trust-section": {
+      "title": "Your trusted partner in Dubai",
+      "description": "We are a premier real estate agency based in the vibrant heart of Dubai. Since our inception, we have been committed to delivering exceptional experiences to our clients. Our journey began with a simple and profound vision: to redefine the standards of real estate brokerage in one of the world's most dynamic property markets."
+    },
+    "propart-section": {
+      "title": "At ProPart",
+      "description": "We pride ourselves on our deep understanding of the unique Dubai real estate market. Our team of seasoned professionals is adept at navigating its complexities, ensuring that our clients make informed and profitable decisions. Our values of integrity, transparency, and excellence are at the core of everything we do, guiding us in building lasting relationships with our clients."
+    },
+
+    "company_registration": "Company registration",
+    "company_registration_description": "Efficient and professional company registration services",
+    "bank_account": "Bank account",
+    "bank_account_description": "Open a corporate bank account effortlessly",
+    "attorney_power": "Attorney power",
+    "attorney_power_description": "Legal support for your business needs",
+    "resident_visa": "Resident Visa",
+    "resident_visa_description": "Resident Visa",
+    "accounting": "Accounting",
+    "accounting_description": "Professional financial management services",
+    "trademark_registration": "Trademark registration",
+    "trademark_registration_description": "Protect your brand in the UAE market",
+    "mainland": "Mainland",
+    "mainland_description": "Navigating business regulations in the UAE mainland",
+    "uae_employment": "UAE employment",
+    "uae_employment_description": "Hire skilled professionals for your business",
+
+    "propart_intro_line1": "PROPART - stands as a beacon of trust and expertise in the real estate sector.",
+  "propart_intro_line2": "We are not just selling properties; we are crafting homes and building futures in Dubai's ever-growing skyline.",
+
+  "personalized_approach_title": "What sets us apart is our personalized approach",
+  "personalized_approach_text": "We recognize that each client has unique needs and aspirations, and we go above and beyond to cater to these individual requirements. Our extensive portfolio showcases a wide range of properties across Dubai, from luxurious villas to state-of-the-art apartments, catering to a diverse clientele. In a city known for its architectural wonders and innovative developments",
+
+
+  "infrastructure": "Infrastructure",
+  "location-features": "Location Features",
+
+
+  "areas-business": {
+    "title": "Business Bay",
+    "titleText": ["Business Bay is a well-known business center and a large area combining commercial, residential and business facilities. Skyscrapers, modern architecture, a concentration of luxury and prestige: everything that is associated with Dubai is located here. Initially, Business Bay was conceived as the world's largest business hub, but the popularity of the area among tourists and residents led to the emergence of a developed residential cluster."],
+    "locationText": ["The Business Bay area has a strategically advantageous location. Covering an area of about 6 square kilometers, it is surrounded on both sides by the famous Dubai Water Canal, and is adjacent to the equally famous central area of Downtown Dubai.",
+        "In its atmosphere and arrangement, the area is reminiscent of New York: the special energy of the place, many attractions in the area, and a developed business environment. And most importantly - excellent transport accessibility. Of all the areas in Dubai, Business Bay arguably has the easiest access to other communities and attractions in the emirate.",
+        "First of all, it has direct access to the largest highway, Sheikh Zayed Road and Al Khail Road, which run through the whole of Dubai. There are metro stations in the area, which make it easier to leave and travel around the city.",
+        "The Business Bay area has an excellent public transport network. There are many bus routes, as well as public water transport: from the nearest piers you can go on an excursion or take a shortcut to the desired location. Marinas for private yachts are also located here."],
+    "infrastructureText": ["Business Bay has a very developed infrastructure. Residents and guests of the city will not have to worry about spending time in everyday life. The area is home to excellent five-star hotels with premium amenities, gourmet restaurants, nightclubs and bars, SPA salons, and gyms.",
+        "According to the plans of the general developer Dubai Properties, a unique Marasi Business Bay project will be built in the area, which will become one of the main attractions. This project is a huge complex with a yacht club, places for recreation and entertainment, and a water station. At the moment, some of the facilities have already been built, and the remaining part is in the final stage of construction.",
+        "Despite the business atmosphere that prevails in the area, Business Bay is suitable for everyone. There are many social infrastructure facilities within walking distance and in the area: kindergartens and schools, universities, medical clinics."],
+    "images": [
+        "apart1",
+        "apart2",
+        "apart3"
+    ],
+    "blocks": [
+        {
+            "title": "Attractions",
+            "texts": ["The main attraction of the area itself is the well-maintained embankment of the Dubai Water Canal. It is ideal for leisurely walks, sports or cycling, and spending time with the family. On the embankment there are cafes and restaurants, places for entertainment and recreation.",
+                "Business Bay is one of the few areas that is surrounded by almost all the attractions that tourists come to Dubai for. Just steps away from the area are Opera Dubai, the famous Burj Khalifa skyscraper, the largest shopping center Dubai Mall and many others. Jumeirah, famous for its beautiful beaches, is just a 10-minute drive away.",
+                "A landmark of the area is the unique residential complex The Pad, which is the most technologically advanced building in the world. It has a unique and recognizable architecture, attracting many tourists. A famous location is the Souk Al Bahar center - a shopping complex built in the national Arabic style. Not far from the Burj Khalifa tower is a popular musical fountain that captivates with its daily shows."]
+        },
+        {
+            "title": "Property in Business Bay",
+            "texts": ["Business Bay offers investors and buyers a very wide selection of properties. Most of the residential properties have modern architecture and are high-rise buildings. Here you can buy compact and functional studios, premium apartments with 1-4 bedrooms, luxurious duplexes and penthouses, the area of which can be over 1300 square meters.",
+                "Some residences are rented with built-in appliances and partial furniture. The hotel apartments are completely ready for occupancy. Each residential complex features premium amenities for residents: swimming pools (including luxurious infinity pools with picturesque landscapes), modern gyms, steam rooms and SPA complexes, recreation areas, event facilities, concierge services and much more."]
+        },
+        {
+            "title": "Investment attractiveness",
+            "texts": ["Business Bay is a premium-class area and a prestigious location, which has a limited territory, which guarantees the profitability of real estate and its growth in price. Investors are increasingly paying attention to Business Bay, since housing here is cheaper than in neighboring Downtown Dubai, but the area has a developed transport network and infrastructure."]
+        }
+    ]
+},
+
+  "palm": {
+    "title": "Palm Jumeirah",
+    "titleText": ["The Palm Jumeirah is an artificial island in Dubai, shaped like a palm tree and located off the coast of the city. It is one of the most iconic and recognizable landmarks in Dubai, known for its luxurious properties and stunning views of the Arabian Gulf.",
+      "The Palm Jumeirah was developed by Nakheel Properties, one of Dubai’s largest property developers, and was completed in 2006. "],
+    "locationText":
+    ["Location: Palm Jumeirah is a man-made island located off the coast of Dubai, United Arab Emirates, in the Persian Gulf.",
+      "Size: The island is shaped like a palm tree and spans over 5 square kilometers, making it one of the largest man-made islands in the world.",
+      "Architecture: Palm Jumeirah is known for its impressive architecture, featuring high-end luxury hotels, apartments, and villas, many of which offer stunning views of the sea and the city skyline.",
+      "Attractions: The island offers a range of attractions and entertainment options, including beaches, water sports, shopping malls, and theme parks like Aquaventure Waterpark.",
+      "Architecture: Palm Jumeirah is known for its impressive architecture, featuring high-end luxury hotels, apartments, and villas, many of which offer stunning views of the sea and the city skyline.",
+      "Landmarks: Palm Jumeirah is home to several iconic landmarks, including the Atlantis, The Palm hotel and resort, and the Palm Jumeirah Monorail."
+    ],
+    "infrastructureText": ["The Palm Jumeirah offers a wide range of amenities for residents, including supermarkets, restaurants, cafes, and retail outlets. The Palm Jumeirah Boardwalk, which is a popular destination for residents and visitors, is lined with a variety of restaurants and cafes.",
+      "There are several schools in and around the Palm Jumeirah, including the Dubai British School, the American School of Dubai, and the Wellington International School.",
+      "Healthcare facilities on the Palm Jumeirah include the Al Das Medical Clinic and the Al Das Medical Centre. There are also several hospitals and medical centers located in nearby areas such as Dubai Marina and Dubai Media City.",
+      "The Palm Jumeirah offers a wide range of amenities for residents, including supermarkets, restaurants, cafes, and retail outlets. ",
+      "The Palm Jumeirah Boardwalk, which is a popular destination for residents and visitors, is lined with a variety of restaurants and cafes."],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": ["The Palm Jumeirah is home to several notable landmarks, including the Atlantis, The Palm hotel, which features a waterpark, aquarium, and several restaurants and bars. The Palm Jumeirah also has several parks and green spaces, including Al Ittihad Park, which features a playground, jogging track, and a variety of plants and trees.",
+          "There are also plenty of outdoor activities available on The Palm Jumeirah, including water sports such as jet skiing, parasailing, and wakeboarding. The Palm Jumeirah Boardwalk is a popular spot for walking, jogging, and cycling, with stunning views of the Dubai skyline and the Arabian Gulf. Other nearby attractions include the Dubai Marina, Ski Dubai at Mall of the Emirates, and the Dubai Miracle Garden.",
+          "The Palm Jumeirah offers a wide range of outdoor activities, fitness options, and beauty services to residents and visitors. There are several gyms and fitness centers located on the island, including Fitness First and Fairmont The Palm’s Willow Stream Spa & Fitness Center. There are also plenty of opportunities for outdoor activities, such as walking or cycling."]
+      },
+      {
+        "title": "Property in Business Bay",
+        "texts": ["The Palm Jumeirah is situated near several other communities in Dubai, including Dubai Marina, Jumeirah Beach Residence, and Al Sufouh. Dubai Marina is just a short drive away and offers a similar lifestyle to The Palm Jumeirah, with luxury apartments, high-end shopping, and dining options. Jumeirah Beach Residence is another beachfront community that is popular with residents and visitors. Al Sufouh is located to the south of The Palm Jumeirah and is primarily a residential area. ",
+          "The Palm Jumeirah is well-connected to the rest of Dubai via Sheikh Zayed Road, which runs parallel to the island. Public transportation options include buses and taxis, and there are plans to build a monorail system that will connect The Palm Jumeirah to the Dubai Metro."]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": ["The Palm Jumeirah is one of Dubai’s most prestigious and sought-after residential areas, offering a luxurious beachfront lifestyle with stunning views and top-notch amenities. While the cost of living and real estate prices are high, the area offers a unique and unparalleled experience that is highly desirable to many. The Palm Jumeirah is a great place to live for those who can afford it and want to experience the best of what Dubai has to offer."]
+      }
+    ]
+  },
+
+
+  "rent": "rentEn",
+  "family": "familyEn",
+  "vila": "vilaEn",
+  "resale": "resaleEn"
 }

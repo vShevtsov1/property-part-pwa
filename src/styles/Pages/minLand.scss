@@ -1,0 +1,814 @@
+.minland-wrapper {
+    .minland-container {
+        display: flex;
+        flex-direction: column;
+
+        .minland-baner-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .page-title {
+            color: #191C38;
+            font-family: HelveticaBold, sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            /* 38.4px */
+        }
+
+        .process-of-setuping {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            padding: 32px 64px 12px 64px;
+        }
+
+        .table-box {
+            padding: 12px 0px 32px 0px;
+        }
+
+        .accompany {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px 64px 64px 64px;
+
+            .title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+
+            }
+
+            .accompany-blocks-container {
+                display: flex;
+                flex-direction: column;
+
+                gap: 24px;
+
+                .list-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .list-title {
+                        color: #191C38;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .list-upper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        .list-elem {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            color: #000;
+                            leading-trim: both;
+                            text-edge: cap;
+                            font-family: HelveticaLight, sans-serif;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+
+                    .list-lower {
+                        display: flex;
+                        gap: 24px;
+
+                        .list-elem {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            color: #000;
+                            leading-trim: both;
+                            text-edge: cap;
+                            font-family: HelveticaLight, sans-serif;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+                .accompany-block {
+                    display: flex;
+
+                    .left-content {
+                        padding: 24px;
+                        background-color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 36px;
+                        width: 50%;
+
+                        .stage-title {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+
+                            div:first-child {
+                                color: #5E5E5E;
+                                font-family: HelveticaRegular, sans-serif;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            div:last-child {
+                                color: #191C38;
+                                font-family: HelveticaBold, sans-serif;
+                                font-size: 28px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%;
+                                /* 33.6px */
+                            }
+                        }
+
+                        .accompany-paragraph {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+
+                            .underline {
+                                text-decoration-line: underline;
+                            }
+
+                            .big-description {
+                                font-size: 20px;
+                            }
+
+                            div:first-child {
+                                color: #191C38;
+                                font-family: HelveticaBold, sans-serif;
+                                font-size: 22px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            div:last-child {
+                                color: #000;
+                                font-family: HelveticaLight, sans-serif;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                        }
+                    }
+
+                    .right-content {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fff;
+                        padding: 24px;
+                        justify-content: space-between;
+                        width: 50%;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+
+        .cost-of-service-box {
+            padding: 32px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .cost-of-service-title {
+                padding: 0px 64px;
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+                color: #191C38;
+            }
+        }
+
+        .the-main-services {
+            padding: 32px 64px 8px 64px;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                background-color: #fff;
+                gap: 24px;
+
+                .title {
+                    color: #000;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .content-blocks {
+                    display: flex;
+                    gap: 16px;
+
+                    .block {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 48px;
+                        background: #F1F1F1;
+                        padding: 16px;
+                        position: relative;
+                        flex: 1;
+
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 24px;
+
+                            div:first-child {
+                                color: #191C38;
+                                leading-trim: both;
+                                text-edge: cap;
+                                font-family: HelveticaBold, sans-serif;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: -0.48px;
+                            }
+
+                            div:last-child {
+                                color: #717171;
+                                font-family: HelveticaRegular, sans-serif;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .statistic {
+            display: flex;
+            padding: 8px 64px 64px 64px;
+
+            .content {
+                display: flex;
+                gap: 16px;
+                width: 100%;
+
+                .statistic-block {
+                    position: relative;
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    background-color: #fff;
+                    padding: 16px;
+                    gap: 16px;
+
+                    .img-number {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        color: #191C38;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: HelveticaBold, sans-serif;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: -0.64px;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                    }
+
+                    .text {
+                        color: #717171;
+                        font-family: Helvetica;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: -0.32px;
+                    }
+                }
+
+            }
+        }
+
+
+        .page-description {
+            color: #717171;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .minland-wrapper {
+        .minland-container {
+            .minland-baner-guide {
+                .guide-blocks {
+                    padding: 0px 16px;
+                    gap: 8px;
+
+                    .guide-block {
+                        font-size: 18px;
+                        padding: 16px;
+
+                        line-height: 30px;
+
+                        div:first-child {
+                            font-size: 22px;
+                        }
+
+                        div:last-child {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .page-title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+
+            .process-of-setuping {
+                padding: 36px 16px 16px 16px;
+
+                div:first-child {
+                    /* ... */
+                }
+
+                div:last-child {
+                    /* ... */
+                }
+            }
+
+            .accompany {
+                gap: 24px;
+                padding: 16px 16px 32px 16px;
+
+                .title {}
+
+                .accompany-blocks-container {
+
+                    .list-container {
+
+                        .list-title {
+                            font-size: 18px;
+                        }
+
+                        .list-upper {
+
+                            .list-elem {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .list-lower {
+
+                            .list-elem {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .accompany-block {
+
+                        .left-content {
+
+
+                            .stage-title {
+
+
+                                div:first-child {
+                                    font-size: 14px;
+                                }
+
+                                div:last-child {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .accompany-paragraph {
+                                .underline {
+                                    text-decoration: none;
+                                }
+
+                                .big-description {
+                                    font-size: 18px;
+                                }
+
+                                div:first-child {
+                                    color: #191C38;
+                                    font-size: 18px;
+                                }
+
+                                div:last-child {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .right-content {
+                            gap: 24px;
+                        }
+                    }
+                }
+            }
+
+            .cost-of-service-box {
+                padding: 32px 0px 16px 0px;
+                gap: 16px;
+
+                .cost-of-service-title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    padding: 0px 16px;
+                }
+            }
+
+            .cost-service {
+                padding: 0px 16px 0px 16px;
+                gap: 24px;
+
+                .title {
+
+                    div:last-child {
+                        font-size: 18px;
+                    }
+                }
+
+                .setups-container {
+
+
+                    .setup {
+
+                        .setup-name {
+                            font-size: 22px;
+                        }
+
+                        .setup-content {
+                            padding: 16px;
+
+                            .setup-list {
+
+                                .setup-list-elem {}
+
+                            }
+
+                            .setup-price {
+
+                                div:first-child {
+                                    font-size: 18px;
+                                }
+
+                                div:last-child {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .blue {
+                            background: #191C38 !important;
+                        }
+                    }
+                }
+
+            }
+
+            .the-main-services {
+                padding: 16px 16px;
+            }
+
+            .statistic {
+                padding: 16px 16px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 786px) {
+    .minland-wrapper {
+        .minland-container {
+            .minland-baner-guide {
+
+                .guide-blocks {
+                    padding: 0px !important;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 7px;
+
+                    .guide-block {
+                        flex: 1;
+
+                        font-size: 16px;
+                        min-width: 170px;
+
+                        div:first-child {
+                            font-size: 22px;
+                        }
+
+                        div:last-child {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .page-title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            .table-box {
+                padding: 16px 0px 16px 0px;
+            }
+
+            .process-of-setuping {
+                padding: 24px 16px 16px 16px;
+                gap: 12px;
+
+                div:first-child {
+                    font-size: 24px;
+                }
+
+                div:last-child {
+                    font-size: 14px;
+                }
+            }
+
+            .accompany {
+                gap: 24px;
+                padding: 16px 16px 32px 16px;
+
+                .title {}
+
+                .accompany-blocks-container {
+
+                    .list-container {
+
+                        .list-title {
+                            font-size: 18px;
+                        }
+
+                        .list-upper {
+
+                            .list-elem {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .list-lower {
+                            flex-direction: column;
+
+                            .list-elem {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .accompany-block {
+
+                        flex-direction: column;
+
+                        .left-content {
+                            width: 100%;
+
+                            .stage-title {
+
+
+                                div:first-child {
+                                    font-size: 14px;
+                                }
+
+                                div:last-child {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .accompany-paragraph {
+                                .underline {
+                                    text-decoration: none;
+                                }
+
+                                .big-description {
+                                    font-size: 18px;
+                                }
+
+                                div:first-child {
+                                    color: #191C38;
+                                    font-size: 18px;
+                                }
+
+                                div:last-child {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .right-content {
+                            width: 100%;
+                            gap: 24px;
+                        }
+                    }
+                }
+            }
+
+            .cost-of-service-box {
+                padding: 32px 0px 16px 0px;
+                gap: 16px;
+
+                .cost-of-service-title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    padding: 0px 16px;
+                }
+            }
+
+            .cost-service {
+                padding: 0px 16px 0px 16px;
+                gap: 24px;
+
+                .title {
+
+                    div:last-child {
+                        font-size: 18px;
+                    }
+                }
+
+                .setups-container {
+
+
+                    .setup {
+
+                        .setup-name {
+                            font-size: 22px;
+                        }
+
+                        .setup-content {
+                            padding: 16px;
+
+                            .setup-list {
+
+                                .setup-list-elem {}
+
+                            }
+
+                            .setup-price {
+
+                                div:first-child {
+                                    font-size: 18px;
+                                }
+
+                                div:last-child {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .blue {
+                            background: #191C38 !important;
+                        }
+                    }
+                }
+
+            }
+
+            .the-main-services {
+                padding: 16px 0px 4px 0px;
+
+                .content {
+                    padding: 16px;
+
+                    .title {
+                        font-size: 22px;
+                    }
+
+                    .content-blocks {
+                        flex-wrap: wrap;
+                        gap: 8px;
+
+
+
+                        .block {
+                            min-width: calc(50% - 4px);
+
+                            .text {
+                                gap: 8px;
+
+                                div:first-child {
+                                    font-size: 16px;
+                                }
+
+                                div:last-child {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .statistic {
+                padding: 4px 0px 32px 0px;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+
+                    gap: 8px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .minland-wrapper {
+        .minland-container {
+            .minland-baner-guide {
+                gap: 40px;
+
+                .guide-blocks {
+                    padding: 16px 16px 16px 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 7px;
+
+                    .guide-block {
+                        flex: 1;
+                        font-size: 16px;
+                        min-width: 170px;
+
+                        div:first-child {
+                            font-size: 22px;
+                        }
+
+                        div:last-child {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}

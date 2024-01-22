@@ -8,10 +8,10 @@ import RealEstate from '../pages/RealEstate';
 
 
 
-const Marker = ({ index, mapZoom, project }) => {
-    const [infowindowOpen, setInfowindowOpen] = useState(false);
+const Marker = ({ index, mapZoom, project, currnetIndex, setCurrentIndex }) => {
     const [markerRef, marker] = useAdvancedMarkerRef();
     const elementRef = useRef(null);
+
 
     function convertPriceToShortFormat(price) {
         price = (Number(price) / 3.16).toFixed(0).toString()
@@ -35,7 +35,13 @@ const Marker = ({ index, mapZoom, project }) => {
                 style={{ pointerEvents: 'auto' }}
                 position={{ lat: Number(project.lat), lng: Number(project.lng) }}
                 title={'AdvancedMarker that opens an Infowindow when clicked.'}
-                onClick={() => setInfowindowOpen(true)}
+                onClick={() => {
+                    if (currnetIndex === index) {
+                        setCurrentIndex(null)
+                    } else {
+                        setCurrentIndex(index)
+                    }
+                }}
             >
                 <div
                     style={{ borderRadius: mapZoom < 13 ? 20 : 5, padding: mapZoom < 13 ? 7 : 0 }}>
@@ -44,15 +50,19 @@ const Marker = ({ index, mapZoom, project }) => {
                     </div>
                 </div>
             </AdvancedMarker >
-            {infowindowOpen && (
+            {currnetIndex === index && (
                 <InfoWindow
                     anchor={marker}
                     maxWidth={200}
                 >
-                    This is an example for the{' '}
-                    <code style={{ whiteSpace: 'nowrap' }}>&lt;AdvancedMarker /&gt;</code>{' '}
-                    combined with an Infowindow.
-                </InfoWindow>
+                    <div className="pop-container" onClick={() => window.location.href = `/project/${project._id}`}>
+                        <img src={project.imageSrcMain} alt="" />
+                        <div className="pop-content">
+                            <div>{project.projectName}</div>
+                            <div>{project.developer}</div>
+                        </div>
+                    </div>
+                </InfoWindow >
             )}
         </>
     );

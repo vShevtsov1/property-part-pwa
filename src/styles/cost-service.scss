@@ -1,157 +1,107 @@
 .cost-service {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    padding: 0px 64px;
 
-    padding: 128px 64px 32px 64px;
-
-    .title {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        div:first-child {
-            color: #191C38;
-            font-family: HelveticaBold, sans-serif;
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-        }
-
-        div:last-child {
-            color: #191C38;
-            font-family: Helvetica;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-        }
-    }
-
-    .setups-container {
+    .cost-block-container {
         display: flex;
         flex-direction: column;
         gap: 24px;
 
-        .setup {
+        .cost-block {
             display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 24px;
+            background-color: #fff;
 
-            .setup-name {
-                display: flex;
-                align-items: flex-end;
-                padding: 24px;
-                background: #C29773;
-                width: 23%;
-
-                color: #FFF;
-                font-family: Helvetica;
-                font-size: 32px;
+            .title {
+                color: #191C38;
+                font-family: HelveticaBold, sans-serif;
+                font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+
             }
 
-            .setup-content {
+            .cost-temp-container {
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
                 gap: 16px;
-                padding: 24px;
-                background: #FFF;
-                flex: 1;
 
-                .setup-list {
+                .cost-temp {
                     display: flex;
-                    flex-direction: column;
-                    gap: 16px;
+                    padding: 16px;
+                    gap: 10px;
+                    align-items: center;
 
-                    .setup-list-elem {
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-
-                        color: #000;
-                        font-family: Helvetica;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                    }
-
-                }
-
-                .setup-price {
-                    display: flex;
-                    gap: 16px;
-                    align-items: flex-end;
-
-                    div:first-child {
-                        color: #000;
-                        font-family: HelveticaBold, sans-serif;
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                    }
-
-                    div:last-child {
-                        color: #000;
-                        font-family: Helvetica;
-                        font-size: 18px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                    }
+                    color: #191C38;
+                    font-family: Helvetica;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    background: #F1F1F1;
                 }
             }
 
-            .blue {
-                background: #191C38 !important;
+            .price {
+                display: flex;
+                gap: 16px;
+                align-items: flex-end;
+
+                div:first-child {
+                    color: #191C38;
+                    font-family: HelveticaBold, sans-serif;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                div:last-child {
+                    color: #C29773;
+                    font-family: Helvetica;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
             }
         }
     }
-
 }
 
 @media (max-width: 1300px) {
     .cost-service {
-        padding: 64px 16px 32px 16px;
-        gap: 24px;
+        padding: 0px 16px;
 
-        .title {
-            div:first-child {
-                font-size: 32px;
-            }
+        .cost-block-container {
+            gap: 8px;
 
-            div:last-child {
-                font-size: 18px;
-            }
-        }
+            .cost-block {
+                gap: 16px;
+                padding: 16px;
 
-        .setups-container {
-            gap: 16px;
-
-            .setup {
-                .setup-name {
-                    padding: 16px;
-                    font-size: 22px;
+                .title {
+                    font-size: 16px;
                 }
 
-                .setup-content {
-                    padding: 16px;
+                .cost-temp-container {
 
-                    .setup-list {
-                        .setup-list-elem {}
+                    .cost-temp {
+                        font-size: 14px;
+                    }
+                }
+
+                .price {
+                    div:first-child {
+                        font-size: 16px;
                     }
 
-                    .setup-price {
-                        div:first-child {
-                            font-size: 18px;
-                        }
-
-                        div:last-child {
-                            font-size: 16px;
-                        }
+                    div:last-child {
+                        font-size: 14px;
                     }
                 }
             }
@@ -161,6 +111,6 @@
 
 @media (max-width: 768px) {
     .cost-service {
-        display: none;
+        padding: 0px;
     }
 }
