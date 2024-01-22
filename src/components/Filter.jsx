@@ -3,15 +3,10 @@ import { useTranslation } from "react-i18next";
 import locations from "../data/Location.jsx";
 import { useState } from "react";
 
-const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
+const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
     const { t } = useTranslation();
     const [visibleSearch, setVisibleSearch] = useState(false);
-    const [filterData, setFilterData] = useState({
-        "search": "",
-        "searchVisible": locations,
-        priceValues: { "from": "", "to": "" },
-        sizeValues: { "from": "", "to": "" }
-    })
+
 
     const [visibleDropDowns, setVisibleDropDowns] = useState({
         "price": false,
@@ -22,7 +17,8 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
         "propertyType": false
     })
 
-    const { values }= useState([
+    const bedroomOptions = ["Studio", "1", "2", "3", "4", "5", "6", "7"];
+    const  values =[
         {"value": "Al Barari", "label": "Al Barari"},
         {"value": "Al Barsha 1", "label": "Al Barsha 1"},
         {"value": "Al Barsha 2", "label": "Al Barsha 2"},
@@ -121,31 +117,71 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
         {"value": "Villanova", "label": "Villanova"},
         {"value": "Wadi Al Safa 5", "label": "Wadi Al Safa 5"},
         {"value": "YAS Island", "label": "YAS Island"}
-    ]);
+    ];
+    const completionOptions =["Ready","Any","Off-Plan"]
+    const typeOptions = ["Plots"," Town house","Villa","Apartments"]
 
-    function handleFindChange(event) {
-        const inputValue = event.target.value;
-
-        if (inputValue.length !== 0) {
-            setVisibleSearch(true)
-            const filteredList = locations.filter((location) =>
-                location.label.toLowerCase().startsWith(inputValue.toLowerCase())
-            );
-            setFilterDataProjects(prevState => ({
-                ...prevState,
-                searchVisible: filteredList,
-            }));
-        } else {
-            setVisibleSearch(false)
-            setFilterDataProjects(prevState => ({
-                ...prevState,
-                searchVisible: locations
-            }));
-        }
+    const handleSearchChange = (value) => {
         setFilterDataProjects(prevState => ({
             ...prevState,
-            search: inputValue
+            search: value
         }));
+    }
+    const handlePriceFromChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            priceValues: {
+                ...prevState.priceValues,
+                from: value
+            }
+        }));
+    }
+
+    const handlePriceToChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            priceValues: {
+                ...prevState.priceValues,
+                to: value
+            }
+        }));
+    }
+
+    const handleSizeFromChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            sizeValues: {
+                ...prevState.sizeValues,
+                from: value
+            }
+        }));
+    }
+
+    const handleSizeToChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            sizeValues: {
+                ...prevState.sizeValues,
+                to: value
+            }
+        }));
+    }
+
+    const handleItemChange = (propertyName, selectedItem) => {
+        setFilterDataProjects(prevState => {
+            const existingItems = prevState[propertyName];
+
+            const itemExists = existingItems.includes(selectedItem);
+
+            const updatedItems = itemExists
+                ? existingItems.filter(item => item !== selectedItem)
+                : [...existingItems, selectedItem];
+
+            return {
+                ...prevState,
+                [propertyName]: updatedItems
+            };
+        });
     }
 
 
@@ -156,24 +192,8 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
                     d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#09121F" />
             </svg>
 
-            <input placeholder={"Search on map..."} value={filtrDataProjects.search} onChange={handleFindChange} type="text" />
-            {visibleSearch && <div className="filter-dropdown-search">
-                {filtrDataProjects.searchVisible.map((location, index) => (
-                    <div key={index}>
-                        <div onClick={() => {
-                            setFilterData(prevState => ({
-                                ...prevState,
-                                search: location.value
-                            }));
-                            setVisibleSearch(false)
-                        }} className="location-option">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M18.364 17.3639L12 23.7279L5.636 17.3639C4.37734 16.1052 3.52019 14.5016 3.17293 12.7558C2.82567 11.0099 3.00391 9.20035 3.6851 7.55582C4.36629 5.91129 5.51984 4.50569 6.99988 3.51677C8.47992 2.52784 10.22 2 12 2C13.78 2 15.5201 2.52784 17.0001 3.51677C18.4802 4.50569 19.6337 5.91129 20.3149 7.55582C20.9961 9.20035 21.1743 11.0099 20.8271 12.7558C20.4798 14.5016 19.6227 16.1052 18.364 17.3639ZM12 12.9999C12.5304 12.9999 13.0391 12.7892 13.4142 12.4141C13.7893 12.0391 14 11.5304 14 10.9999C14 10.4695 13.7893 9.96078 13.4142 9.58571C13.0391 9.21064 12.5304 8.99992 12 8.99992C11.4696 8.99992 10.9609 9.21064 10.5858 9.58571C10.2107 9.96078 10 10.4695 10 10.9999C10 11.5304 10.2107 12.0391 10.5858 12.4141C10.9609 12.7892 11.4696 12.9999 12 12.9999Z" fill="#909090" />
-                            </svg> {location.label}
-                        </div>
-                    </div>
-                ))}
-            </div>}
+            <input value={filterDataProjects.search} onChange={(e)=>handleSearchChange(e.target.value)} placeholder={"Search on map..."}  type="text" />
+
         </div>
 
         <div className="dropdown" onMouseEnter={() => {
@@ -197,22 +217,10 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
             </div>
 
             {visibleDropDowns.price && <div className="additional-menu">
-                <input value={filterData.priceValues.from}
-                    onChange={(e) => setFilterData(prevState => ({
-                        ...prevState,
-                        priceValues: {
-                            ...prevState.priceValues,
-                            from: e.target.value
-                        }
-                    }))} placeholder={"From"} />
-                <input value={filterData.priceValues.to} placeholder={"To"}
-                    onChange={(e) => setFilterData(prevState => ({
-                        ...prevState,
-                        priceValues: {
-                            ...prevState.priceValues,
-                            to: e.target.value
-                        }
-                    }))}
+                <input value={filterDataProjects.priceValues.from} onChange={(e)=>handlePriceFromChange(e.target.value)}
+                    placeholder={"From"} />
+                <input value={filterDataProjects.priceValues.to} onChange={(e)=>handlePriceToChange(e.target.value)}  placeholder={"To"}
+
                 />
             </div>}
         </div>
@@ -238,22 +246,10 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
             </div>
 
             {visibleDropDowns.size && <div className="additional-menu">
-                <input value={filterData.sizeValues.from}
-                       onChange={(e) => setFilterData(prevState => ({
-                           ...prevState,
-                           sizeValues: {
-                               ...prevState.sizeValues,
-                               from: e.target.value
-                           }
-                       }))} placeholder={"From"} />
-                <input value={filterData.sizeValues.to} placeholder={"To"}
-                       onChange={(e) => setFilterData(prevState => ({
-                           ...prevState,
-                           sizeValues: {
-                               ...prevState.sizeValues,
-                               to: e.target.value
-                           }
-                       }))}
+                <input value={filterDataProjects.sizeValues.from} onChange={e=>handleSizeFromChange(e.target.value)}
+                       placeholder={"From"} />
+                <input value={filterDataProjects.sizeValues.to} onChange={e=>handleSizeToChange(e.target.value)} placeholder={"To"}
+
                 />
             </div>}
         </div>
@@ -279,186 +275,25 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
             </div>
 
             {visibleDropDowns.bedrooms && <div className="additional-list">
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    Studio
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    1
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    2
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    3
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    4
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    5
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    6
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    7
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    8
-                </div>
+                {
+                    bedroomOptions.map((option, index) => (
+                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("bedrooms",option)}>
+                            <div>
+                                {filterDataProjects.bedrooms.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
+                                    </svg>:
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                    </svg>
+                                }
+                            </div>
+                            {option}
+                        </div>
+                    ))
+                }
+
+
+
             </div>}
         </div>
 
@@ -482,31 +317,24 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
                 </svg>
             </div>
 
-            {/*{visibleDropDowns.location && <div className="additional-list location">*/}
-            {/*    {values.map((value, index) => (*/}
-            {/*        <div key={index} className='dropdown-option'>*/}
-            {/*            <div>*/}
-            {/*                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"*/}
-            {/*                     fill="none">*/}
-            {/*                    <g clip-path="url(#clip0_329_1748)">*/}
-            {/*                        <path*/}
-            {/*                            d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"*/}
-            {/*                                fill="#B6B6B6"/>*/}
-            {/*                            <path*/}
-            {/*                                d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"*/}
-            {/*                                fill="#B6B6B6"/>*/}
-            {/*                        </g>*/}
-            {/*                        <defs>*/}
-            {/*                            <clipPath id="clip0_329_1748">*/}
-            {/*                                <rect width="24" height="24" fill="white"/>*/}
-            {/*                            </clipPath>*/}
-            {/*                        </defs>*/}
-            {/*                    </svg>*/}
-            {/*                </div>*/}
-            {/*                {value.label}*/}
-            {/*            </div>*/}
-            {/*        ))}*/}
-            {/*</div>}*/}
+            {visibleDropDowns.location && <div className="additional-list location">
+                {values.map((value, index) => (
+                    <div key={index} className='dropdown-option' onClick={()=>handleItemChange("location",value.value)}>
+                        <div>
+                            {filterDataProjects.location.includes(value.value)?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
+                                </svg>
+                                :<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                </svg>
+                            }
+
+                            </div>
+                            {value.label}
+                        </div>
+                    ))}
+            </div>}
         </div>
 
         <div className="dropdown" onMouseEnter={() => {
@@ -530,69 +358,22 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
             </div>
 
             {visibleDropDowns.completion && <div className="additional-list">
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    ready
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    off plan
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    any
-                </div>
+                {
+                    completionOptions.map((option, index) => (
+                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("completion",option)}>
+                            <div>
+                                {filterDataProjects.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
+                                    </svg>:
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                    </svg>
+                                }
+                            </div>
+                            {option}
+                        </div>
+                    ))
+                }
             </div>}
         </div>
 
@@ -617,90 +398,22 @@ const Filter = ({ filtrDataProjects, setFilterDataProjects }) => {
             </div>
 
             {visibleDropDowns.propertyType && <div className="additional-list">
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    Apartments
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    Villa
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    Town house
-                </div>
-                <div className='dropdown-option'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none">
-                            <g clip-path="url(#clip0_329_1748)">
-                                <path
-                                    d="M10 3C10 3.78105 10 4.21895 10 5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10Z"
-                                    fill="#B6B6B6"/>
-                                <path
-                                    d="M19 14H21V3.99984C21 3.73462 20.8946 3.48027 20.7071 3.29273C20.5196 3.1052 20.2652 2.99984 20 2.99984L10 3C10 3.78105 10 4.21895 10 5H19V14Z"
-                                    fill="#B6B6B6"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_329_1748">
-                                    <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    Plots
-                </div>
+                {
+                    typeOptions.map((option, index) => (
+                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("propertyType",option)}>
+                            <div>
+                                {filterDataProjects.propertyType.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
+                                    </svg>:
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                    </svg>
+                                }
+                            </div>
+                            {option}
+                        </div>
+                    ))
+                }
             </div>
             }
         </div>

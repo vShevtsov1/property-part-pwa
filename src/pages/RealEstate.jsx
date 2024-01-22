@@ -152,7 +152,7 @@ const RealEstate = () => {
         }));
     }
 
-    const [filtrDataProjects, setFilterDataProjects] = useState({
+    const [filterDataProjects, setFilterDataProjects] = useState({
         search: "",
         priceValues: { from: "", to: "" },
         sizeValues: { from: "", to: "" },
@@ -161,11 +161,88 @@ const RealEstate = () => {
         completion: [],
         propertyType: []
     })
-
+    const [filteredProjects, setFilteredProjects] = useState([]);
 
     useEffect(() => {
+        if(projects!=null){
+            const filteredList = projects.filter((project) => {
+                const projectNameMatches = project.projectName.toLowerCase().startsWith(filterDataProjects.search.toLowerCase());
 
-    }, [filtrDataProjects]);
+                const isPriceInRange = () => {
+                    if (!filterDataProjects.priceValues.from && !filterDataProjects.priceValues.to) {
+                        return true;
+                    }
+
+                    const projectPrice = parseFloat(project.priceFrom);
+
+                    const minPrice = filterDataProjects.priceValues.from
+                        ? parseFloat(filterDataProjects.priceValues.from)
+                        : Number.NEGATIVE_INFINITY;
+
+                    const maxPrice = filterDataProjects.priceValues.to
+                        ? parseFloat(filterDataProjects.priceValues.to)
+                        : Number.POSITIVE_INFINITY;
+
+                    return projectPrice >= minPrice && projectPrice <= maxPrice;
+                };
+
+                const isSizeInRange = () => {
+                    if (!filterDataProjects.sizeValues.from && !filterDataProjects.sizeValues.to) {
+                        return true;
+                    }
+
+                    const projectSize = parseFloat(project.sizeFrom);
+
+                    const minSize = filterDataProjects.sizeValues.from
+                        ? parseFloat(filterDataProjects.sizeValues.from)
+                        : Number.NEGATIVE_INFINITY;
+
+                    const maxSize = filterDataProjects.sizeValues.to
+                        ? parseFloat(filterDataProjects.sizeValues.to)
+                        : Number.POSITIVE_INFINITY;
+
+                    return projectSize >= minSize && projectSize <= maxSize;
+                };
+
+                const isBedroomsMatch = () => {
+                    if (filterDataProjects.bedrooms.length === 0) {
+                        return true;
+                    }
+
+                    return filterDataProjects.bedrooms.includes(project.selectedBedrooms);
+                };
+
+                const isLocationMatch = () => {
+                    if (filterDataProjects.location.length === 0) {
+                        return true;
+                    }
+
+                    return filterDataProjects.location.includes(project.selectedLocation);
+                };
+
+                const isCompletionMatch = () => {
+                    if (filterDataProjects.completion.length === 0) {
+                        return true;
+                    }
+
+                    return filterDataProjects.completion.includes(project.selectedStatus);
+                };
+
+                const isPropertyTypeMatch = () => {
+                    if (filterDataProjects.propertyType.length === 0) {
+                        return true;
+                    }
+
+                    return filterDataProjects.propertyType.includes(project.selectedProperty);
+                };
+
+                return projectNameMatches && isPriceInRange() && isSizeInRange() && isBedroomsMatch() && isLocationMatch() && isCompletionMatch() && isPropertyTypeMatch();
+            });
+
+            setFilteredProjects(filteredList);
+        }
+
+    }, [filterDataProjects,projects,setFilterDataProjects]);
 
     console.log(projects)
 
@@ -177,7 +254,7 @@ const RealEstate = () => {
         <div className={"real-estate"}>
             <Header />
             <Filter
-                filtrDataProjects={filtrDataProjects}
+                filterDataProjects={filterDataProjects}
                 setFilterDataProjects={setFilterDataProjects}
             />
 
@@ -222,7 +299,7 @@ const RealEstate = () => {
                     </div>
                     <div className="projects">
                         {
-                            projects.slice(0, projectPerView).map((project, index) => (
+                            filteredProjects.slice(0, projectPerView).map((project, index) => (
                                 <Project project={project} key={index} />
                             ))
                         }
