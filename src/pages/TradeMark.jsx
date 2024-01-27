@@ -95,7 +95,6 @@ function TradeMark() {
             }
         },
     ]
-
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState({
         tittleText: "Our expert will reach you out",
@@ -137,8 +136,10 @@ function TradeMark() {
                     />
                 </div>
                 <div className="registering-trademark">
-                    <div className="page-title">{t("name506")}</div>
-                    <div>{t("name507")}</div>
+                    <div className="content">
+                        <div className="page-title">{t("name506")}</div>
+                        <div>{t("name507")}</div>
+                    </div>
                 </div>
                 <div className="register-cost">
                     <div className="registring">

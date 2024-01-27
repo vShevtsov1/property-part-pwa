@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
             <div>{t("foot2")}</div>
         </div>
-        <div className="menu-wrapper">
+        <div className={`menu-wrapper ${t("menu-ua-ru")}`}>
             <div className="menu">
                 <div className="tittle">{t("foot3")}</div>
                 <Link to={"/real-estate"}>

@@ -58,51 +58,54 @@ const Header = () => {
             </div>
         </div>
 
-        <div className="menu">
+        <div className={`menu ${t("menu-ua-ru")}`}>
             <Link to={"/"}><div className="menu-option">{t('header_option0')}</div></Link>
             <Link to={"/real-estate"}><div className="menu-option">{t('header_option1')}</div></Link>
             <div onClick={() => toggleVisibility('areas')} className="menu-option">
                 {areasVisible && <div className="drop-down">
                     <Link to={"/areas"}>
-                        <div className="option">All areas</div>
+                        <div className="option">{t("All areas")}</div>
                     </Link>
-                    <Link to={"/area-page/business"}>
+                    <Link to={"/area/business"}>
                         <div className="option">Business Bay</div>
                     </Link>
-                    <Link to={"/area-page/palm"}>
+                    <Link to={"/area/palm"}>
                         <div className="option">Palm Jumeirah</div>
                     </Link>
-                    <Link to={"/area-page/mbr"}>
+                    <Link to={"/area/mbr"}>
                         <div className="option">MBR City</div>
                     </Link>
-                    <Link to={"/area-page/mjl"}>
+                    <Link to={"/area/mjl"}>
                         <div className="option">MJL</div>
                     </Link>
-                    <Link to={"/area-page/lagoons"}>
+                    <Link to={"/area/lagoons"}>
                         <div className="option">Damac Lagoons</div>
                     </Link>
-                    <Link to={"/area-page/jlt"}>
+                    <Link to={"/area/jlt"}>
                         <div className="option">JLT</div>
                     </Link>
-                    <Link to={"/area-page/bank-account"}>
+                    <Link to={"/area/creek"}>
                         <div className="option">Creek Harbour</div>
                     </Link>
-                    <Link to={"/area-page/mudon"}>
+                    <Link to={"/area/mudon"}>
                         <div className="option">Mudon</div>
                     </Link>
-                    <Link to={"/area-page/jvc"}>
+                    <Link to={"/area/jvc"}>
                         <div className="option">JVC</div>
                     </Link>
-                    <Link to={"/area-page/bluewaters"}>
+                    <Link to={"/area/bluewaters"}>
                         <div className="option">Bluewaters</div>
                     </Link>
-                    <Link to={"/area-page/central-park"}>
+                    <Link to={"/area/central-park"}>
                         <div className="option">Central Park</div>
                     </Link>
-                    <Link to={"/area-page/dubai-marina"}>
+                    <Link to={"/area/marina"}>
                         <div className="option">Dubai Marina</div>
                     </Link>
-                    <Link to={"/area-page/dubai-hills"}>
+                    <Link to={"/area/damac-hills"}>
+                        <div className="option">Damac Hills</div>
+                    </Link>
+                    <Link to={"/area/dubai-hills"}>
                         <div className="option">Dubai Hills</div>
                     </Link>
                 </div>}
@@ -355,43 +358,43 @@ const Header = () => {
                         <Link to={"/areas"}>
                             <div className="option">All areas</div>
                         </Link>
-                        <Link to={"/area-page/business"}>
+                        <Link to={"/area/business"}>
                             <div className="option">Business Bay</div>
                         </Link>
-                        <Link to={"/area-page/palm"}>
+                        <Link to={"/area/palm"}>
                             <div className="option">Palm Jumeirah</div>
                         </Link>
-                        <Link to={"/area-page/mbr"}>
+                        <Link to={"/area/mbr"}>
                             <div className="option">MBR City</div>
                         </Link>
-                        <Link to={"/area-page/mjl"}>
+                        <Link to={"/area/mjl"}>
                             <div className="option">MJL</div>
                         </Link>
-                        <Link to={"/area-page/lagoons"}>
+                        <Link to={"/area/lagoons"}>
                             <div className="option">Damac Lagoons</div>
                         </Link>
-                        <Link to={"/area-page/jlt"}>
+                        <Link to={"/area/jlt"}>
                             <div className="option">JLT</div>
                         </Link>
-                        <Link to={"/area-page/bank-account"}>
+                        <Link to={"/area/bank-account"}>
                             <div className="option">Creek Harbour</div>
                         </Link>
-                        <Link to={"/area-page/mudon"}>
+                        <Link to={"/area/mudon"}>
                             <div className="option">Mudon</div>
                         </Link>
-                        <Link to={"/area-page/jvc"}>
+                        <Link to={"/area/jvc"}>
                             <div className="option">JVC</div>
                         </Link>
-                        <Link to={"/area-page/bluewaters"}>
+                        <Link to={"/area/bluewaters"}>
                             <div className="option">Bluewaters</div>
                         </Link>
-                        <Link to={"/area-page/central-park"}>
+                        <Link to={"/area/central-park"}>
                             <div className="option">Central Park</div>
                         </Link>
-                        <Link to={"/area-page/dubai-marina"}>
+                        <Link to={"/area/dubai-marina"}>
                             <div className="option">Dubai Marina</div>
                         </Link>
-                        <Link to={"/area-page/dubai-hills"}>
+                        <Link to={"/area/dubai-hills"}>
                             <div className="option">Dubai Hills</div>
                         </Link>
                     </div>}

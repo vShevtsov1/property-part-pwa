@@ -1,0 +1,123 @@
+.areas-card {
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: space-between;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .name-price {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      div:first-child {
+        color: #191C38;
+        font-family: Onest;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.96px;
+      }
+
+      div:last-child {
+        color: #C29773;
+        text-align: right;
+        font-family: Onest;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.96px;
+      }
+    }
+
+    .description {
+      color: #ABABAB;
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: 0.56px;
+    }
+  }
+
+  .map-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .areas-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .header {
+      .name-price {
+
+        div:first-child {
+          font-size: 18px;
+        }
+
+        div:last-child {
+          font-size: 18px;
+        }
+      }
+
+      .description {
+        font-size: 14px;
+      }
+    }
+
+    .map-img {
+
+      img {
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .areas-card {
+
+    .header {
+      .name-price {
+
+        div:first-child {
+          font-size: 18px;
+        }
+
+        div:last-child {
+          font-size: 18px;
+        }
+      }
+
+      .description {
+        font-size: 14px;
+      }
+    }
+
+    .map-img {
+
+      img {
+      }
+    }
+  }
+}

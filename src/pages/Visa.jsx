@@ -875,7 +875,7 @@ function Visa() {
                             </div>
                             <div className="right-content">
                                 <div className="right-container">
-                                    <div className="content-title">Renewal every six months</div>
+                                    <div className="content-title">{t("name450")}</div>
                                     <div className="content">
                                         <div className="content-text">
 

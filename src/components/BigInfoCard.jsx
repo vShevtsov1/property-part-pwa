@@ -163,7 +163,7 @@ function BigInfoCard({ name, activitiesBlocks, opportunitiesBlocks, price, capit
                 </div>
                 <div className="show-hide " onClick={setShowModal}>
                     <img src={showHide} className="rotate90" alt="" />
-                    Get help
+                    {t("get-help")}
                 </div>
             </div>
             <RequestModal showModal={showModal} closeModal={closeModal} modalText={{ tittleText: t("modalHeader"), buttonText: t("modalButton") }} image={team[randomNumber].image} />

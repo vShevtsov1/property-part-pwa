@@ -1,5 +1,5 @@
 import blueArrow from "../assets/Areas/blue-arrow.svg";
-import "../styles/areaCard.scss"
+import "../styles/areaCards.scss"
 import { Link } from "react-router-dom";
 
 function AreasCard({ img, name, page }) {

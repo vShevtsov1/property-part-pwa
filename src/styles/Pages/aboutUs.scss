@@ -1,11 +1,13 @@
 .about-wrapper {
     .about-container {
+        .about-us-img {
+            display: none;
+        }
         .banner {
             display: flex;
             flex-direction: column;
 
             padding: 46px 64px 24px 64px;
-
             .text-photo {
                 display: flex;
                 width: 100%;
@@ -76,6 +78,10 @@
                     }
                 }
             }
+        }
+
+        .since-our {
+            display: none;
         }
 
         .trust {
@@ -531,12 +537,12 @@
 
             .pdf-file {
                 display: flex;
-                flex: 1;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 15px;
                 cursor: pointer;
+                width: 100%;
 
                 color: #707070;
                 text-align: center;
@@ -582,19 +588,40 @@
     }
 }
 
+
 @media (max-width: 1300px) {
     .about-wrapper {
         .about-container {
             .banner {
-                padding: 23px 16px 24px 16px;
+                padding: 23px 16px 4px 16px;
 
                 .text-photo {
-                    .text {
-                        padding: 24px 24px 24px 24px;
+                    .text-content {
 
-                        svg {
-                            height: 34.826px;
-                            width: 89px;
+                        .text {
+                            padding: 24px 24px 24px 24px;
+                            margin: 0;
+                            height: 100%;
+                            gap: 148px;
+
+                            .text-med {
+                                color: #FFF;
+                                font-family: Onest;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+
+                            svg {
+                                width: 92px;
+                                height: 36px;
+                            }
+                        }
+
+                        .content {
+                            display: none;
                         }
                     }
 
@@ -616,6 +643,25 @@
                 }
             }
 
+            .since-our {
+                display: flex;
+                flex-direction: column;
+                padding: 4px 16px 13px 16px;
+
+                .title-med {
+                    background: #fff;
+                    padding: 16px 16px 0px 16px;
+                }
+
+                .descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    background: #fff;
+                    padding: 16px 16px 16px 16px;
+                }
+            }
+
             .trust {
                 padding: 13px 16px 13px 16px;
 
@@ -628,8 +674,20 @@
             }
 
             .propart {
-                padding: 13px 16px 25px 16px;
+                padding: 32px 16px 26px 16px;
                 gap: 24px;
+
+                .content {
+                    padding: 16px;
+                    gap: 12px;
+                    .title-big {
+                        font-size: 16px;
+                    }
+
+                    .text-med {
+                        font-size: 16px;
+                    }
+                }
             }
 
             .team {
@@ -669,9 +727,10 @@
                     }
                 }
             }
+
             .provide {
                 gap: 16px;
-                padding: 0px 16px;
+                padding: 16px 16px 42px 16px;
 
                 .title {
                     gap: 8px;
@@ -709,16 +768,82 @@
                     }
                 }
             }
-            .sets {
-                padding: 13px 16px;
+
+            .lohachov {
+                padding: 42px 16px 16px;
+                height: 455px;
+
+                .image {
+                    width: 50%;
+
+                    img {
+                    }
+                }
 
                 .content {
+                    flex: 1;
+                    padding: 0;
 
-                    .title-side {
-                        padding: 24px 22px 48px 24px;
+                    .info {
+                        gap: 16px;
+                        .info-title {
+                            .name {
+                                gap: 4px;
+                                width: 100%;
+
+                                div:first-child {
+                                    font-size: 18px;
+                                }
+
+                                div:last-child {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .cards-container {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            .card {
+                                .title {
+                                    font-size: 14px;
+                                }
+
+                                .description {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .help-orange {
+                .free-consult-form  {
+
+                    .contact-us-form {
+                        .form {
+                            .get-in-touch {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sets {
+                padding: 26px 16px;
+
+                .sets-content {
+
+                    .title {
+                        font-size: 24px;
                     }
 
-                    .text-side {
+                    .text {
+                        font-size: 16px;
                         padding: 24px;
                     }
                 }
@@ -774,6 +899,11 @@
                 }
             }
 
+            .pdf-files {
+                gap: 8px;
+                padding: 32px 16px 42px 16px;
+            }
+
             .title-big {
                 font-size: 24px;
             }
@@ -797,29 +927,24 @@
     .about-wrapper {
         .about-container {
             .banner {
-                padding: 23px 16px 24px 16px;
-
                 .text-photo {
                     flex-direction: column;
-
-                    .text {
+                    .text-content {
                         width: 100%;
-                        padding: 14px;
-                        margin-bottom: 0px;
-                        gap: 15px;
 
-                        svg {
-                            width: 53.667px;
-                            height: 21px;
+                        .text {
+                            gap: 16px;
+                            svg {
+                            }
+
+                            div:last-child {}
                         }
-
-                        div:last-child {}
                     }
 
                     .image {
+                        display: none;
                         width: 100%;
-                        height: 137px;
-
+                        height: 191px;
                         img {}
                     }
                 }
@@ -837,6 +962,43 @@
                 }
             }
 
+            .since-our {
+                .title-med {
+                    font-size: 16px;
+                }
+
+                .descr {
+                    .text-med {
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            .propart {
+                .content {
+                    .title-big {
+                        font-size: 16px;
+                    }
+
+                    .text-med {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .about-us-img {
+                display: flex;
+                height: 300px;
+                padding: 0px 16px 32px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
             .trust {
                 grid-template-columns: 1fr;
 
@@ -849,6 +1011,10 @@
 
                     img {}
                 }
+            }
+
+            .help-orange {
+                display: none;
             }
 
             .provide {
@@ -893,10 +1059,11 @@
             }
 
             .team {
-                padding: 16px 8px;
-                gap: 8px;
+                padding: 16px 16px;
+                gap: 8px !important;
 
                 .member {
+                    width: calc(50% - 4px);
                     .member {
                         .image {
                             height: 250px;
@@ -928,10 +1095,21 @@
             }
 
             .sets {
-                padding: 13px 16px;
+                padding: 13px 16px 24px 16px;
+                flex-direction: column;
 
-                .content {
+                .sets-content {
                     flex-direction: column;
+
+                    .title {
+                        width: 100%;
+
+                        font-size: 24px;
+                    }
+
+                    .text {
+                        font-size: 14px;
+                    }
 
                     .title-side {
                         width: 100%;
@@ -980,6 +1158,11 @@
                 }
             }
 
+            .provide {
+                display: none;
+                padding: 32px 16px;
+            }
+
             .about-cards-container {
                 padding: 13px 16px 23px 16px;
                 gap: 8px;
@@ -1006,6 +1189,46 @@
 
                         div:last-child {}
                     }
+                }
+            }
+
+            .lohachov {
+                height: auto;
+                .image {
+                    width: 100%;
+                    height: 350px;
+                    img  {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                        object-position: top;
+                    }
+                }
+
+                .content {
+                    .info {
+                        padding: 16px;
+                    }
+                }
+                flex-direction: column;
+            }
+
+            .pdf-files {
+                gap: 8px;
+                padding: 32px 16px 42px 16px;
+                flex-wrap: wrap;
+                display: flex;
+                width: 100%;
+
+                .pdf-file {
+                    padding: 14px 0px 10px 0px;
+                }
+                .pdf-file:first-child {
+                    width: 100%;
+                }
+
+                .pdf-file:nth-child(n+2) {
+                    width: calc(50% - 4px);
                 }
             }
 

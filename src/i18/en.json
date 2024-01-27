@@ -15,17 +15,18 @@
   "home_box5": "Assistance in processing transactions",
   "home_button": "Learn more",
   "block2_title": "Choose the best from the special collection",
-  "block2_text": "We prepared special offers for different types of requests. From budget apartments to luxurious villas. Choose the best option for you, and our expert will reach you out in 5 minutes",
-  "sel_1": "Best for rent",
+  "block2_text": "We cater to a diverse range of preferences and budgets, ensuring there's something perfect for everyone. Whether you're searching for a cozy studio or a sprawling estate, our selections are tailored to meet your needs. Once you've selected your ideal property, our dedicated expert will promptly contact you within 5 minutes to assist with any inquiries and guide you through the process.",
+  "block3_text": "Take advantage of our tailored approach and let us help you find the home of your dreams. Make your selection, and we'll be in touch in no time to start your journey towards the perfect property.",
+  "sel_1": "Selection for rent",
   "proj_1": "4 projects",
   "price_1": "from $190,000",
-  "sel_2": "For Families",
+  "sel_2": "Selection for families",
   "proj_2": "13 projects",
   "price_2": "from $170,000",
-  "sel_3": "Villas & Townhouses",
+  "sel_3": "Selection of villas",
   "proj_3": "5 projects",
   "price_3": "from $2,100,000",
-  "sel_4": "Best for resale",
+  "sel_4": "Selection for resale",
   "proj_4": "6 projects",
   "price_4": "from $150,000",
   "square1": "Why Dubai?",
@@ -48,15 +49,17 @@
   "drop_4": "Commercial real estate",
   "drop_text4": "Our specialists have Dubai commercial real estate database. We assist in processing business documents and finding the right property for your company.",
   "block4_title": "Consulting",
-  "block4_text": "What kind of consulting services do we provide?",
+  "block4_text": "Explore our consulting services for expert guidance and strategic insights. Our experienced team is here to help you navigate challenges, make informed decisions, and achieve your business objectives.",
   "feat1": "Registration of a local company (LLC)",
   "feat2": "Investor Visa for 2 years or 10 years",
   "feat3": "Issuance of UAE resident visa (employee or freelancer)",
   "feat4": "Registration of a company in a free economic zone",
 
-  "block5_title": "Our team",
+  "block5_title": "PROPART Team",
   "block6_title": "Would you like to be the first to know about the launches of sales of promising projects in Dubai?",
   "block6_text1": "Text your phone number, and our real estate expert will contact you within 5 minutes.",
+  "block6_title11": "Would you like to be the first to know about the launches of sales of promising projects in Dubai?",
+  "block6_title12": "Text your phone number, and our real estate expert will contact you within 5 minutes.",
   "block6_line1": "Your name",
   "block6_line2": "Phone number",
   "block6_line3": "Send",
@@ -89,18 +92,10 @@
   "filter4": "Location",
   "filter5": "Handover",
   "filter6": "Property type",
-  "set1": "Your name",
-  "set2": "Phone number",
-  "set3": "E-Mail",
-  "set4": "Select budget",
-  "set5": "Send",
-
-
-  "set1": "Your name",
-  "set2": "Phone number",
-  "set3": "E-Mail",
-  "set4": "Select budget",
-  "set5": "Send",
+  "filter7": "Completion",
+  "About Dubai": "About Dubai areas: luxury, comfort and style",
+  "About Dubai Descr1": "Dubai, a glittering jewel in the United Arab Emirates, is renowned for its blend of modern luxury and traditional allure. The city's diverse areas each tell a unique story of opulence and grandeur, offering a living experience that caters to a range of lifestyles and preferences. From the palm-shaped islands of Palm Jumeirah to the bustling streets of Downtown Dubai, the city is a tapestry of exclusive residential enclaves, commercial hubs, and serene family neighborhoods.",
+  "About Dubai Descr2": "The iconic Burj Khalifa and the dancing Dubai Fountain are just the tip of the iceberg, with each area boasting its own landmarks and luxuries. The upscale marinas, sprawling malls like The Dubai Mall, and lush parks underscore the city's commitment to providing an unmatched urban experience.",
 
   "r_but": "Back",
 
@@ -130,7 +125,8 @@
   "r_sim": "Similar properties",
   "r_sim1": "from",
 
-  "e_title": "Your concierge service in Dubai",
+  "e_title": "Your concierge in Dubai",
+  "e1_title": "With our concierge service, you can unlock the full potential of Dubai, whether it's for business or leisure, making your time in this dynamic city truly unforgettable. Let us take care of the details while you focus on enjoying all that Dubai has to offer.",
   "e_but": "Get a free consultation",
 
   "e_block1": "About us",
@@ -147,6 +143,8 @@
   "e_ch7": "Business concierge services",
   "e_ch8": "Real estate management",
   "e_ch9": "Company registration in the UAE",
+  "Life Services": "Life Services",
+  "VIP Services": "VIP Services",
 
   "e_ch11": "Services for life",
   "e_ch22": "Private jet rentals",
@@ -162,6 +160,9 @@
   "e_ch333": "Personal driver",
   "e_ch444": "Tours and entertainment around the world",
   "e_ch555": "Real estate acquisition services",
+  "e_ch666": "Kids care",
+  "e_ch777": "Legal services",
+  "e_ch888": "Health and family services",
 
   "e_cj": "Do you have a question",
   "e_cj_text": "Our specialist will contact you to answer any questions you may have.",
@@ -413,6 +414,27 @@
    "name89": "Expertise in Licensing Procedures",
    "name90": "Legal",
    "name91": "Knowledgeable Legal Support",
+   "name901": "Legal",
+  "name911": "Knowledgeable Legal Support",
+  "name9011": "Legal",
+  "Get in touch!": "Get in touch!",
+
+  "OLEXANDER LOHACHOV": "OLEXANDER LOHACHOV",
+  "Founder, Investor": "Founder, Investor",
+  "Agency owner": "Agency owner",
+  "12 years of continuous experience in real estate": "12 years of continuous experience in real estate",
+  "Business Speaker": "Business Speaker",
+  "Efficient and professional company registration services": "Efficient and professional company registration services",
+  "Open a corporate bank account effortlessly": "Open a corporate bank account effortlessly",
+  "Legal support for your business needs in the UAE": "Legal support for your business needs in the UAE",
+  "Secure your residency in the UAE with a good expert": "Secure your residency in the UAE with a good expert",
+  "Professional financial management services": "Professional financial management services",
+  "Protect your business brand in the UAE market": "Protect your business brand in the UAE market",
+  "Navigating business regulations in the UAE mainland": "Navigating business regulations in the UAE mainland",
+  "Hire skilled professionals for your business": "Hire skilled professionals for your business",
+  "RERA CERTIFICATE": "RERA CERTIFICATE",
+  "OWNER BROKER ID": "OWNER BROKER ID",
+  "COMPANY TRADE LICENCE": "COMPANY TRADE LICENCE",
 
    "name92": "There are no taxes on income, personal income and dividends in the UAE.",
    "name93": "The UAE has an excellent geographical location, developed infrastructure and the national currency, which is pegged to the dollar and has not changed for 20 years",
@@ -1556,12 +1578,16 @@
   "propart_intro_line2": "We are not just selling properties; we are crafting homes and building futures in Dubai's ever-growing skyline.",
 
   "personalized_approach_title": "What sets us apart is our personalized approach",
-  "personalized_approach_text": "We recognize that each client has unique needs and aspirations, and we go above and beyond to cater to these individual requirements. Our extensive portfolio showcases a wide range of properties across Dubai, from luxurious villas to state-of-the-art apartments, catering to a diverse clientele. In a city known for its architectural wonders and innovative developments",
+  "personalized_approach_text1": "We recognize that each client has unique needs and aspirations, and we go above and beyond to cater to these individual requirements.",
+  "personalized_approach_text2": "Our extensive portfolio showcases a wide range of properties across Dubai, from luxurious villas to state-of-the-art apartments, catering to a diverse clientele. In a city known for its architectural wonders and innovative developments",
 
 
   "infrastructure": "Infrastructure",
   "location-features": "Location Features",
-
+  "attractions": "Attractions",
+  "Mixed-Use Development": "Mixed-Use Development",
+  "Strategic Location": "Strategic Location",
+  "Hub for Business and Finance": "Hub for Business and Finance",
 
   "areas-business": {
     "title": "Business Bay",
@@ -1633,9 +1659,567 @@
     ]
   },
 
+  "mbr": {
+    "title": "MBR City",
+    "titleText": ["MBR City is a new development area in Dubai, named after His Highness Sheikh Mohammed bin Rashid Al Maktoum, the Vice President and Prime Minister of the UAE and Ruler of Dubai. It is a high-end residential and commercial development project located in the heart of Dubai.",
+      "MBR City was first announced in 2013 as part of the Dubai Plan 2021, which aims to make Dubai one of the most livable and sustainable cities in the world."],
+    "locationText": ["Location: MBR City, also known as Mohammed Bin Rashid City, is a master-planned development located in the heart of Dubai, United Arab Emirates, spanning over 54 million square feet.",
+      "Size: The development includes residential, commercial, and leisure spaces, with a mix of apartments, villas, and townhouses.",
+      "Accessibility: MBR City is well-connected to other parts of Dubai via major roads, including Sheikh Zayed Road and Al Khail Road, and is also accessible via public transportation.",
+      "Architecture: MBR City features a range of architectural styles, from modern and contemporary to traditional Arabic, with a focus on luxury and sustainability.",
+      "Attractions: The development offers a range of attractions and entertainment options, including shopping malls, restaurants, cafes, cinemas, and parks.",
+      "Real estate: MBR City offers a range of luxurious residential properties, including apartments, villas, and townhouses, with world-class amenities and services in Dubai."],
+    "infrastructureText": ["MBR City offers residents access to a range of world-class amenities, including supermarkets, restaurants, cafes, and retail outlets. The area is also home to several top-rated schools, including GEMS International School and Hartland International School. ",
+      "Healthcare facilities in the area are also of the highest quality, with Dubai Creek Hospital and Mediclinic Parkview Hospital located nearby.",
+      "MBR City is located near the coast, and residents have easy access to some of Dubai’s most beautiful beaches. The nearest beach is Jumeirah Beach, which is just a short drive away. This popular beach is known for its crystal-clear water, white sand, and stunning views of the Burj Al Arab.",
+      "Another popular beach nearby is Kite Beach, which is known for its ideal conditions for kite surfing and other water sports. The beach also features several food trucks, a running track, and a playground, making it a popular spot for families and fitness enthusiasts."],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": ["MBR City offers a variety of shopping destinations, dining options, and entertainment venues. The area is home to several malls such as Cityland Mall and Meydan One Mall. These malls offer a wide range of international and local brands, cinemas, and restaurants, making them popular spots for residents and visitors alike.",
+          "There are also several fine dining restaurants located within the area, such as the French-inspired Bistro des Arts and the contemporary Japanese restaurant Izakaya. Other popular dining options in MBR City include Zuma, Cavalli Club, and Atmosphere Lounge.",
+          "For those seeking a lively nightlife, MBR City has several options to choose from. The world-renowned Cavalli Club is located in the Fairmont Hotel, offering guests an unforgettable experience with its luxurious décor, world-class DJ performances, and signature cocktails.  The nearest beach is Jumeirah Beach, which is just a short drive away. This popular beach is known for its crystal-clear water, white sand, and stunning views of the Burj Al Arab."]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": ["MBR City is located near several other popular communities in Dubai, including Downtown Dubai, Business Bay, and Dubai Hills Estate. These communities offer a range of shopping, dining, and entertainment options, as well as access to major landmarks and attractions such as the Burj Khalifa, Dubai Mall, and Dubai Opera. MBR City is also well-connected to other parts of Dubai through major highways and public transportation.",
+          "Popular beach nearby is Kite Beach, which is known for its ideal conditions for kite surfing and other water sports. The beach also features several food trucks, a running track, and a playground, making it a popular spot for families and fitness enthusiasts."]
+      },
+      {
+        "title": "Conclusion",
+        "texts": ["MBR City is a rapidly developing area in Dubai that offers a luxurious and comfortable lifestyle for its residents. With a range of properties available, including villas, townhouses, and apartments, there is something for everyone in this community. The area offers easy access to major landmarks and attractions, as well as a range of amenities and facilities, including schools, healthcare facilities, shopping destinations, and outdoor activities."]
+      }
+    ]
+  },
+
+  "creek": {
+    "title": "Creek Harbour",
+    "titleText": ["Dubai Creek Harbour is a mixed-use development located on the banks of Dubai Creek, which is considered to be the birthplace of Dubai.",
+      "The area is being developed by Emaar Properties, one of the largest real estate developers in the Middle East, in partnership with Dubai Holding. ",
+      "The project aims to create a new urban center that combines residential, commercial, and cultural elements."],
+    "locationText": ["Location: Dubai Creek Harbour is a master-planned development located on the banks of the Dubai Creek, United Arab Emirates., and is adjacent to the equally famous central area of Downtown Dubai.",
+      "Size: The development spans over 6 square kilometers, and includes residential, commercial, and leisure spaces.",
+      "Accessibility: Dubai Creek Harbour is well-connected to other parts of Dubai via major roads, including Sheikh Zayed Road and Dubai-Al Ain Road, and is also accessible via public transportation.",
+      "Architecture: Dubai Creek Harbour features modern and contemporary architecture, with several high-rise residential towers, luxury villas, and commercial buildings.",
+      "Attractions: The development offers a range of attractions and entertainment options, including the Dubai Creek Tower, a cultural center, a marina, a yacht club, and several shopping malls.",
+      "Real estate: Dubai Creek Harbour offers a range of luxurious residential properties, including apartments, villas, and townhouses, with stunning views of the Dubai skyline and the Dubai Creek."
+    ],
+    "infrastructureText": ["Dubai Creek Harbour offers residents a wide range of amenities, including supermarkets, cafes, restaurants, and shops. The Dubai Creek Tower, which is currently under construction, will offer additional retail and dining options once completed. The area is also home to several schools, including the International School of Arts and Sciences and the Cambridge International School. Healthcare facilities in the area include the Mediclinic Dubai Creek Hospital.",
+      "Dubai Creek Harbour is well-connected to the rest of Dubai through a variety of transportation options. The area is easily accessible by car, with Sheikh Zayed Road and Al Khail Road both nearby.",
+      "Dubai Creek Harbour is also served by Dubai Metro’s Green Line, with the Dubai Creek Harbour Metro Station providing convenient access to the area. In addition, the area is home to the Dubai Creek Harbour Ferry Station, which offers ferry services to various destinations including Dubai Marina, Al Fahidi, and Al Ghubaiba."],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": ["Dubai Creek Harbour offers a variety of options for shopping, dining, and entertainment. There are several shopping destinations within the area, such as The Dubai Mall, the largest shopping mall in the world, and Dubai Festival City Mall. Both malls offer a wide range of shops and boutiques, ranging from high-end luxury brands to popular international chains.",
+          "When it comes to dining, residents and visitors can choose from a vast selection of restaurants and cafes serving different cuisines, including Arabic, Asian, European, and American. Some of the popular dining spots in the area include Boardwalk, EETEN Urban Kitchen, The Lighthouse Restaurant & Cafe, and The Pizza Company.",
+          "For those looking for a lively nightlife, Dubai Creek Harbour has several options, including the Irish Village, QD’s, and the Buddha Bar. These venues offer a range of entertainment options, including live music performances, DJs, and drinks.",
+          "Dubai Creek Harbour offers several leisure activities for residents and visitors. One of the most popular activities is taking a traditional dhow boat ride along the Dubai Creek."]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": ["Dubai Creek Harbour is located close to several other communities in Dubai. The neighboring communities include the Dubai Festival City, Business Bay, and Downtown Dubai. The connectivity to these areas is excellent, with various modes of transportation available, including the Dubai Metro, buses, and taxis.",
+          "Dubai Creek Harbour is located along the Dubai Creek, and while it doesn’t have any beaches of its own, it is located near several popular beaches. The closest beach to the area is Al Mamzar Beach Park, which is just a short drive away. The park has five beaches, which offer a variety of activities, including swimming, sunbathing, and water sports.",
+          "Jumeirah Beach is another popular beach destination that is easily accessible from Dubai Creek Harbour. The beach is known for its white sand, clear water, and stunning views of the Burj Al Arab, one of Dubai’s most famous landmarks."]
+      },
+      {
+        "title": "Conclusion",
+        "texts": ["Dubai Creek Harbour is a rapidly growing area in Dubai, offering residents a luxurious and comfortable lifestyle. With its stunning views of Dubai Creek and the Dubai skyline, world-class amenities, and convenient location, the area is an excellent choice for both investors and those looking to live in Dubai. The area has a wide range of properties available, catering to different preferences and budgets."]
+      }
+    ]
+  },
+
+
+  "marina": {
+    "title": "Dubai Marina",
+    "titleText": ["Dubai Marina is a vibrant waterfront community in Dubai, United Arab Emirates (UAE). It’s located along the Persian Gulf shoreline.",
+      "The Dubai Marina district is a man-made canal city, built around a two-mile stretch of artificial canal. It’s also home to the world’s tallest residential building, the Princess Tower, as well as the second-tallest residential building, the 23 Marina."],
+    "locationText": ["Location: Dubai Marina is a man-made canal city located along the Persian Gulf shoreline in Dubai, United Arab Emirates.",
+      "Size: The area spans over 50 million square feet and is one of the largest waterfront communities in the world.",
+      "Architecture: Dubai Marina is known for its impressive architecture, featuring high-rise buildings and luxury towers, many of which offer stunning views of the marina and the sea.",
+      "Accessibility: The area is well-connected to other parts of Dubai via major roads, including Sheikh Zayed Road and the Dubai Metro.",
+      "Marina: Dubai Marina is home to a large yacht marina, which can accommodate over 500 boats and yachts, making it a popular destination for water sports enthusiasts",
+      "Entertainment: The area offers a wide range of entertainment options, including restaurants, cafes, and shopping malls like Dubai Marina Mall. It is a popular tourist destination, with many visitors coming to experience its attractions, events, and entertainment."],
+    "infrastructureText": ["Dubai Marina is home to several popular shopping destinations, including Dubai Marina Mall, which features over 140 stores and restaurants, and the nearby Mall of the Emirates, which is one of the largest malls in the world. Other popular shopping destinations in the area include Ibn Battuta Mall, The Beach at JBR, and Marina Walk.",
+      "Dubai Marina is also known for its vibrant nightlife scene, with several bars, lounges, and nightclubs located in the area. Some of the most popular nightlife spots in Dubai Marina include Zero Gravity, Pier 7, and Lock, Stock & Barrel.",
+      "Dubai Marina offers a range of fitness centers and gyms, including Fitness First, Gold’s Gym, and Fitness Factory."],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": ["There are several outdoor activities available in Dubai Marina, including water sports such as jet skiing, parasailing, and wakeboarding. The area is also home to several parks and green spaces, including Dubai Marina Promenade and Jumeirah Beach Park, which offer walking paths and scenic views.",
+          "Dubai Marina is home to several notable landmarks and attractions, including the Dubai Marina Yacht Club, which offers yacht rentals and charters, and the Dubai Marina Walk, a pedestrian-friendly promenade with a variety of shops, cafes, and restaurants. The Dubai Eye, one of the world’s largest observation wheels, is also located in Dubai Marina.",
+          "In addition to Dubai Marina Promenade and Jumeirah Beach Park, there are several other parks and green spaces in the area, including the Al Sufouh Park and Emirates Golf Club, which features a championship golf course and stunning views of Dubai Marina."]
+      },
+      {
+        "title": "Property in Business Bay",
+        "texts": ["Dubai Creek Harbour is located close to several other communities in Dubai. The neighboring communities include the Dubai Festival City, Business Bay, and Downtown Dubai. The connectivity to these areas is excellent, with various modes of transportation available, including the Dubai Metro, buses, and taxis.",
+          "Dubai Creek Harbour is located along the Dubai Creek, and while it doesn’t have any beaches of its own, it is located near several popular beaches. The closest beach to the area is Al Mamzar Beach Park, which is just a short drive away. The park has five beaches, which offer a variety of activities, including swimming, sunbathing, and water sports.",
+          "Jumeirah Beach is another popular beach destination that is easily accessible from Dubai Creek Harbour. The beach is known for its white sand, clear water, and stunning views of the Burj Al Arab, one of Dubai’s most famous landmarks."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": ["Dubai Marina is a vibrant and cosmopolitan community located in the heart of Dubai.",
+          "Dubai Marina is a popular choice for both living and investing, due to its central location, high-end properties, and numerous amenities. It is a great place for those who value an active lifestyle, with plenty of opportunities for outdoor activities and sports. Overall, Dubai Marina offers a unique and desirable living experience in one of the most dynamic cities in the world"
+        ]
+      }
+    ]
+  },
+
+  "lagoons": {
+    "title": "Damac Lagoons",
+    "titleText": ["Damac Lagoons is a waterfront residential community situated in Dubai’s International Media Production Zone (IMPZ). It is a part of the larger Dubailand project and is developed by Damac Properties. ",
+      "The community features a range of residential properties, including apartments, townhouses, and villas, that offer a luxurious and comfortable living experience. "],
+    "locationText": ["Location: Damac Lagoons is situated in the heart of Dubai, close to Dubai International Airport, Dubai Festival City, and Dubai Creek. It is easily accessible via road and public transportation, making it a convenient location for residents and commuters alike.",
+      "Architecture: Damac Lagoons has a modern and contemporary design, with a mix of low-rise residential buildings and villas that offer stunning waterfront views. The area is designed to be pedestrian-friendly, with several walkways and green spaces for residents to enjoy.",
+      "Real estate: Damac Lagoons offers a range of luxury residential properties, including apartments and villas, with world-class amenities and services. The area is designed to offer a unique lifestyle that combines luxury living with natural beauty and tranquility.",
+      "Amenities: Damac Lagoons offers several amenities and facilities for residents, including a clubhouse, swimming pools, fitness center, and spa. The area also has several parks and open spaces for recreational activities, as well as a marina for water sports enthusiasts."],
+    "infrastructureText": ["Damac Lagoons offers a range of amenities and facilities to its residents, including supermarkets, retail outlets, restaurants, and cafes. The community also features several parks and green spaces, as well as sports facilities and playgrounds for children.",
+      "There are several schools in and around Damac Lagoons, including Gems Metropole School and Jebel Ali School. These schools offer high-quality education to students of all ages, from pre-school to secondary school.",
+      "The healthcare needs of residents in Damac Lagoons are catered to by several hospitals and clinics in the surrounding areas, including the Mediclinic Parkview Hospital and Aster Clinic in Arabian Ranches.",
+      "Damac Lagoons is located in close proximity to some of the most stunning beaches in Dubai. The community is situated a few minutes’ drive away from the beaches of Jumeirah and Dubai Marina. These beaches are known for their pristine waters and beautiful scenery."],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": ["Damac Lagoons is situated close to a range of leisure activities and notable landmarks. For those who enjoy the outdoors, there are several parks, cycling tracks, and walking trails in the vicinity of the community. The Dubai Miracle Garden, one of the world’s largest flower gardens, is also located nearby, providing visitors with a colorful and picturesque setting to explore.",
+          "The Dubai Autodrome, a world-class race track, is located a few minutes’ drive from the community, providing motorsports enthusiasts with an exciting destination to visit. Another notable landmark near Damac Lagoons is the Dubai Fountain, a spectacular water and light show located in the heart of Downtown Dubai.",
+          "Additionally, there are several golf courses located near the community, including the Trump International Golf Club and the Emirates Golf Club, providing golfers with world-class facilities to enjoy."]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": ["Damac Lagoons is located in the heart of Dubai and is surrounded by several other popular communities. These include Jumeirah Village Circle, Jumeirah Village Triangle, and Dubai Sports City. The area is also in close proximity to the bustling Dubai Marina, which is home to numerous restaurants, shops, and entertainment options.",
+          "The transportation options in and around the area are excellent, with easy access to major highways and public transportation. There are several bus and metro stations located nearby, providing easy access to other areas of Dubai.",
+          "Damac Lagoons is located in close proximity to some of the most stunning beaches in Dubai. The community is situated a few minutes’ drive away from the beaches of Jumeirah and Dubai Marina. These beaches are known for their pristine waters and beautiful scenery."]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": ["Damac Lagoons is an excellent place to live or invest in Dubai, offering a wide range of real estate options, top-notch amenities, and convenient transportation options. With its prime location and easy access to major highways and public transportation, the area is ideal for those who want to be close to the action but still enjoy a peaceful and relaxing lifestyle. Whether you are looking for a luxury villa, a spacious townhouse, or a modern apartment, Damac Lagoons has something for everyone."]
+      }
+    ]
+  },
+
+  "jlt": {
+    "title": "JLT",
+    "titleText": [
+      "Jumeirah Lake Towers (JLT) is a large mixed-use development located in the heart of Dubai, United Arab Emirates. It is a master-planned development that consists of 80 high-rise towers, a cluster of man-made lakes, and several commercial and residential buildings.",
+      "The development is designed to offer residents and visitors a high-quality lifestyle, with its focus on modern living and state-of-the-art facilities."
+    ],
+    "locationText": [
+      "Location: Damac Lagoons is situated in the heart of Dubai, close to Dubai International Airport, Dubai Festival City, and Dubai Creek. It is easily accessible via road and public transportation, making it a convenient location for residents and commuters alike.",
+      "Architecture: Damac Lagoons has a modern and contemporary design, with a mix of low-rise residential buildings and villas that offer stunning waterfront views. The area is designed to be pedestrian-friendly, with several walkways and green spaces for residents to enjoy.",
+      "Real estate: Damac Lagoons offers a range of luxury residential properties, including apartments and villas, with world-class amenities and services. The area is designed to offer a unique lifestyle that combines luxury living with natural beauty and tranquility.",
+      "Amenities: Damac Lagoons offers several amenities and facilities for residents, including a clubhouse, swimming pools, fitness center, and spa. The area also has several parks and open spaces for recreational activities, as well as a marina for water sports enthusiasts."
+    ],
+    "infrastructureText": [
+      "Jumeirah Lakes Towers (JLT) is a mixed-use development located in the heart of New Dubai, close to Dubai Marina.",
+      "The development consists of 80 towers, divided into 26 clusters.",
+      "The community offers residential, commercial, and retail properties, with over 5000 companies operating within the area.",
+      "JLT features a number of amenities including parks, running tracks, restaurants, cafes, supermarkets, and shops.",
+      "The community is known for its scenic views of two championship golf courses, lakes, and Dubai Marina skyline.",
+      "Public transportation is easily accessible, with two metro stations and bus services connecting JLT to the rest of Dubai."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "Jumeirah Lake Towers offers a wide variety of shopping, dining, and entertainment options. The area is home to several shopping centers, including the Dubai Marina Mall and the Ibn Battuta Mall. These malls offer a range of high-end and affordable stores, as well as restaurants and cafes.",
+          "For dining, residents can enjoy a diverse range of cuisines, from Middle Eastern to Asian to Western. Some popular restaurants in the area include The Cheesecake Factory, Nando’s, Wagamama, and Brothaus Bakery.",
+          "In terms of nightlife, Jumeirah Lake Towers has a thriving bar and nightclub scene. Some popular venues include Lock Stock & Barrel, McGettigan’s, and Stereo Arcade. The area also has a number of rooftop bars and lounges with stunning views of the Dubai skyline."
+        ]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": [
+          "Jumeirah Lake Towers is located in close proximity to several other popular areas in Dubai, such as Dubai Marina, Jumeirah Beach Residence, and Emirates Hills. These communities offer a range of amenities, attractions, and activities for residents to enjoy. There are also several transportation options available for those looking to explore other areas of the city, including the Dubai Metro, taxis, and buses.",
+          "Jumeirah Lake Towers is located near some of the best beaches in Dubai. The most popular beaches in the area are Jumeirah Beach and the public beach at Dubai Marina. Both beaches offer pristine white sand, crystal-clear water, and plenty of facilities for visitors.",
+          "Jumeirah Beach also features a range of water sports and activities, including jet skiing, parasailing, and banana boat."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "Overall, Jumeirah Lake Towers is a vibrant and dynamic area of Dubai that offers a range of amenities, attractions, and activities for residents to enjoy. With its prime location, high-quality real estate options, and abundance of amenities, Jumeirah Lake Towers is an ideal place to live or invest in. The area is popular with young professionals and families alike, and offers a diverse and multicultural community. Whether you’re looking for a place to call home or a sound investment opportunity, Jumeirah Lake Towers is definitely worth considering."
+        ]
+      }
+    ]
+  },
+
+  "mjl": {
+    "title": "MJL",
+    "titleText": [
+      "Madinat Jumeirah Living is a luxurious residential development situated in the heart of Dubai.",
+      "It is a gated community surrounded by lush green parks, stunning views of the Burj Al Arab, and an abundance of amenities that cater to residents’ every need."
+    ],
+    "locationText": [
+      "Madinat Jumeirah Living is a premium residential development located in the heart of Dubai’s prestigious Jumeirah district.",
+      "The development features spacious apartments, townhouses, and duplexes with high-end finishes and stunning views of the iconic Burj Al Arab. There are 60 buildings in total, with 1, 2, 3, and 4-bedroom apartments, 3 and 4-bedroom townhouses, and 4, 5, and 6-bedroom villas.",
+      "The area covers over 3 million square feet.",
+      "Madinat Jumeirah Living is developed by Dubai Holding, one of the region’s leading real estate developers.",
+      "The community offers a range of amenities, including swimming pools, fitness centers, playgrounds, landscaped gardens, and retail outlets.",
+      "Madinat Jumeirah Living is located close to several of Dubai’s major attractions, including the beach, the Dubai Mall, and the Dubai International Airport.",
+      "The development is designed to offer residents a luxurious and tranquil lifestyle with easy access to all the conveniences of city living."
+    ],
+    "infrastructureText": [
+      "Madinat Jumeirah Living offers a range of amenities, including supermarkets, restaurants, cafes, and retail stores. The area also features a community center, fitness center, and a shared pool. For healthcare facilities, the nearest hospital is Al Zahra Hospital Dubai, located a 10-minute drive away.",
+      "There are several schools in and around Madinat Jumeirah Living, including Jumeirah College, GEMS Wellington International School, and Emirates International School. These schools offer a range of curriculums and programs, providing families with a variety of options for their children’s education.",
+      "In terms of supermarkets, there are several options in the area, including Spinneys, Carrefour, and Waitrose. Residents can also find a range of specialty stores and boutique shops for their daily needs.",
+      "Madinat Jumeirah Living offers a range of beauty and wellness services, including salons, spas, and fitness centers. Residents can enjoy a variety of outdoor activities, such as jogging and cycling."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "Madinat Jumeirah Living offers a range of shopping, dining, and nightlife options. One of the most popular destinations in the area is the Souk Madinat Jumeirah, which is a modern interpretation of a traditional Arabian souk. It features over 95 stores selling everything from clothing and accessories to artwork and jewelry. The souk also offers a variety of dining options, from fast food to fine dining, with cuisines ranging from Middle Eastern to international.",
+          "In terms of dining options, residents of Madinat Jumeirah Living can enjoy a variety of cuisines. Some popular restaurants in the area include Pierchic, which offers seafood and stunning views of the Arabian Gulf, and Pai Thai, which serves authentic Thai cuisine. For a more casual dining experience, residents can visit the Beachcombers restaurant, which offers Asian-inspired cuisine in a relaxed atmosphere."
+        ]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": [
+          "Jumeirah Lake Towers is located in close proximity to several other popular areas in Dubai, such as Dubai Marina, Jumeirah Beach Residence, and Emirates Hills. These communities offer a range of amenities, attractions, and activities for residents to enjoy. There are also several transportation options available for those looking to explore other areas of the city, including the Dubai Metro, taxis, and buses.",
+          "Jumeirah Lake Towers is located near some of the best beaches in Dubai. The most popular beaches in the area are Jumeirah Beach and the public beach at Dubai Marina. Both beaches offer pristine white sand, crystal-clear water, and plenty of facilities for visitors.",
+          "Jumeirah Beach also features a range of water sports and activities, including jet skiing, parasailing, and banana boat."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "Overall, Jumeirah Lake Towers is a vibrant and dynamic area of Dubai that offers a range of amenities, attractions, and activities for residents to enjoy. With its prime location, high-quality real estate options, and abundance of amenities, Jumeirah Lake Towers is an ideal place to live or invest in. The area is popular with young professionals and families alike, and offers a diverse and multicultural community. Whether you’re looking for a place to call home or a sound investment opportunity, Jumeirah Lake Towers is definitely worth considering."
+        ]
+      }
+    ]
+  },
+
+  "mudon": {
+    "title": "Mudon",
+    "titleText": [
+      "Mudon is a private area of Dubai, where the real atmosphere of country life is recreated. It is located inside the larger Dubailand district and is a prime example of a classic low-rise building. The general developer of Mudon is Dubai Properties, a company known for its residential projects."
+    ],
+    "locationText": [
+      "The unique location is one of the main advantages of the Mudon area. It is located on the outskirts of Dubai, away from the bustling tourist streets and attractions, which gives residents the opportunity to fully enjoy a calm and quiet holiday.",
+      "At the same time, Mudon is located at the junction of two highways – Al Qudra Road and Emirates Road, which allows you to quickly get to other areas of Dubai, including interesting locations and attractions. Mudon borders other districts, including Dubai Studio City, Arabian Ranches, Remraam.",
+      "Currently, there is no active public transport network in the area, but there are several bus stops on the territory of Mudon. You can also use the bus to get to the nearest metro station: the trip to it will take about 15 minutes.",
+      "The ideal location significantly reduces the travel time to different locations in Dubai. Dubai Miracle Garden and Expo 2021 can be reached in just 15 minutes.",
+      "It will take about a 30-minute drive to the central part of Dubai, Kite Beach and The Beach, located in JBR. The road to Dubai International Airport will take about 35 minutes."
+    ],
+    "infrastructureText": [
+      "Mudon offers residents many opportunities for recreation and daily life. You can have a snack or spend time with your family in nearby cafes or restaurants.",
+      "Fans of an active lifestyle and sports will appreciate the impressive number of sports grounds where you can play football, basketball and tennis.",
+      "Also on the territory of the district there is a premium sports club Athletic Concept Fitness First Gym.",
+      "Grocery stores, pharmacies, laundries, coffee shops, beauty salons are located on almost every street. On the territory of the landscaped park spaces there are equipped bicycle and jogging paths. Safe playgrounds are provided for children.",
+      "Mudon district is popular among families with children, due to its proximity to educational institutions. Schools with an international curriculum and kindergartens are located near the community. Clinics and hospitals are located a few minutes from Mudon."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "There are no popular tourist attractions in the area, but this is a plus for a quiet and private suburban community. The main attraction of Mudon can be called a huge Central Park, whose area is over 16 hectares.",
+          "If residents want to spend time with their family and get new impressions, you can always go to see nearby attractions. A 15-minute drive separates residents from the Global Village – a unique place with a fair, attractions, regular shows, a museum, a theater and other entertainment.",
+          "IMG Worlds of Adventure Theme Park is located 20 minutes from Mudon – a real abundance of attractions and entertainment for the whole family. In 30 minutes you can reach the Al Marmoom Desert Conservation Reserve – a picturesque natural resort inhabited by birds."
+        ]
+      },
+      {
+        "title": "Real estate in Mudon",
+        "texts": [
+          "There is a wide range of real estate in the Mudon area, but duplexes and townhouses predominate. For large families, separate townhouses with 2-6 bedrooms are offered. There are also medium-rise complexes on the territory, where you can buy apartments with 1-3 bedrooms. For connoisseurs of maximum luxury and privacy, villas with 3-5 bedrooms are offered.",
+          "Individual houses are equipped with additional amenities: private terraces, swimming pool, private parking or garage. Residential complexes also have premium amenities, including a concierge service, a gym, a security system, recreation areas and a barbecue."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "Mudon is an attractive area for all categories of residents. Expats moving to Dubai, employees of local companies, tourists, young families with children and elderly couples prefer to settle here. The area is ideal for those who want to live not in the noisy conditions of the metropolis, but in a quiet and private community with developed infrastructure.",
+          "All this makes any property in Mudon attractive from the point of view of investment – especially villas, townhouses and duplexes."
+        ]
+      }
+    ]
+  },
+
+  "jvc": {
+    "title": "JVC",
+    "titleText": [
+      "Jumeirah Village Circle is a growing community located in the heart of Dubai. The area is designed to be a self-contained and self-sufficient neighborhood with a mix of residential, commercial, and retail spaces. The area is situated close to Dubai Sports City, Dubai Motor City, and Arabian Ranches."
+    ],
+    "locationText": [
+      "Jumeirah Village Circle (JVC) is a freehold community located in Dubai, United Arab Emirates.",
+      "The community is situated in the heart of Dubai, close to major highways, shopping centers, schools, and hospitals.",
+      "JVC offers a range of housing options, including apartments, villas, and townhouses.",
+      "The community features a range of amenities and facilities, such as parks, sports facilities, and retail outlets.",
+      "JVC is known for its family-friendly atmosphere, making it a popular choice for families and expatriates living in Dubai.",
+      "The community is designed to provide a balanced lifestyle, with a focus on green spaces and a healthy environment.",
+      "JVC is a relatively new community, with many of the properties built within the past decade.",
+      "The community is a short drive away from popular destinations in Dubai, such as Dubai Marina, Jumeirah Beach Residence, and Mall of the Emirates."
+    ],
+    "infrastructureText": [
+      "Jumeirah Village Circle has a range of amenities, including supermarkets, pharmacies, restaurants, and cafes. Popular supermarkets in the area include Spinneys, Carrefour, and Choithrams. There are also several parks and green spaces, including JVC Park and Circle Park.",
+      "Several schools are located in and around Jumeirah Village Circle, including GEMS World Academy, JSS International School, and Dubai British School.",
+      "Healthcare facilities in the area include Mediclinic Parkview Hospital and Aster Clinic. Jumeirah Village Circle is well connected to the rest of Dubai via Sheikh Mohammed Bin Zayed Road, Al Khail Road, and Hessa Street.",
+      "Public transportation options include buses and taxis. The nearest metro station is the Mall of the Emirates metro station, which is around 15 minutes away by car.",
+      "Jumeirah Village Circle is located around 20-25 minutes away from Dubai Marina, Jumeirah Beach, and Downtown Dubai.",
+      "Other major landmarks and attractions such as Burj Khalifa, Dubai Mall, and Dubai International Airport can be reached within a 25-30 minute drive."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "Jumeirah Village Circle offers residents a wide variety of shopping, dining, and entertainment options. There are several supermarkets and grocery stores in the area, including Spinneys, Carrefour, and Choithrams, providing residents with easy access to fresh produce and other essentials.",
+          "There are also many restaurants offering a range of cuisines, from Italian to Indian, and several cafes and bakeries.",
+          "For nightlife, there are several bars and pubs in the area, including Folly by Nick & Scott and The Taphouse, which offers craft beers and live music. There are also several entertainment venues in the area, including cinemas and the Dubai Miracle Garden, which is the world’s largest flower garden and a must-visit attraction in the city. Jumeirah Village Circle is conveniently located near some of Dubai’s most popular beaches, including Jumeirah Beach, which is only a 20-minute."
+        ]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": [
+          "There are plenty of outdoor activities available in Jumeirah Village Circle, including parks, sports facilities, and community centers. One of the most popular attractions in the area is the Circle Mall, which offers a range of shopping and entertainment options for residents and visitors alike.",
+          "Other notable landmarks in the area include the Dubai Autodrome, a world-class race track that hosts various events throughout the year, and the Dubai Butterfly Garden, which is home to over 15,000 butterflies and other insects.",
+          "Jumeirah Village Circle is surrounded by several other communities, including Jumeirah Park, Jumeirah Village Triangle, and Dubai Sports City."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "In conclusion, Jumeirah Village Circle is a vibrant and dynamic community that offers residents a range of amenities and attractions. From its prime location near some of Dubai’s most popular beaches to its variety of shopping, dining, and entertainment options, there’s something for everyone in this thriving community.",
+          "With a range of real estate options available, Jumeirah Village Circle is also an attractive investment opportunity for those looking to make a smart investment in Dubai’s booming real estate market."
+        ]
+      }
+    ]
+  },
+
+  "bluewaters": {
+    "title": "Bluewaters",
+    "titleText": [
+      "Bluewaters Island is a luxurious artificial island, part of the prestigious coastal area of Dubai Marina. This large-scale project was created by a large developer Meraas, and in a short period of time, this man-made island became a real concentration of elite residential and commercial real estate."
+    ],
+    "locationText": [
+      "The island has a unique location - it is located just 400 meters from Dubai Marina and the coastal line of the district, but at the same time, it is a separate territory that is connected to the mainland by bridges.",
+      "Despite its privacy and isolation of the territory, every resident of Bluewaters Island has the opportunity to quickly reach any part of Dubai.",
+      "From the island, there is a road leading to the main highway of the emirate Sheikh Zayed Road, which connects all areas.",
+      "The project also involves the construction of a cable car that will connect Dubai Marina and Bluewaters Island and significantly increase the tourist potential of the island.",
+      "For residents and guests of the city without their own cars, there is a pedestrian zone: a few minutes of a pleasant walk with amazing views of the city and the Arabian Gulf, and you get to the mainland Dubai Marina."
+    ],
+    "infrastructureText": [
+      "The peculiarity of the Bluewaters Island infrastructure is the division of the island's territory into separate zones.",
+      "There are residential, entertainment, beach, shopping, and hotel areas that complement each other and create an ideal residential and entertainment space for residents and tourists.",
+      "The shopping and entertainment area of the district includes more than 200 restaurants, cafes, bars, and shops. There are no large shopping centers on the island: only exclusive boutiques and shops.",
+      "However, shopping lovers will not need much time to get to the largest Dubai Marina Mall.",
+      "The territory of the island is perfect for recreation and accommodation of families with children: there are children's play areas and swimming pools that diversify the leisure of every child.",
+      "There are no preschools and school facilities on Bluewaters Island, but the road to the nearest schools and kindergartens will take no more than 7-10 minutes."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "The main attraction of the island is the Dubai Eye, marked in the Guinness Book of Records as the world's tallest wheel. Its height is 210 meters, and every visitor can enjoy stunning views of the Arabian Gulf, the coastline, and the emirate itself.",
+          "A famous location on Bluewaters Island is the Madame Tussauds Wax Museum, which is also the first Tussauds museum in the Middle East.",
+          "A landmark can also be called well-equipped beach lines: a comfortable coast with beach clubs exceeds the expectations of each guest, offering a calm and peaceful holiday."
+        ]
+      },
+      {
+        "title": "Real estate on Bluewaters Island",
+        "texts": [
+          "The residential cluster on the island is represented mainly by low-rise complexes. Buyers and investors are offered classic apartments with 1-3 bedrooms, penthouses and townhouses. Villas are especially popular, due to the limited offers.",
+          "At the service of residents - an impressive set of premium amenities: swimming pools, well-equipped recreation areas, modern gyms and sports grounds, round-the-clock concierge services, playgrounds, cinemas, SPA and fitness centers."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "Artificial islands in Dubai are one of the most attractive locations in terms of real estate investment. Limited area and a small number of offers make real estate a highly profitable and liquid asset.",
+          "Combined with the developed tourist and entertainment infrastructure that distinguishes Bluewaters Island, the limited offers significantly increase the investment potential of real estate. At the same time, the location is ideal not only for investment but also for personal living of connoisseurs of real comfort and exclusivity."
+        ]
+      }
+    ]
+  },
+
+  "central-park": {
+    "title": "Central Park",
+    "titleText": [
+      "Central Park is a community located inside one of the central districts of the Emirate, Mohammed bin Rashid City. This is an elite residential community designed and built on the principle of 'a city within a city': low-rise buildings provide a comfortable suburban lifestyle while offering residents developed infrastructure."
+    ],
+    "locationText": [
+      "Central Park is located at the junction of the main thoroughfares, which provides quick access to any areas of Dubai.",
+      "Being in the central part of the emirate, Central Park residents can use most of the major highways: Sheikh Mohammed Bin Zayed Road, Al Khail Road, Al Meydan Road, Al Quoz 2, Muscat Street.",
+      "The area is perfect for both owners of private cars and residents who prefer to travel by public transport.",
+      "The abundance of bus stops and the proximity to metro stations allow you to save time on trips to business and tourist areas of the city.",
+      "The road to Downtown Dubai, Business Bay, Dubai Design District will take about 10-15 minutes.",
+      "It will take the same amount of time to get to Dubai International Airport.",
+      "A 20-30-minute drive will take you to the artificial Palm Jumeirah Island and the Dubai Marina coastal area."
+    ],
+    "infrastructureText": [
+      "Within Central Park and the surrounding areas, there is everything that a modern person needs for a comfortable life.",
+      "Grocery stores, cafes, restaurants and snack bars, playgrounds and sports grounds, beauty salons and fitness centers are all located within walking distance.",
+      "Special attention is paid to sports infrastructure.",
+      "Within walking distance from the community, there are sports and wellness centers, as well as a huge park with cycling and running tracks.",
+      "The social infrastructure is also at a high level.",
+      "Within a 10-minute drive, there are international schools, shopping malls, kindergartens, hospitals, medical centers and polyclinics."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "There are no tourist attractions in the area itself: the concept of the community is based on the format of a quiet suburban life. At the same time, the residents of Central Park are not deprived of the opportunity to enjoy the popular locations of Dubai.",
+          "A 5-10-minute drive will take you to the largest shopping malls, the famous Meydan Racecourse, the popular Dubai Hills Golf Club. After spending 10-15 minutes on the road, Central Park residents will find themselves in the central districts of Dubai (Downtown Dubai, Business Bay, and others), where the key attractions of the emirate are located."
+        ]
+      },
+      {
+        "title": "Real estate in Central Park",
+        "texts": [
+          "The Central Park area is dominated by comfortable townhouses with 3-5 bedrooms, whose area can reach 500 square meters. There is also a medium-rise building on the territory, where investors and buyers can purchase apartments.",
+          "Private residences differ not only in layout and configuration but also in additional amenities: they can be equipped with private pools, fully furnished, premium appliances."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "The developed infrastructure and transport network make the area attractive for potential tenants. Thanks to the complex development, Central Park becomes interesting for residents counting on short-term and long-term rentals.",
+          "On average, the potential profitability of real estate in Central Park is at the level of 7-8%."
+        ]
+      }
+    ]
+  },
+
+  "damac-hills": {
+    "title": "Damac Hills",
+    "titleText": [
+      "Damac Hills is a prestigious and popular district of Dubai, one of the largest projects of the famous developer Damac Properties. It is a large-scale and multifunctional community with a developed commercial and social infrastructure. The area offers a very wide selection of real estate, which is suitable for buyers."
+    ],
+    "locationText": [
+      "The Damac Hills district has a strategically advantageous location - it is surrounded by developed communities, has access to the main highways of Dubai and tourist attractions.",
+      "Communities such as Arabian Ranches, Dubai Motor City, Mudon, Dubai Investments Park, Dubai Sports City are located next to Damac Hills. The trip to them will take no more than 5-10 minutes. This location makes Damac Hills ideal for families, employees of local companies, expats, and other categories of buyers.",
+      "There are regular bus routes throughout the area, allowing you to quickly get to the right places. There is no subway station in the district - it is located 20 minutes away. The trip to popular tourist areas will also not take much time: Downtown Dubai and Dubai Marina are only 25-30 minutes away."
+    ],
+    "infrastructureText": [
+      "Dubai Hills Estate is positioned as a quiet, peaceful and family-oriented area, which is reflected in its infrastructure.",
+      "The main part of the district's infrastructure is a 7-kilometer boulevard, where retail outlets, entertainment facilities, supermarkets, cafes and restaurants are located: every resident will be able to find something to their liking.",
+      "The area is very popular among families with children: there are schools and kindergartens located within walking distance.",
+      "There are also educational institutions in the surrounding areas, including institutions for higher education.",
+      "Polyclinics, medical centers, hospitals are within walking distance from the northern and southern parts of Dubai Hills. The developer paid special attention to the arrangement of sports grounds: on the territory of the district there are open and closed gyms, fitness centers, tennis courts and football fields."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "The main attraction of Dubai Hills is the prestigious 18-hole golf course - one of the world's most famous courses, ideal for both craftsmen and beginners.",
+          "There are many park spaces in the area: landscaped areas will be an excellent solution for family outdoor recreation, picnics and barbecues. A large shopping center Dubai Hills Mall is also located in the community.",
+          "Dubai Hills is a worthy example of a classic country community. There are no famous tourist attractions here, which makes it an attractive option for life."
+        ]
+      },
+      {
+        "title": "Real estate in Damac Hills",
+        "texts": [
+          "Dubai Hills offers a wide selection of real estate: the objects differ in area, format and cost. This variability allows you to choose housing for a certain budget and taste.",
+          "Apartments with 1-3 bedrooms are common in medium-storey residential complexes. Those who want to fully immerse themselves in the atmosphere of country life can see options with functional townhouses. The main part of the development of Dubai Hills is luxury villas - the best solution for personal living or investment."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "One of the main features of the Dubai Hills Estate area is the huge popularity of residential projects. Real estate here is bought by locals, expats, investors and people who want to move to Dubai forever. Such demand affects the cost, which has increased by almost 10% in less than a year. Confident growth rates prove the high investment potential of real estate in Dubai Hills.",
+          "Real estate in Dubai Hills is great for generating income from risk-free long-term rentals. At the same time, developers try to master the territory of the district as much as possible."
+        ]
+      }
+    ]
+  },
+
+  "dubai-hills": {
+    "title": "Dubai Hills",
+    "titleText": [
+      "Dubai Hills is one of the new prestigious areas of Dubai, having all the advantages of country life and located in close proximity to the central part of the emirate. It is part of Mohammed Bin Rashid City, a multifunctional and developed area. The large green area of Dubai Hills is ideal for people who want to live away from the city hustle."
+    ],
+    "locationText": [
+      "Representing a community within the MBR City district, Dubai Hills Estate has a favorable location: you can get to it quickly from any part of Dubai, as well as vice versa. Excellent transport accessibility is ensured by the proximity to the highway that runs along the area.",
+      "Dubai Hills is divided into three separate zones, and each of them has its own characteristics. The first zone is the central part with a picturesque golf course, which is surrounded by prestigious mansions and villas. The second zone is a medium-rise building of residential complexes, commercial facilities and a promenade. The third zone is a denser building, consisting of villas and townhouses.",
+      "According to the plans of developers to equip transport infrastructure, subway stations will be built on the territory of Dubai Hills Estate in the near future.",
+      "Public transport stops are also located in the immediate vicinity of the area. Car owners will be able to easily reach famous areas of Dubai: the road to Downtown Dubai will take about 20 minutes, the trip to Dubai International Airport will take about 25 minutes, and the journey to the artificial island of Palm Jumeirah will take about 35 minutes."
+    ],
+    "infrastructureText": [
+      "Dubai Hills Estate is positioned as a quiet, peaceful and family-oriented area, which is reflected in its infrastructure.",
+      "The main part of the district's infrastructure is a 7-kilometer boulevard, where retail outlets, entertainment facilities, supermarkets, cafes and restaurants are located: every resident will be able to find something to their liking.",
+      "The area is very popular among families with children: there are schools and kindergartens located within walking distance.",
+      "There are also educational institutions in the surrounding areas: even including institutions for higher education.",
+      "Polyclinics, medical centers, hospitals are within walking distance from the northern and southern parts of Dubai Hills. The developer paid special attention to the arrangement of sports grounds: on the territory of the district there are open and closed gyms, fitness centers, tennis courts and football fields."
+    ],
+    "blocks": [
+      {
+        "title": "Attractions",
+        "texts": [
+          "The main attraction of Dubai Hills is the prestigious 18-hole golf course - one of the world's most famous courses, ideal for both craftsmen and beginners.",
+          "There are many park spaces in the area: landscaped areas will be an excellent solution for family outdoor recreation, picnics and barbecues. A large shopping center Dubai Hills Mall is also located in the community.",
+          "Dubai Hills is a worthy example of a classic country community. There are no famous tourist attractions here, which makes it an attractive option for life."
+        ]
+      },
+      {
+        "title": "Nearby Communities",
+        "texts": [
+          "Dubai Hills offers a wide selection of real estate: the objects differ in area, format and cost. This variability allows you to choose housing for a certain budget and taste.",
+          "Apartments with 1-3 bedrooms are common in medium-storey residential complexes. Those who want to fully immerse themselves in the atmosphere of country life can see options with functional townhouses. The main part of the development of Dubai Hills is luxury villas - the best solution for personal living or investment."
+        ]
+      },
+      {
+        "title": "Investment attractiveness",
+        "texts": [
+          "One of the main features of the Dubai Hills Estate area is the huge popularity of residential projects. Real estate here is bought by locals, expats, investors and people who want to move to Dubai forever. Such demand affects the cost, which has increased by almost 10% in less than a year. Confident growth rates prove the high investment potential of real estate in Dubai Hills.",
+          "Real estate in Dubai Hills is great for generating income from risk-free long-term rentals. At the same time, developers try to master the territory of the district as much as possible."
+        ]
+      }
+    ]
+  },
 
   "rent": "rentEn",
   "family": "familyEn",
   "vila": "vilaEn",
-  "resale": "resaleEn"
+  "resale": "resaleEn",
+
+  "search on map": "Search on map...",
+  "clear": "Clear",
+  "from": "From",
+  "to": "To",
+  "studio": "Studio",
+  "ready": "Ready",
+  "any": "Any",
+  "Off-plan": "Off-plan",
+  "Plots": "Plots",
+  "Town-house": "Town house",
+  "Villa": "Villa",
+  "Apartments": "Apartments",
+
+  "Business Bay description": "Best for business style of life",
+  "Palm description": "Luxurious and exclusive way of living",
+  "MBR description": "Best for business style of life",
+  "Creek description": "New downtown of Dubai",
+
+  "Dubai description": "Popular tourist place for staying",
+  "Damac description": "Unique way of living in the desert",
+  "JLT description": "Lake towers in the city",
+  "MJL description": "Middle-east style near iconic Burj Al Arab",
+
+  "Mudon description": "Private life within the green gardens",
+  "JVC description": "Most desirable place for living",
+  "Bluewaters description": "Luxurious life in front of Ain Dubai",
+  "City description": "City Walk",
+
+  "get-help": "Get help",
+
+  "Owner & CEO Property Partners Real Estate": "Owner & CEO Property Partners Real Estate",
+  "Business Developer": "Business Developer",
+  "Real estate broker": "Real estate broker",
+  "Owner & CEO Kristal Business Experts": "Owner & CEO Kristal Business Experts",
+  "Marketing specialist, content creator": "Marketing specialist, content creator",
+
+  "Top 5 performing areas in Dubai": "Top 5 performing areas in Dubai",
+  "Dubai's property market is booming": "Dubai's property market is booming, especially in Jumeirah Village Circle (JVC), Business Bay, Dubai Marina, Dubai Hills, and Jumeirah Lakes Towers (JLT). JVC attracts those seeking affordable, family-friendly living, while Business Bay is a hub for professionals with its luxury residences and commercial spaces.",
+  "Dubai Marina and JLT are favorites": "Dubai Marina and JLT are favorites for their luxurious waterfront lifestyles, and Dubai Hills is gaining popularity for its serene, upscale environment.",
+
+  "Lohachov Oleksandr": "Lohachov Oleksandr",
+  "Aleksei Shyian": "Aleksei Shyian",
+  "Tykhova Tatiana": "Tykhova Tatiana",
+  "Kristina Sokolovskaya": "Kristina Sokolovskaya",
+  "Pavel Dynin": "Pavel Dynin",
+  "Anna Horshunova": "Anna Horshunova",
+  "Alla Gerassimova": "Alla Gerassimova",
+  "Dmitriy Koltsov": "Dmitriy Koltsov",
+  "Aleksandra Bobrova": "Aleksandra Bobrova",
+  "Ruslan Geisha": "Ruslan Geisha",
+  "All areas": "All areas",
+
+  "menu-ua-ru": ""
 }

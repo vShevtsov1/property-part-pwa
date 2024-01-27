@@ -23,6 +23,7 @@ import SupportChat from "./components/SupportChat.jsx";
 import AboutAgent from "./pages/AboutAgent.jsx";
 import ProjectView from "./pages/ProjectView.jsx";
 import AboutAreas from "./pages/AboutAreas.jsx";
+import AreasViewPage from "./pages/AreasViewPage.jsx";
 
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
@@ -35,7 +36,6 @@ function App() {
     setPDFModalOpen(false);
   };
   return (
-
     <BrowserRouter>
       <ScrollToTop />
       <SupportChat />
@@ -55,13 +55,14 @@ function App() {
         <Route path="/visa" element={<Visa />} />
         <Route path="/accounting" element={<Accounting />} />
         <Route path="/trademark-registration" element={<TradeMark />} />
-        <Route path="/areas" element={<Areas />} />
+        <Route path="/about-areas" element={<Areas />} />
 
         <Route path="/area-page/:id" element={<AreaPage />} />
+        <Route path="/area/:id" element={<AreasViewPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/about-agent" element={<AboutAgent />} />
         <Route path="/project-view/:id" element={<ProjectView />} />
-        <Route path="about-areas" element={<AboutAreas />} />
+        <Route path="/areas" element={<AboutAreas />} />
       </Routes>
 
     </BrowserRouter>

@@ -47,6 +47,7 @@ import PDFmodal from "../components/PDFmodal.jsx";
 import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import InquireModal from "../components/InquireModal.jsx";
 
 const Home = ({ openModal }) => {
     const [activeKind, setActiveKind] = useState(null);
@@ -54,7 +55,7 @@ const Home = ({ openModal }) => {
     const { t } = useTranslation();
     const team = [
         {
-            "image": alexLogachevName, "name": "Lohachov Oleksandr", "position": "Owner & CEO Property Partners Real Estate", "qr": qrAlex,
+            "image": alexLogachevName, "name": t("Lohachov Oleksandr"), "position": t("Owner & CEO Property Partners Real Estate"), "qr": qrAlex,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Lohachov.vcf", "email": "lohachov@propart.ae",
             "social": {
                 "telegram": "https://t.me/oleksandr_logachev",
@@ -65,7 +66,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": alekseiShyianName, "name": "Aleksei Shyian", "position": "Business Developer", "qr": alekseiShyian,
+            "image": alekseiShyianName, "name": t("Aleksei Shyian"), "position": t("Business Developer"), "qr": alekseiShyian,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Shyian.vcf", "email": "info@kristalexperts.com",
             "social": {
                 "instagram": "https://instagram.com/dubai_oleksii_shyian?igshid=MzRlODBiNWFlZA==",
@@ -77,7 +78,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": tykhovaTatianaName, "name": "Tykhova Tatiana", "position": "Real estate broker", "qr": tykhovaTatiana,
+            "image": tykhovaTatianaName, "name": t("Tykhova Tatiana"), "position": t("Real estate broker"), "qr": tykhovaTatiana,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Tykhova.vcf", "email": "tykhova@propart.ae",
             "social": {
                 "instagram": "https://instagram.com/taffeeta?igshid=NTc4MTIwNjQ2YQ==",
@@ -89,7 +90,7 @@ const Home = ({ openModal }) => {
         }
         ,
         {
-            "image": kristinaSokolovskayaName, "name": "Kristina Sokolovskaya", "position": "Owner & CEO Kristal Business Experts", "qr": kristinaSokolovskaya,
+            "image": kristinaSokolovskayaName, "name": t("Kristina Sokolovskaya"), "position": t("Owner & CEO Kristal Business Experts"), "qr": kristinaSokolovskaya,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Sokolovskaya.vcf", "email": "info@kristalexperts.com",
             "social": {
                 "telegram": "https://t.me/+971529568390",
@@ -97,7 +98,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": pavelDyninName, "name": "Pavel Dynin", "position": "Real estate broker", "qr": propertyPartnersDynin,
+            "image": pavelDyninName, "name": t("Pavel Dynin"), "position": t("Real estate broker"), "qr": propertyPartnersDynin,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/dynin.vcf", "email": "dynin@propart.ae",
             "social": {
                 "telegram": "https://t.me/pavel_dynin",
@@ -107,7 +108,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": annaHorshunovaName, "name": "Anna Horshunova", "position": "Real estate broker", "qr": annaHorshunova,
+            "image": annaHorshunovaName, "name": t("Anna Horshunova"), "position": t("Real estate broker"), "qr": annaHorshunova,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Horshunova.vcf", "email": "Horshunova@propart.ae",
             "social": {
                 "facebook": "https://www.facebook.com/annagorshunova?mibextid=LQQJ4d",
@@ -117,7 +118,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": allaGerassimovaName, "name": "Alla Gerassimova", "position": "Marketing specialist, content creator ", "qr": allaGerassimova,
+            "image": allaGerassimovaName, "name": t("Alla Gerassimova"), "position": t("Marketing specialist, content creator"), "qr": allaGerassimova,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Gerassimova.vcf", "email": "gerassimova@propart.ae",
             "social": {
                 "telegram": "https://t.me/alla_gerassimova",
@@ -126,7 +127,7 @@ const Home = ({ openModal }) => {
             }
         },
         {
-            "image": dmitriyKoltsovName, "name": "Dmitriy Koltsov", "position": "Real estate broker", "qr": dmitriyKoltsov,
+            "image": dmitriyKoltsovName, "name": t("Dmitriy Koltsov"), "position": t("Real estate broker"), "qr": dmitriyKoltsov,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Koltsov.vcf", "email": "koltsov@propart.ae",
             "social": {
                 "telegram": "https://t.me/brokervdubae",
@@ -143,7 +144,7 @@ const Home = ({ openModal }) => {
         //     }
         // },
         {
-            "image": ruslanGeisha, "name": "Ruslan Geisha", "position": "Real estate broker", "qr": qrAlex,
+            "image": ruslanGeisha, "name": t("Ruslan Geisha"), "position": t("Real estate broker"), "qr": qrAlex,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Geisha.vcf", "email": "geisha@propart.ae",
             "social": {
                 "telegram": "https://t.me/ruslan_geisha",
@@ -156,11 +157,17 @@ const Home = ({ openModal }) => {
     const [showModal, setShowModal] = useState(false);
     const [modalContent, setModalContent] = useState("")
 
+    const [showInquireModal, setShowInquireModal] = useState(false);
+
     const handleTypeClick = (kind) => {
         setActiveKind((prevActiveKind) => (prevActiveKind === kind ? null : kind));
     };
     const closeModal = () => {
         setShowModal(false)
+    }
+
+    const closeInquireModal = () => {
+        setShowInquireModal(false)
     }
 
     function isMobile() {
@@ -334,7 +341,8 @@ const Home = ({ openModal }) => {
         <div id={"collections"} className="collections">
             <div className="tittle">
                 <div> {t("block2_title")}</div>
-                <div> {t("block2_text")}</div>
+                <div className='description'>{t("block2_text")}</div>
+                <div className='description'>{t("block3_text")}</div>
             </div>
             <div className="content">
                 <div className="collection">
@@ -347,7 +355,7 @@ const Home = ({ openModal }) => {
                             <div style={{
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: 16,
+                                gap: 10,
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
@@ -398,13 +406,13 @@ const Home = ({ openModal }) => {
                     <div className="image"><img src={collection2} /></div>
                     <div className="content">
                         <div className="collection-info">
-                            <div className="tittle">
+                            <div className="tittle" style={{ width: '100%'}}>
                                 {t("sel_2")}
                             </div>
                             <div style={{
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: 16
+                                gap: 10
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
@@ -454,13 +462,13 @@ const Home = ({ openModal }) => {
                     <div className="image"><img src={collection3} /></div>
                     <div className="content">
                         <div className="collection-info">
-                            <div className="tittle" style={{ fontSize: 28 }}>
+                            <div className="tittle" >
                                 {t("sel_3")}
                             </div>
                             <div style={{
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: 16
+                                gap: 10
                             }}>
                                 <div className="properties">
                                     <div className="property" onClick={() => {
@@ -516,9 +524,8 @@ const Home = ({ openModal }) => {
                             <div style={{
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: 16
+                                gap: 10
                             }}>
-
                                 <div className="properties">
                                     <div className="property" onClick={() => {
                                         setModalContent("resale")
@@ -623,10 +630,18 @@ const Home = ({ openModal }) => {
                 </div> */}
             </div>
         </div>
-
         <div className="why-dubai">
             <div className={"div1"}><img src={whyDubaiMain} /></div>
-            <div className={"dark"}>{t("square1")}</div>
+            <div className={"dark"}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="177" height="177" viewBox="0 0 177 177" fill="none">
+                    <path
+                        d="M88.5 177C39.6214 177 0 137.379 0 88.5C0 39.6214 39.6214 0 88.5 0C137.379 0 177 39.6214 177 88.5C177 137.379 137.379 177 88.5 177ZM144.742 123.475V122.546C144.742 114.386 144.742 110.66 138.972 107.359C137.117 106.308 135.212 105.348 133.263 104.483C130.015 103.005 127.865 102.041 124.962 97.7925C124.615 97.2881 124.273 96.7807 123.935 96.2703C120.882 91.6241 118.679 88.2788 110.289 89.6063C93.7835 92.2259 92.5622 95.1287 91.8365 100.032L91.7214 100.837C90.6506 108.005 90.4558 110.413 93.4472 113.554C104.642 125.298 111.351 133.768 113.386 138.724C114.377 141.14 116.926 148.459 115.174 155.698C125.916 151.419 135.478 144.631 143.06 135.901C144.034 132.591 144.742 128.467 144.742 123.475ZM88.5 16.222C67.9946 16.222 49.4715 24.7712 36.3204 38.4887C37.8869 39.5772 39.2498 41.1082 40.1879 43.2146C41.9933 47.259 41.9933 51.4273 41.9933 55.1178C41.9933 58.0206 41.9933 60.7818 42.9225 62.7731C44.1969 65.4989 49.7016 66.6671 54.5603 67.676C56.3037 68.0477 58.0914 68.4193 59.7198 68.8707C64.1979 70.1097 67.6671 74.1365 70.4371 77.3667C71.5876 78.703 73.2957 80.6766 74.1542 81.1722C74.5966 80.8536 76.0215 79.3048 76.7206 76.7649C77.2693 74.8179 77.1101 73.101 76.3224 72.1629C71.3664 66.3219 71.6407 55.0824 73.1718 50.9318C75.579 44.3916 83.1015 44.8784 88.6062 45.2324C90.6594 45.3651 92.5887 45.4978 94.0401 45.312C99.5448 44.6217 101.244 36.2407 102.439 34.6035C105.023 31.0635 112.935 25.7269 117.838 22.4347C108.603 18.3283 98.6068 16.2115 88.5 16.222Z"
+                        fill="#E5E5E5" fill-opacity="0.1"/>
+                </svg>
+                <span>
+                    {t("square1")}
+                </span>
+            </div>
             <div className={"light"}>
                 <div className="tittle">{t("square2")}</div>
                 <div className="description">{t("square2_1")}</div>
@@ -640,7 +655,7 @@ const Home = ({ openModal }) => {
                 <div className="tittle">{t("square4")}</div>
                 <div className="description">{t("square4_1")}</div>
             </div>
-            <div className={"image-grid"}><img src={whyDubai} /></div>
+            <div className={"image-grid"}><img src={whyDubai}/></div>
             <div className={"light"}>
                 <div className="tittle">{t("square5")}</div>
                 <div className="description">{t("square5_1")}
@@ -648,64 +663,80 @@ const Home = ({ openModal }) => {
             </div>
         </div>
         <div className="kind-of-projects">
-            <div className="image">
-                <img src={homeMain} />
-            </div>
-            <div className="content">
-                <div className="tittle">
-                    {t("block3_title")}
+            <div className="kind-container">
+                <div className="image">
+                    <img src={homeMain}/>
                 </div>
-                <div className="types">
-                    <div className={`type ${activeKind === 0 ? 'active' : ''}`}>
-                        <div className="visible-element" onClick={() => handleTypeClick(0)}>
-                            <div className="tittle"> {t("drop_1")}</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
+                <div className="content">
+                    <div className="tittle">
+                        {t("block3_title")}
+
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="90" viewBox="0 0 72 90" fill="none">
                                 <path
-                                    d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
-                                    fill="#191C38" />
+                                    d="M53.9958 17.9999C53.9958 27.9409 45.937 35.9997 35.996 35.9997C26.0549 35.9997 17.9961 27.9409 17.9961 17.9999C17.9961 8.05882 26.0549 0 35.996 0C45.937 0 53.9958 8.05882 53.9958 17.9999Z"
+                                    fill="#E5E5E5" fill-opacity="0.1"/>
+                                <path
+                                    d="M52.5515 51.7625C50.4227 51.7883 48.4384 51.866 46.7093 52.0984C43.8163 52.4874 40.6498 53.417 38.0334 56.0335C35.4169 58.6499 34.4873 61.8164 34.0983 64.7094C33.7488 67.3091 33.7493 70.4855 33.7498 73.8629V74.6366C33.7493 78.0141 33.7488 81.1904 34.0983 83.7901C34.3713 85.8201 34.9104 87.9848 36.1118 89.9997C36.0745 89.9997 36.0371 89.9997 35.9997 89.9997C0 89.9997 0 80.9335 0 69.7498C0 58.5662 16.1176 49.5 35.9997 49.5C41.9675 49.5 47.5961 50.3168 52.5515 51.7625Z"
+                                    fill="#E5E5E5" fill-opacity="0.1"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M56.2499 89.9998C48.8253 89.9998 45.113 89.9998 42.8065 87.6932C40.5 85.3867 40.5 81.6744 40.5 74.2499C40.5 66.8253 40.5 63.113 42.8065 60.8065C45.113 58.5 48.8253 58.5 56.2499 58.5C63.6745 58.5 67.3867 58.5 69.6933 60.8065C71.9998 63.113 71.9998 66.8253 71.9998 74.2499C71.9998 81.6744 71.9998 85.3867 69.6933 87.6932C67.3867 89.9998 63.6745 89.9998 56.2499 89.9998ZM65.106 70.8561C66.1311 69.8309 66.1311 68.1689 65.106 67.1438C64.0809 66.1187 62.4188 66.1187 61.3937 67.1438L52.7499 75.7876L51.1061 74.1437C50.081 73.1186 48.4189 73.1186 47.3938 74.1437C46.3687 75.1688 46.3687 76.8309 47.3938 77.856L50.8938 81.356C51.9189 82.3811 53.5809 82.3811 54.6061 81.356L65.106 70.8561Z"
+                                      fill="#E5E5E5" fill-opacity="0.1"/>
                             </svg>
-                        </div>
-                        <div className="hiden-text"> {t("drop_text1")}
                         </div>
                     </div>
-                    <div className={`type ${activeKind === 1 ? 'active' : ''}`}>
-                        <div className="visible-element" onClick={() => handleTypeClick(1)}>
-                            <div className="tittle"> {t("drop_2")}</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
-                                    fill="#191C38" />
-                            </svg>
+                    <div className="types">
+                        <div className={`type ${activeKind === 0 ? 'active' : ''}`}>
+                            <div className="visible-element" onClick={() => handleTypeClick(0)}>
+                                <div className="tittle"> {t("drop_1")}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path
+                                        d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
+                                        fill="#191C38"/>
+                                </svg>
+                            </div>
+                            <div className="hiden-text"> {t("drop_text1")}
+                            </div>
                         </div>
-                        <div className="hiden-text"> {t("drop_text2")}
+                        <div className={`type ${activeKind === 1 ? 'active' : ''}`}>
+                            <div className="visible-element" onClick={() => handleTypeClick(1)}>
+                                <div className="tittle"> {t("drop_2")}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path
+                                        d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
+                                        fill="#191C38"/>
+                                </svg>
+                            </div>
+                            <div className="hiden-text"> {t("drop_text2")}
+                            </div>
                         </div>
-                    </div>
-                    <div className={`type ${activeKind === 2 ? 'active' : ''}`}>
-                        <div className="visible-element" onClick={() => handleTypeClick(2)}>
-                            <div className="tittle"> {t("drop_3")}</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
-                                    fill="#191C38" />
-                            </svg>
+                        <div className={`type ${activeKind === 2 ? 'active' : ''}`}>
+                            <div className="visible-element" onClick={() => handleTypeClick(2)}>
+                                <div className="tittle"> {t("drop_3")}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path
+                                        d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
+                                        fill="#191C38" />
+                                </svg>
+                            </div>
+                            <div className="hiden-text"> {t("drop_text3")}
+                            </div>
                         </div>
-                        <div className="hiden-text"> {t("drop_text3")}
-                        </div>
-                    </div>
-                    <div className={`type ${activeKind === 3 ? 'active' : ''}`}>
-                        <div className="visible-element" onClick={() => handleTypeClick(3)}>
-                            <div className="tittle"> {t("drop_4")}</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
-                                    fill="#191C38" />
-                            </svg>
-                        </div>
-                        <div className="hiden-text"> {t("drop_text4")}
+                        <div className={`type ${activeKind === 3 ? 'active' : ''}`}>
+                            <div className="visible-element" onClick={() => handleTypeClick(3)}>
+                                <div className="tittle"> {t("drop_4")}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path
+                                        d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.63599 9.63617L7.04999 8.22217L12 13.1722Z"
+                                        fill="#191C38" />
+                                </svg>
+                            </div>
+                            <div className="hiden-text"> {t("drop_text4")}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -722,7 +753,6 @@ const Home = ({ openModal }) => {
                 </div>
 
                 <div className="consulting-content">
-
                     <Link to='/general'>
                         <div className="consult">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -763,25 +793,38 @@ const Home = ({ openModal }) => {
                             {t("feat4")}
                         </div>
                     </Link>
-
                 </div>
             </div>
         </div>
         <div className="our-team">
             <div className="tittle">
-                {t("block5_title")}
+                <div>{t("block5_title")}</div>
+                <div>{t("propart-section.description")}</div>
             </div>
             <div className="team">
                 {displayedMembers.map((member, index) => (
                     <Link
                         key={index}
                         className="member"
-                        to={"/agent"}
+                        to={""}
                         state={{ memberObject: member }}
                     >
                         <div key={index} className="member">
+                            <Link
+                                key={index}
+                                className="member"
+                                to={"/agent"}
+                                state={{ memberObject: member }}
+                            >
                             <div className="image"><img src={member.image} /></div>
+                            </Link>
                             <div className="information">
+                                <Link
+                                    key={index}
+                                    className="member"
+                                    to={"/agent"}
+                                    state={{ memberObject: member }}
+                                >
                                 <div className="general-info">
                                     <div className="name"><DynamicTruncatedText text={member.name} customBreakpoints={
                                         {
@@ -807,6 +850,7 @@ const Home = ({ openModal }) => {
                                         }
                                     } /></div>
                                 </div>
+                                </Link>
                                 <div className="social">
                                     {member.social.facebook && <svg style={{ cursor: "pointer" }} onClick={() => window.open(member.social.facebook)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path
@@ -852,7 +896,6 @@ const Home = ({ openModal }) => {
                                         </svg>}
 
                                 </div>
-
                             </div>
                         </div>
                     </Link>
@@ -875,9 +918,11 @@ const Home = ({ openModal }) => {
             </div>
             <div className="contact-form-form">
                 <div className="tittle">
-                    <div>{t("block5_title")}
+                    <div style={{width: "70%"}}>
+                        {t("block6_title11")}
                     </div>
-                    <div>{t("block6_text1")}
+                    <div style={{width: "85%"}}>
+                        {t("block6_title12")}
                     </div>
                 </div>
                 <div className="form">
@@ -909,6 +954,7 @@ const Home = ({ openModal }) => {
             </div>
         </div>
         <PDFmodal showModal={showModal} closeModal={closeModal} type={modalContent} />
+        <InquireModal showInquireModal={showInquireModal} closeInquireModal={closeInquireModal} />
         <Footer />
     </div>)
 }

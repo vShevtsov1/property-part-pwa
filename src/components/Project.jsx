@@ -19,7 +19,6 @@ const Project = ({ project }) => {
             </div>
 
         </div>
-
         <div className="project-content">
             <div className="price">
                 ${formatNumberWithCommas(project.priceFrom)} <span>/from</span>
@@ -33,6 +32,7 @@ const Project = ({ project }) => {
 
                 <DynamicTruncatedText text={project.developer} customBreakpoints={{
                     1920: 20,
+                    1024: 10,
                 }}/>
             </div>
         </div>
@@ -97,10 +97,7 @@ const Project = ({ project }) => {
                         <rect x="0.5" width="6" height="6" rx="0.5" stroke="#191C38" stroke-width="2"
                               mask="url(#path-8-inside-4_2627_21161)"/>
                     </svg>
-
                 </div>
-
-
                 <div className="text">
                     {(Number(project.priceFrom) / 3.16 / Number(project.sizeFrom)).toFixed(0)} <span>USD</span>
                 </div>

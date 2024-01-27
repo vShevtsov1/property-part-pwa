@@ -7,7 +7,6 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
     const { t } = useTranslation();
     const [visibleSearch, setVisibleSearch] = useState(false);
 
-
     const [visibleDropDowns, setVisibleDropDowns] = useState({
         "price": false,
         "size": false,
@@ -17,7 +16,7 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
         "propertyType": false
     })
 
-    const bedroomOptions = ["Studio", "1", "2", "3", "4", "5", "6", "7"];
+    const bedroomOptions = [t("studio"), "1", "2", "3", "4", "5", "6", "7"];
     const  values =[
         {"value": "Al Barari", "label": "Al Barari"},
         {"value": "Al Barsha 1", "label": "Al Barsha 1"},
@@ -118,8 +117,8 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
         {"value": "Wadi Al Safa 5", "label": "Wadi Al Safa 5"},
         {"value": "YAS Island", "label": "YAS Island"}
     ];
-    const completionOptions =["Ready","Any","Off-Plan"]
-    const typeOptions = ["Plots"," Town house","Villa","Apartments"]
+    const completionOptions =[t("ready"), t("any"),t("Off-plan")]
+    const typeOptions = [t("Plots"), t("Town-house"), t("Villa"), t("Apartments")]
 
     const handleSearchChange = (value) => {
         setFilterDataProjects(prevState => ({
@@ -184,238 +183,269 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
         });
     }
 
+    const [showFilter, setShowFilter] = useState()
+
 
     return (<div className={"filter"}>
-        <div className="search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                    d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#09121F" />
+        <div className="filter-mob" onClick={() => setShowFilter(!showFilter)}>
+            Filter
+
+            <svg className={`${showFilter ? 'active' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="4" viewBox="0 0 10 4" fill="none">
+                <path d="M5 4L0 0H10L5 4Z" fill="white"/>
             </svg>
-
-            <input value={filterDataProjects.search} onChange={(e)=>handleSearchChange(e.target.value)} placeholder={"Search on map..."}  type="text" />
-
         </div>
 
-        <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                price: true
-            }));
-        }}
-            onMouseLeave={() => {
+
+        <div className={`filter-container ${showFilter ? 'active' : ''}`}>
+            <div className="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#09121F" />
+                </svg>
+
+                <input value={filterDataProjects.search} onChange={(e)=>handleSearchChange(e.target.value)} placeholder={t("search on map")}  type="text" />
+            </div>
+
+            <div className="dropdown" onMouseEnter={() => {
                 setVisibleDropDowns(prevState => ({
                     ...prevState,
-                    price: false
+                    price: true
                 }));
             }}
-        >
-            <div className={"dropdown-container"}>
-                {t("filter1")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F" />
-                </svg>
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         price: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter1")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F" />
+                    </svg>
+                </div>
+
+                {visibleDropDowns.price && <div className="additional-menu">
+                    <input value={filterDataProjects.priceValues.from} onChange={(e)=>handlePriceFromChange(e.target.value)}
+                           placeholder={t('from')} />
+                    <input value={filterDataProjects.priceValues.to} onChange={(e)=>handlePriceToChange(e.target.value)}  placeholder={t("to")}
+
+                    />
+                </div>}
             </div>
 
-            {visibleDropDowns.price && <div className="additional-menu">
-                <input value={filterDataProjects.priceValues.from} onChange={(e)=>handlePriceFromChange(e.target.value)}
-                    placeholder={"From"} />
-                <input value={filterDataProjects.priceValues.to} onChange={(e)=>handlePriceToChange(e.target.value)}  placeholder={"To"}
+            <div className="dropdown" onMouseEnter={() => {
+                setVisibleDropDowns(prevState => ({
+                    ...prevState,
+                    size: true
+                }));
+            }}
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         size: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter2")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
+                    </svg>
+                </div>
 
-                />
-            </div>}
-        </div>
-
-        <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                size: true
-            }));
-        }}
-             onMouseLeave={() => {
-                 setVisibleDropDowns(prevState => ({
-                     ...prevState,
-                     size: false
-                 }));
-             }}
-        >
-            <div className={"dropdown-container"}>
-                {t("filter2")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
-                </svg>
+                {visibleDropDowns.size && <div className="additional-menu">
+                    <input value={filterDataProjects.sizeValues.from} onChange={e=>handleSizeFromChange(e.target.value)}
+                           placeholder={t("from")} />
+                    <input value={filterDataProjects.sizeValues.to} onChange={e=>handleSizeToChange(e.target.value)} placeholder={t("to")}
+                    />
+                </div>}
             </div>
 
-            {visibleDropDowns.size && <div className="additional-menu">
-                <input value={filterDataProjects.sizeValues.from} onChange={e=>handleSizeFromChange(e.target.value)}
-                       placeholder={"From"} />
-                <input value={filterDataProjects.sizeValues.to} onChange={e=>handleSizeToChange(e.target.value)} placeholder={"To"}
+            <div className="dropdown" onMouseEnter={() => {
+                setVisibleDropDowns(prevState => ({
+                    ...prevState,
+                    bedrooms: true
+                }));
+            }}
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         bedrooms: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter3")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
+                    </svg>
+                </div>
 
-                />
-            </div>}
-        </div>
+                {visibleDropDowns.bedrooms && <div className="additional-list">
+                    {
+                        bedroomOptions.map((option, index) => (
+                            <div className='dropdown-option' key={index} onClick={()=>handleItemChange("bedrooms",option)}>
+                                <div>
+                                    {filterDataProjects.bedrooms.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                        </svg>:
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                        </svg>
+                                    }
+                                </div>
+                                {option}
+                            </div>
+                        ))
+                    }
 
-        <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                bedrooms: true
-            }));
-        }}
-             onMouseLeave={() => {
-                 setVisibleDropDowns(prevState => ({
-                     ...prevState,
-                     bedrooms: false
-                 }));
-             }}
-        >
-            <div className={"dropdown-container"}>
-                {t("filter3")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
-                </svg>
+
+
+                </div>}
             </div>
 
-            {visibleDropDowns.bedrooms && <div className="additional-list">
-                {
-                    bedroomOptions.map((option, index) => (
-                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("bedrooms",option)}>
+            <div className="dropdown" onMouseEnter={() => {
+                setVisibleDropDowns(prevState => ({
+                    ...prevState,
+                    location: true
+                }));
+            }}
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         location: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter4")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
+                    </svg>
+                </div>
+
+                {visibleDropDowns.location && <div className="additional-list location">
+                    {values.map((value, index) => (
+                        <div key={index} className='dropdown-option' onClick={()=>handleItemChange("location",value.value)}>
                             <div>
-                                {filterDataProjects.bedrooms.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
-                                    </svg>:
+                                {filterDataProjects.location.includes(value.value)?
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                    </svg>
+                                    :<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
                                     </svg>
                                 }
-                            </div>
-                            {option}
-                        </div>
-                    ))
-                }
-
-
-
-            </div>}
-        </div>
-
-       <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                 location: true
-            }));
-        }}
-             onMouseLeave={() => {
-                 setVisibleDropDowns(prevState => ({
-                     ...prevState,
-                     location: false
-                 }));
-             }}
-        >
-            <div className={"dropdown-container"}>
-                {t("filter4")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
-                </svg>
-            </div>
-
-            {visibleDropDowns.location && <div className="additional-list location">
-                {values.map((value, index) => (
-                    <div key={index} className='dropdown-option' onClick={()=>handleItemChange("location",value.value)}>
-                        <div>
-                            {filterDataProjects.location.includes(value.value)?
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
-                                </svg>
-                                :<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
-                                </svg>
-                            }
 
                             </div>
                             {value.label}
                         </div>
                     ))}
-            </div>}
-        </div>
-
-        <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                completion: true
-            }));
-        }}
-             onMouseLeave={() => {
-                 setVisibleDropDowns(prevState => ({
-                     ...prevState,
-                     completion: false
-                 }));
-             }}
-        >
-            <div className={"dropdown-container"}>
-                Completion
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
-                </svg>
+                </div>}
             </div>
 
-            {visibleDropDowns.completion && <div className="additional-list">
-                {
-                    completionOptions.map((option, index) => (
-                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("completion",option)}>
-                            <div>
-                                {filterDataProjects.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
-                                    </svg>:
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
-                                    </svg>
-                                }
+            <div className="dropdown" onMouseEnter={() => {
+                setVisibleDropDowns(prevState => ({
+                    ...prevState,
+                    completion: true
+                }));
+            }}
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         completion: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter7")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
+                    </svg>
+                </div>
+
+                {visibleDropDowns.completion && <div className="additional-list">
+                    {
+                        completionOptions.map((option, index) => (
+                            <div className='dropdown-option' key={index} onClick={()=>handleItemChange("completion",option)}>
+                                <div>
+                                    {filterDataProjects.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                        </svg>:
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                        </svg>
+                                    }
+                                </div>
+                                {option}
                             </div>
-                            {option}
-                        </div>
-                    ))
-                }
-            </div>}
-        </div>
-
-        <div className="dropdown" onMouseEnter={() => {
-            setVisibleDropDowns(prevState => ({
-                ...prevState,
-                propertyType: true
-            }));
-        }}
-             onMouseLeave={() => {
-                 setVisibleDropDowns(prevState => ({
-                     ...prevState,
-                     propertyType: false
-                 }));
-             }}
-        >
-            <div className={"dropdown-container"}>
-                {t("filter6")}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
-                </svg>
+                        ))
+                    }
+                </div>}
             </div>
 
-            {visibleDropDowns.propertyType && <div className="additional-list">
-                {
-                    typeOptions.map((option, index) => (
-                        <div className='dropdown-option' key={index} onClick={()=>handleItemChange("propertyType",option)}>
-                            <div>
-                                {filterDataProjects.propertyType.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#FF996D"/>
-                                    </svg>:
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
-                                    </svg>
-                                }
+            <div className="dropdown" onMouseEnter={() => {
+                setVisibleDropDowns(prevState => ({
+                    ...prevState,
+                    propertyType: true
+                }));
+            }}
+                 onMouseLeave={() => {
+                     setVisibleDropDowns(prevState => ({
+                         ...prevState,
+                         propertyType: false
+                     }));
+                 }}
+            >
+                <div className={"dropdown-container"}>
+                    {t("filter6")}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 14L8 10H16L12 14Z" fill="#09121F"/>
+                    </svg>
+                </div>
+
+                {visibleDropDowns.propertyType && <div className="additional-list">
+                    {
+                        typeOptions.map((option, index) => (
+                            <div className='dropdown-option' key={index} onClick={()=>handleItemChange("propertyType",option)}>
+                                <div>
+                                    {filterDataProjects.propertyType.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                        </svg>:
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                        </svg>
+                                    }
+                                </div>
+                                {option}
                             </div>
-                            {option}
-                        </div>
-                    ))
+                        ))
+                    }
+                </div>
                 }
             </div>
-            }
+
+            <div className="clear" onClick={() => setFilterDataProjects({
+                search: "",
+                priceValues: { from: "", to: "" },
+                sizeValues: { from: "", to: "" },
+                bedrooms: [],
+                location: [],
+                completion: [],
+                propertyType: []
+            })}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+                    <path
+                        d="M7.75938 7.32205C7.50055 7.06322 7.08089 7.06322 6.82205 7.32205C6.56322 7.5809 6.56322 8.00055 6.82205 8.25937L8.56268 10L6.82207 11.7407C6.56324 11.9995 6.56324 12.4191 6.82207 12.678C7.08091 12.9368 7.50057 12.9368 7.75938 12.678L9.50005 10.9374L11.2406 12.678C11.4995 12.9368 11.9191 12.9368 12.178 12.678C12.4368 12.4191 12.4368 11.9995 12.178 11.7406L10.4373 10L12.178 8.25937C12.4368 8.00057 12.4368 7.58091 12.178 7.32208C11.9191 7.06324 11.4995 7.06324 11.2406 7.32208L9.50005 9.06267L7.75938 7.32205Z"
+                        fill="#FF5959"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.5 0.5C4.2533 0.5 0 4.7533 0 10C0 15.2467 4.2533 19.5 9.5 19.5C14.7467 19.5 19 15.2467 19 10C19 4.7533 14.7467 0.5 9.5 0.5ZM1.32558 10C1.32558 5.4854 4.9854 1.82558 9.5 1.82558C14.0146 1.82558 17.6744 5.4854 17.6744 10C17.6744 14.5146 14.0146 18.1744 9.5 18.1744C4.9854 18.1744 1.32558 14.5146 1.32558 10Z"
+                          fill="#FF5959"/>
+                </svg>
+                {t("clear")}
+            </div>
         </div>
     </div>)
 }

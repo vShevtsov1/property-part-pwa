@@ -3,7 +3,7 @@
   padding-bottom: 16px;
   flex-direction: column;
   background: white;
-  height: 40vh;
+  height: 41vh;
   gap: 16px;
   border-radius: 3px;
   background: #FFF;
@@ -30,7 +30,6 @@
       gap: 6px;
       justify-content: space-between;
       width: 100%;
-
       div:first-child{
         display: flex;
         flex-direction: column;
@@ -86,10 +85,12 @@
     }
   }
 }
+
 @media (max-width: 600px) {
   .floor-plan{
+    gap: 0;
     .plan-info{
-      padding: 5px;
+      padding: 10px;
       .price-info{
         div:first-child{
           font-size: 16px;

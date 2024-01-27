@@ -145,7 +145,16 @@ footer {
       }
     }
   }
+}
 
+@media (max-width: 965px) {
+  footer {
+    .menu-wrapper {
+      &.menu-ua-ru {
+        gap: 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {

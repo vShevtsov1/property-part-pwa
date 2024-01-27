@@ -9,30 +9,33 @@
          }
 
          .registering-trademark {
-             display: flex;
-             flex-direction: column;
-             gap: 16px;
 
              padding: 32px 64px 32px 64px;
 
-             div:first-child {
-                 color: #000;
-                 font-family: HelveticaBold, sans-serif;
-                 font-size: 32px;
-                 font-style: normal;
-                 font-weight: 400;
-                 line-height: 120%;
-                 /* 38.4px */
-             }
+             .content {
+                 display: flex;
+                 flex-direction: column;
+                 gap: 16px;
+                 padding: 25px;
+                 background: #fff;
 
-             div:last-child {
-                 color: #707070;
-                 font-family: Helvetica;
-                 font-size: 16px;
-                 font-style: normal;
-                 font-weight: 400;
-                 line-height: 120%;
-                 /* 19.2px */
+                 div:first-child {
+                     color: #191C38;
+                     font-family: Onest;
+                     font-size: 32px;
+                     font-style: normal;
+                     font-weight: 700;
+                     line-height: normal;
+                 }
+
+                 div:last-child {
+                     color: #575757;
+                     font-family: Onest;
+                     font-size: 20px;
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: normal;
+                 }
              }
          }
 
@@ -53,7 +56,7 @@
                      gap: 12px;
 
                      div:first-child {
-                         color: #000;
+                         color: #191C38;
                          font-family: HelveticaBold, sans-serif;
                          font-size: 32px;
                          font-style: normal;
@@ -88,7 +91,7 @@
                              align-items: center;
 
                              div:first-child {
-                                 color: #000;
+                                 color: #191C38;
                                  font-family: Helvetica;
                                  font-size: 24px;
                                  font-style: normal;
@@ -104,7 +107,8 @@
                                      margin-top: 3px;
                                  }
 
-                                 color: #C29773;
+                                 color: #575757;
+
                                  font-family: Helvetica;
                                  font-size: 16px;
                                  font-style: normal;
@@ -119,7 +123,7 @@
                              gap: 24px;
 
                              div:first-child {
-                                 color: #000;
+                                 color: #191C38;
                                  font-family: HelveticaBold, sans-serif;
                                  font-size: 22px;
                                  font-style: normal;
@@ -164,7 +168,7 @@
              gap: 24px;
 
              .title {
-                 color: #000;
+                 color: #191C38;
 
                  font-family: HelveticaBold, sans-serif;
                  font-size: 32px;
@@ -185,7 +189,7 @@
                      align-items: center;
 
                      div:first-child {
-                         color: #FFF;
+                         color: #fff;
                          leading-trim: both;
                          text-edge: cap;
                          font-family: Helvetica;
@@ -203,7 +207,7 @@
                      }
 
                      div:last-child {
-                         color: #191C38;
+                         color: #575757;
                          leading-trim: both;
                          text-edge: cap;
                          font-family: Helvetica;
@@ -319,12 +323,14 @@
              .registering-trademark {
                  padding: 64px 16px 32px 16px;
 
-                 div:first-child {
-                     font-size: 20px;
-                 }
+                 .content {
+                     div:first-child {
+                         font-size: 20px;
+                     }
 
-                 div:last-child {
-                     font-size: 16px;
+                     div:last-child {
+                         font-size: 16px;
+                     }
                  }
              }
 
@@ -518,12 +524,14 @@
              .registering-trademark {
                  padding: 96px 16px 48px 16px;
 
-                 div:first-child {
-                     font-size: 20px;
-                 }
+                 .content {
+                     div:first-child {
+                         font-size: 20px;
+                     }
 
-                 div:last-child {
-                     font-size: 16px;
+                     div:last-child {
+                         font-size: 16px;
+                     }
                  }
              }
 

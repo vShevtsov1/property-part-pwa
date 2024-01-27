@@ -1,12 +1,12 @@
+import "../styles/Pages/realEstate.scss"
 import Header from "../components/Header.jsx";
 import {
     APIProvider,
     ControlPosition,
     Map,
-    MapControl,
+    MapControl
 } from '@vis.gl/react-google-maps';
 import { useEffect, useState } from "react";
-import "../styles/Pages/realEstate.scss"
 import Filter from "../components/Filter.jsx";
 import Project from "../components/Project.jsx";
 import Footer from "../components/Footer.jsx";
@@ -18,25 +18,15 @@ import {
 } from '@vis.gl/react-google-maps';
 import AreasCard from "../components/AreasCard.jsx";
 import { Link } from "react-router-dom";
-import apart1 from "../assets/Areas/apart1.png";
-import palm from "../assets/Areas/palm-jumeirah.png";
-import mbr from "../assets/Areas/mbr.png";
-import creek from "../assets/Areas/creek.png";
-import marina from "../assets/Areas/marina.png";
-import lagoons from "../assets/Areas/lagoons.png";
-import jlt from "../assets/Areas/jlt.png";
-import mjl from "../assets/Areas/mjl.png";
-import mudon from "../assets/Areas/mudon.png";
-import jvc from "../assets/Areas/jvc.png";
-import bluewaters from "../assets/Areas/bluewaters.png";
-import centralPark from "../assets/Areas/central-park.png";
-import domacHills from "../assets/Areas/damac-hills.png";
-import dubaiHills from "../assets/Areas/dubai-hills.png";
+
 import GetConsult from "../components/GetConsult.jsx";
 import React from 'react';
 import areasinfo from "../data/Areasinfo.jsx";
 import project from "../components/Project.jsx";
 import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
+import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
+import AreaCard from "../components/AreaCard.jsx";
+import areasViewPage from "./AreasViewPage.jsx";
 
 const RealEstate = () => {
     const [mapZoom, setMapZoom] = useState(10);
@@ -61,6 +51,12 @@ const RealEstate = () => {
                 console.log(error);
             });
     }, []);
+
+    useEffect(() => {
+        if(visibleProjects.length === 0 && projects !== null) {
+            setVisibleProjects(projects.slice(0, 10))
+        }
+    }, [projects]);
     const updateProjectsVisibility = () => {
         const currentZoom = mapZoom;
         let visiblePercentage = 100;
@@ -109,48 +105,13 @@ const RealEstate = () => {
         }
     };
 
+    const cardInfo = AreasCardsInfo();
+
     const handlePrevProjects = () => {
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
         }
     };
-    const showMore = () => {
-        setDisplayCount((prevCount) => prevCount + 6); // Increase the display count by 4
-    };
-    const [visibleSearch, setVisibleSearch] = useState(false);
-
-    const [filterData, setFilterData] = useState({
-        search: "",
-        searchVisibleAreas: areasinfo,
-        priceValues: { from: "", to: "" },
-    });
-
-    const [visibleDropDowns, setVisibleDropDowns] = useState({
-        "price": false,
-    })
-    function handleFindChangeAreas(event) {
-        const inputValue = event.target.value;
-        if (inputValue.length !== 0) {
-            setVisibleSearch(true);
-            const filteredListAreas = areasinfo.filter((area) =>
-                area.label.toLowerCase().includes(inputValue.toLowerCase())
-            );
-            setFilterData((prevState) => ({
-                ...prevState,
-                searchVisibleAreas: filteredListAreas,
-            }));
-        } else {
-            setVisibleSearch(false);
-            setFilterData((prevState) => ({
-                ...prevState,
-                searchVisibleAreas: areasinfo,
-            }));
-        }
-        setFilterData((prevState) => ({
-            ...prevState,
-            search: inputValue,
-        }));
-    }
 
     const [filterDataProjects, setFilterDataProjects] = useState({
         search: "",
@@ -244,8 +205,6 @@ const RealEstate = () => {
 
     }, [filterDataProjects,projects,setFilterDataProjects]);
 
-    console.log(projects)
-
     if (projects === null) {
         return null;
     }
@@ -268,7 +227,6 @@ const RealEstate = () => {
                                     lat: 25.152033492170037,
                                     lng: 55.32550889425454,
                                 }}
-                                gestureHandling={"greedy"}
                                 mapId={"eafda8fe79279394"}
                                 fullscreenControl={true}
                                 onZoomChanged={ev => {
@@ -304,7 +262,7 @@ const RealEstate = () => {
                             ))
                         }
 
-                        {projectPerView < projects.length && <div className="show-more-wrapper">
+                        {projectPerView < filteredProjects.length && <div className="show-more-wrapper">
                             <div className="show-more" onClick={() => setprojectsPerView(projectPerView + 10)}>Show
                                 more
                             </div>
@@ -313,7 +271,7 @@ const RealEstate = () => {
 
                     <div className="projects-phone">
                         {
-                            projects.slice(startIndex, endIndex).map((project, index) => (
+                            filteredProjects.slice(startIndex, endIndex).map((project, index) => (
                                 <Project project={project} key={index}/>
                             ))
                         }
@@ -321,20 +279,18 @@ const RealEstate = () => {
                 </div>
                 <div className="map-buttons">
                     <div className="left-arrow" onClick={handlePrevProjects} disabled={currentPage === 1}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M7.828 11.0007L13.192 5.63666L11.778 4.22266L4 12.0007L11.778 19.7787L13.192 18.3647L7.828 13.0007H20V11.0007H7.828Z"
-                                fill="white"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                            <path d="M5.35878 10L6 9.40171L1.28244 5L6 0.598291L5.35878 0L0 5L5.35878 10Z"
+                                  fill="#191C38"/>
                         </svg>
                     </div>
                     <div className="count">
                         {currentPage}
                     </div>
                     <div className="right-arrow" onClick={handleNextProjects} disabled={currentPage === projects.length / 3}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M16.172 11.0007L10.808 5.63666L12.222 4.22266L20 12.0007L12.222 19.7787L10.808 18.3647L16.172 13.0007H4V11.0007H16.172Z"
-                                fill="white"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                            <path d="M0.641221 10L0 9.40171L4.71756 5L0 0.598291L0.641221 0L6 5L0.641221 10Z"
+                                  fill="#191C38"/>
                         </svg>
                     </div>
                 </div>
@@ -351,14 +307,56 @@ const RealEstate = () => {
                 </svg>
             </div>
 
-            <Footer />
-            {/* <div className="search-bar">
-                <input type="text" placeholder="Type here the area you are looking for..." />
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21008 0.5C4.54633 0.5 0.765625 4.28071 0.765625 8.94446C0.765625 13.6082 4.54633 17.3889 9.21008 17.3889C11.1615 17.3889 12.9584 16.727 14.3882 15.6155L17.9637 19.1909C18.3759 19.603 19.0443 19.603 19.4565 19.1909C19.8687 18.7787 19.8687 18.1103 19.4565 17.6981L15.8811 14.1226C16.9926 12.6927 17.6545 10.8959 17.6545 8.94446C17.6545 4.28071 13.8738 0.5 9.21008 0.5ZM2.87674 8.94446C2.87674 5.44665 5.71227 2.61111 9.21008 2.61111C12.7079 2.61111 15.5434 5.44665 15.5434 8.94446C15.5434 12.4423 12.7079 15.2778 9.21008 15.2778C5.71227 15.2778 2.87674 12.4423 2.87674 8.94446Z" fill="#575757" />
-                </svg>
-            </div> */}
-        </div >
+            <div className="areas-content">
+                <div className="about-dubai">
+                    <div className="about-dubai-content">
+                        <div className="title">{t("About Dubai")}</div>
+                        <div className="description">
+                            <div>{t("About Dubai Descr1")}</div>
+                            <div>{t("About Dubai Descr2")}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="area-card-container">
+                    {cardInfo.slice(0, 6).map((card, index) => (
+                        <AreaCard
+                            key={index}
+                            name={card.name}
+                            description={t(`${card.description}`)}
+                            price={card.price}
+                            image={card.image}
+                            area={card.area}
+                        />
+                    ))}
+                </div>
+
+                <div className="get-consult-box">
+                    <GetConsult/>
+                </div>
+
+                <div className="area-card-container">
+                    {cardInfo.slice(6, 12).map((card, index) => (
+                        <AreaCard
+                            key={index}
+                            name={card.name}
+                            description={card.description}
+                            price={card.price}
+                            image={card.image}
+                            area={card.area}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            <Footer/>
+            {/*<div className="search-bar">*/}
+            {/*    <input type="text" placeholder="Type here the area you are looking for..." />*/}
+            {/*    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">*/}
+            {/*        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21008 0.5C4.54633 0.5 0.765625 4.28071 0.765625 8.94446C0.765625 13.6082 4.54633 17.3889 9.21008 17.3889C11.1615 17.3889 12.9584 16.727 14.3882 15.6155L17.9637 19.1909C18.3759 19.603 19.0443 19.603 19.4565 19.1909C19.8687 18.7787 19.8687 18.1103 19.4565 17.6981L15.8811 14.1226C16.9926 12.6927 17.6545 10.8959 17.6545 8.94446C17.6545 4.28071 13.8738 0.5 9.21008 0.5ZM2.87674 8.94446C2.87674 5.44665 5.71227 2.61111 9.21008 2.61111C12.7079 2.61111 15.5434 5.44665 15.5434 8.94446C15.5434 12.4423 12.7079 15.2778 9.21008 15.2778C5.71227 15.2778 2.87674 12.4423 2.87674 8.94446Z" fill="#575757" />*/}
+            {/*    </svg>*/}
+            {/*</div>*/}
+        </div>
     );
 
 };

@@ -1,0 +1,201 @@
+.inq-modal-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 15px 19px 15px 19px;
+
+  .logo {
+    position: absolute;
+    left: 15px;
+  }
+  .close {
+    position: absolute;
+    right: 15px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    align-items: center;
+    padding: 10px 0px 78px 0px;
+
+    .header {
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+
+        .name {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+
+          div:first-child {
+            color: #FFF;
+            text-align: center;
+            font-family: Onest;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+
+          div:last-child {
+            color: #FFF;
+            text-align: center;
+            font-family: Onest;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+
+        .rooms {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          color: #FFF;
+          font-family: Onest;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          padding: 0px 58px 0px 0px;
+        }
+      }
+    }
+
+    .info-button {
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+
+      .info {
+        div:first-child {
+          color: #FFF;
+          text-align: center;
+          text-shadow: 0px 0px 50px #000;
+          font-family: Onest;
+          font-size: 70px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        div:last-child {
+          color: #FFF;
+          text-align: center;
+          text-shadow: 0px 0px 50px #000;
+          font-family: Onest;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      .button {
+        color: #FFF;
+        text-align: center;
+        font-family: Onest;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+        padding: 12px 127px;
+
+
+
+        border-radius: 2px;
+        border: 1px solid #808080;
+        background: rgba(25, 28, 56, 0.80);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+
+  .fill-content {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    align-items: center;
+    justify-content: center;
+
+    .form-privacy {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+
+        .field-input{
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          border: 1px solid #CACACA;
+          background: #FFF;
+          padding: 0px 16px;
+          height: 46px;
+
+          div {
+            display: flex;
+            align-items: center;
+            height: 100%;
+          }
+
+          input {
+            color: #8F8F8F;
+            font-family: Onest;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.56px;
+            height: 100%;
+            border: 0;
+            background: transparent;
+            outline: none;
+          }
+        }
+
+        .field-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #FFF;
+          font-family: Onest;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          height: 46px;
+          padding: 0 16px;
+          border-radius: 2px;
+          cursor: pointer;
+          background: linear-gradient(180deg, #C29773 0%, #A67F5F 100%);
+        }
+      }
+
+      .privacy {
+        color: #FAFAFA;
+        text-align: center;
+        font-family: Onest;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

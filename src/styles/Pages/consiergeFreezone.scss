@@ -9,6 +9,11 @@
             gap: 24px;
         }
 
+        .video {
+            padding: 48px 64px 16px 64px;
+            height: 80vh;
+        }
+
         .registring {
             display: flex;
             flex-direction: column;
@@ -506,11 +511,28 @@
     }
 }
 
+@media (max-width: 1380px) {
+    .cons-free-wrapper {
+        .cons-free-container {
+            .video {
+                height: 650px;
+
+            }
+        }
+    }
+}
+
+
 @media (max-width: 1300px) {
     .cons-free-wrapper {
         .cons-free-container {
             .guide-section {
                 display: none;
+            }
+
+            .video {
+                padding: 16px 16px;
+                height: 600px;
             }
 
             .registring {
@@ -828,6 +850,11 @@
                         }
                     }
                 }
+            }
+
+            .video {
+                padding: 16px 16px;
+                height: 30vh;
             }
 
             .registring {

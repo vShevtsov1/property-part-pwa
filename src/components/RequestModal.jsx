@@ -25,6 +25,7 @@ const RequestModal = ({ showModal, closeModal, modalText, image }) => {
             zIndex: 999
         }
     };
+
     return (<Modal isOpen={showModal} style={modalStyles} onRequestClose={closeModal}>
         <div className="modal-content">
             <div className="image-container">

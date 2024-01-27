@@ -44,7 +44,7 @@ function AboutUs() {
     const { t } = useTranslation();
     const team = [
         {
-            "image": alexLogachevName, "name": "Lohachov Oleksandr", "position": "Owner & CEO Property Partners Real Estate", "qr": qrAlex,
+            "image": alexLogachevName, "name": t("Lohachov Oleksandr"), "position": t("Owner & CEO Property Partners Real Estate"), "qr": qrAlex,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Lohachov.vcf", "email": "lohachov@propart.ae",
             "social": {
                 "telegram": "https://t.me/oleksandr_logachev",
@@ -55,7 +55,7 @@ function AboutUs() {
             }
         },
         {
-            "image": alekseiShyianName, "name": "Aleksei Shyian", "position": "Business Developer", "qr": alekseiShyian,
+            "image": alekseiShyianName, "name": t("Aleksei Shyian"), "position": t("Business Developer"), "qr": alekseiShyian,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Shyian.vcf", "email": "info@kristalexperts.com",
             "social": {
                 "instagram": "https://instagram.com/dubai_oleksii_shyian?igshid=MzRlODBiNWFlZA==",
@@ -67,7 +67,7 @@ function AboutUs() {
             }
         },
         {
-            "image": tykhovaTatianaName, "name": "Tykhova Tatiana", "position": "Real estate broker", "qr": tykhovaTatiana,
+            "image": tykhovaTatianaName, "name": t("Tykhova Tatiana"), "position": t("Real estate broker"), "qr": tykhovaTatiana,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Tykhova.vcf", "email": "tykhova@propart.ae",
             "social": {
                 "instagram": "https://instagram.com/taffeeta?igshid=NTc4MTIwNjQ2YQ==",
@@ -79,7 +79,7 @@ function AboutUs() {
         }
         ,
         {
-            "image": kristinaSokolovskayaName, "name": "Kristina Sokolovskaya", "position": "Owner & CEO Kristal Business Experts", "qr": kristinaSokolovskaya,
+            "image": kristinaSokolovskayaName, "name": t("Kristina Sokolovskaya"), "position": t("Owner & CEO Kristal Business Experts"), "qr": kristinaSokolovskaya,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Sokolovskaya.vcf", "email": "info@kristalexperts.com",
             "social": {
                 "telegram": "https://t.me/+971529568390",
@@ -87,7 +87,7 @@ function AboutUs() {
             }
         },
         {
-            "image": pavelDyninName, "name": "Pavel Dynin", "position": "Real estate broker", "qr": propertyPartnersDynin,
+            "image": pavelDyninName, "name": t("Pavel Dynin"), "position": t("Real estate broker"), "qr": propertyPartnersDynin,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/dynin.vcf", "email": "dynin@propart.ae",
             "social": {
                 "telegram": "https://t.me/pavel_dynin",
@@ -97,7 +97,7 @@ function AboutUs() {
             }
         },
         {
-            "image": annaHorshunovaName, "name": "Anna Horshunova", "position": "Real estate broker", "qr": annaHorshunova,
+            "image": annaHorshunovaName, "name": t("Anna Horshunova"), "position": t("Real estate broker"), "qr": annaHorshunova,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Horshunova.vcf", "email": "Horshunova@propart.ae",
             "social": {
                 "facebook": "https://www.facebook.com/annagorshunova?mibextid=LQQJ4d",
@@ -107,7 +107,7 @@ function AboutUs() {
             }
         },
         {
-            "image": allaGerassimovaName, "name": "Alla Gerassimova", "position": "Marketing specialist, content creator ", "qr": allaGerassimova,
+            "image": allaGerassimovaName, "name": t("Alla Gerassimova"), "position": t("Marketing specialist, content creator"), "qr": allaGerassimova,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Gerassimova.vcf", "email": "gerassimova@propart.ae",
             "social": {
                 "telegram": "https://t.me/alla_gerassimova",
@@ -116,7 +116,7 @@ function AboutUs() {
             }
         },
         {
-            "image": dmitriyKoltsovName, "name": "Dmitriy Koltsov", "position": "Real estate broker", "qr": dmitriyKoltsov,
+            "image": dmitriyKoltsovName, "name": t("Dmitriy Koltsov"), "position": t("Real estate broker"), "qr": dmitriyKoltsov,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Koltsov.vcf", "email": "koltsov@propart.ae",
             "social": {
                 "telegram": "https://t.me/brokervdubae",
@@ -125,15 +125,15 @@ function AboutUs() {
             }
         },
         // {
-        //     "image": aleksandraBobrova, "name": "Aleksandra Bobrova", "position": "Sales manager secondary market", "qr": qrAlex,
+        //     "image": aleksandraBobrova, "name": "Aleksandra Bobrova", "position": "Sales manager secondary market","qr":qrAlex,
         //     "social": {
         //         "telegram": "https://t.me/alexandraa_ab",
-        //         "instagram": "https://www.instagram.com/alexandraa_ab?igsh=NTl0NTNiaHk5em9w",
-        //         "whatsapp": "https://wa.me/971566510053",
+        //         "instagram":"https://www.instagram.com/alexandraa_ab?igsh=NTl0NTNiaHk5em9w",
+        //         "whatsapp":"https://wa.me/971566510053",
         //     }
         // },
         {
-            "image": ruslanGeisha, "name": "Ruslan Geisha", "position": "Real estate broker", "qr": qrAlex,
+            "image": ruslanGeisha, "name": t("Ruslan Geisha"), "position": t("Real estate broker"), "qr": qrAlex,
             "vcf": "https://propart-vcf.s3.me-south-1.amazonaws.com/Geisha.vcf", "email": "geisha@propart.ae",
             "social": {
                 "telegram": "https://t.me/ruslan_geisha",
@@ -151,7 +151,6 @@ function AboutUs() {
                     <div className="text-photo">
                         <div className="text-content">
                             <div className="text">
-
                                 <svg xmlns="http://www.w3.org/2000/svg" width="207" height="81" viewBox="0 0 207 81"
                                      fill="none">
                                     <path
@@ -191,7 +190,8 @@ function AboutUs() {
                                 <div className="container-med">
                                     <div className="title-med"> {t('about-us.since-inception.title')}</div>
                                     <div className="descr">
-                                        <div className="text-med">{t('about-us.since-inception.description.1')} \{t('about-us.since-inception.description.2')}</div>
+                                        <div
+                                            className="text-med">{t('about-us.since-inception.description.1')} \{t('about-us.since-inception.description.2')}</div>
 
                                         <div className="text-med">{t('about-us.since-inception.description.3')}</div>
                                     </div>
@@ -219,13 +219,26 @@ function AboutUs() {
                 {/*    </div>*/}
                 {/*</div>*/}
 
+                <div className="since-our">
+                    <div className="title-med"> {t('about-us.since-inception.title')}</div>
+                    <div className="descr">
+                        <div className="text-med">{t('about-us.since-inception.description.1')} </div>
+                        <div className="text-med">{t('about-us.since-inception.description.2')}</div>
+                        <div className="text-med">{t('about-us.since-inception.description.3')}</div>
+                    </div>
+                </div>
+
+                <div className='about-us-img'>
+                    <img src={AboutUsImage} alt=""/>
+                </div>
+
                 <div className="propart">
                     <div className="content">
                         <div className="title-big">
-                            PROPART Team
+                            {t("block5_title")}
                         </div>
                         <div className="text-med">
-                            We pride ourselves on our deep understanding of the unique Dubai real estate market. Our team of seasoned professionals is adept at navigating its complexities, ensuring that our clients make informed and profitable decisions. Our values of integrity, transparency, and excellence are at the core of everything we do, guiding us in building lasting relationships with our clients.
+                            {t("propart-section.description")}
                         </div>
                     </div>
                 </div>
@@ -235,83 +248,119 @@ function AboutUs() {
                         <Link
                             key={index}
                             className="member"
-                            to={"/agent"}
-                            state={{ memberObject: member }}
+                            to={""}
+                            state={{memberObject: member}}
                         >
                             <div key={index} className="member">
-                                <div className="image"><img src={member.image} /></div>
+                                <Link
+                                    key={index}
+                                    className="member"
+                                    to={"/agent"}
+                                    state={{memberObject: member}}
+                                >
+                                    <div className="image"><img src={member.image}/></div>
+                                </Link>
                                 <div className="information">
-                                    <div className="general-info">
-                                        <div className="name"><DynamicTruncatedText text={member.name} customBreakpoints={
-                                            {
-                                                1920: 50,
-                                                1450: 15,
-                                                1720: 17,
-                                                1000: 13,
-                                                768: 10,
-                                                725: 9,
-                                                650: 8,
-                                                600: 11
-                                            }
-                                        } /></div>
-                                        <div className="position"><DynamicTruncatedText text={member.position} customBreakpoints={
-                                            {
-                                                1920: 50,
-                                                1450: 16,
-                                                1000: 13,
-                                                1720: 17,
-                                                725: 10,
-                                                650: 8,
-                                                600: 13
-                                            }
-                                        } /></div>
-                                    </div>
+                                    <Link
+                                        key={index}
+                                        className="member"
+                                        to={"/agent"}
+                                        state={{memberObject: member}}
+                                    >
+
+                                        <div className="general-info">
+                                            <div className="name"><DynamicTruncatedText text={member.name}
+                                                                                        customBreakpoints={
+                                                                                            {
+                                                                                                1920: 50,
+                                                                                                1450: 15,
+                                                                                                1720: 17,
+                                                                                                1000: 13,
+                                                                                                768: 10,
+                                                                                                725: 9,
+                                                                                                650: 8,
+                                                                                                600: 11
+                                                                                            }
+                                                                                        }/></div>
+                                            <div className="position"><DynamicTruncatedText text={member.position}
+                                                                                            customBreakpoints={
+                                                                                                {
+                                                                                                    1920: 50,
+                                                                                                    1450: 16,
+                                                                                                    1000: 13,
+                                                                                                    1720: 17,
+                                                                                                    725: 10,
+                                                                                                    650: 8,
+                                                                                                    600: 13
+                                                                                                }
+                                                                                            }/></div>
+                                        </div>
+
+                                    </Link>
+
                                     <div className="social">
-                                        {member.social.facebook && <svg style={{ cursor: "pointer" }} onClick={() => window.open(member.social.facebook)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        {member.social.facebook && <svg style={{cursor: "pointer"}}
+                                                                        onClick={() => window.open(member.social.facebook)}
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none">
                                             <path
                                                 d="M12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.879V14.89H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.879C18.343 21.129 22 16.99 22 12C22 6.477 17.523 2 12 2Z"
                                                 fill="#191C38"
                                             />
                                         </svg>}
                                         {member.social.instagram &&
-                                            <svg style={{ cursor: "pointer" }} onClick={() => window.open(member.social.instagram)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none">
+                                            <svg style={{cursor: "pointer"}}
+                                                 onClick={() => window.open(member.social.instagram)}
+                                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24"
+                                                 fill="none">
                                                 <path
                                                     d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z"
-                                                    fill="#191C38" />
+                                                    fill="#191C38"/>
                                             </svg>}
                                         {member.social.whatsapp &&
-                                            <svg style={{ cursor: "pointer" }} onClick={() => window.open(member.social.whatsapp)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none">
+                                            <svg style={{cursor: "pointer"}}
+                                                 onClick={() => window.open(member.social.whatsapp)}
+                                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24"
+                                                 fill="none">
                                                 <path
                                                     d="M2.00401 22L3.35601 17.032C2.46515 15.5049 1.99711 13.768 2.00001 12C2.00001 6.477 6.47701 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C10.2328 22.0029 8.49667 21.5352 6.97001 20.645L2.00401 22ZM8.39101 7.308C8.26188 7.31602 8.13569 7.35003 8.02001 7.408C7.91153 7.46943 7.81251 7.54622 7.72601 7.636C7.60601 7.749 7.53801 7.847 7.46501 7.942C7.09542 8.423 6.89662 9.01342 6.90001 9.62C6.90201 10.11 7.03001 10.587 7.23001 11.033C7.63901 11.935 8.31201 12.89 9.20101 13.775C9.41501 13.988 9.62401 14.202 9.84901 14.401C10.9524 15.3725 12.2673 16.073 13.689 16.447L14.258 16.534C14.443 16.544 14.628 16.53 14.814 16.521C15.1053 16.506 15.3896 16.4271 15.647 16.29C15.813 16.202 15.891 16.158 16.03 16.07C16.03 16.07 16.073 16.042 16.155 15.98C16.29 15.88 16.373 15.809 16.485 15.692C16.568 15.606 16.64 15.505 16.695 15.39C16.773 15.227 16.851 14.916 16.883 14.657C16.907 14.459 16.9 14.351 16.897 14.284C16.893 14.177 16.804 14.066 16.707 14.019L16.125 13.758C16.125 13.758 15.255 13.379 14.724 13.137C14.668 13.1126 14.608 13.0987 14.547 13.096C14.4786 13.089 14.4095 13.0967 14.3443 13.1186C14.2791 13.1405 14.2193 13.1761 14.169 13.223V13.221C14.164 13.221 14.097 13.278 13.374 14.154C13.3325 14.2098 13.2754 14.2519 13.2098 14.2751C13.1443 14.2982 13.0733 14.3013 13.006 14.284C12.9409 14.2666 12.877 14.2445 12.815 14.218C12.691 14.166 12.648 14.146 12.563 14.109L12.558 14.107C11.9859 13.8572 11.4562 13.5198 10.988 13.107C10.862 12.997 10.745 12.877 10.625 12.761C10.2316 12.3842 9.88873 11.958 9.60501 11.493L9.54601 11.398C9.50364 11.3342 9.46937 11.2653 9.44401 11.193C9.40601 11.046 9.50501 10.928 9.50501 10.928C9.50501 10.928 9.74801 10.662 9.86101 10.518C9.9551 10.3983 10.0429 10.2738 10.124 10.145C10.242 9.955 10.279 9.76 10.217 9.609C9.93701 8.925 9.64701 8.244 9.34901 7.568C9.29001 7.434 9.11501 7.338 8.95601 7.319C8.90201 7.313 8.84801 7.307 8.79401 7.303C8.65972 7.29633 8.52515 7.29766 8.39101 7.307V7.308Z"
-                                                    fill="#191C38" />
+                                                    fill="#191C38"/>
                                             </svg>}
                                         {member.social.telegram &&
-                                            <svg style={{ cursor: "pointer" }} onClick={() => window.open(member.social.telegram)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none">
+                                            <svg style={{cursor: "pointer"}}
+                                                 onClick={() => window.open(member.social.telegram)}
+                                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24"
+                                                 fill="none">
                                                 <path
                                                     d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM8.89 13.17L8.903 13.163L9.773 16.033C9.885 16.344 10.039 16.4 10.226 16.374C10.414 16.349 10.513 16.248 10.636 16.13L11.824 14.982L14.374 16.87C14.84 17.127 15.175 16.994 15.291 16.438L16.948 8.616C17.131 7.888 16.811 7.596 16.246 7.828L6.513 11.588C5.849 11.854 5.853 12.226 6.393 12.391L8.89 13.171V13.17Z"
-                                                    fill="#191C38" />
+                                                    fill="#191C38"/>
                                             </svg>}
                                         {member.social.youtube &&
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none">
                                                 <g clip-path="url(#clip0_908_6319)">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.58613 15.1029V8.36877C11.9768 9.49368 13.8283 10.5804 16.0181 11.752C14.212 12.7536 11.9768 13.8775 9.58613 15.1029ZM22.9092 5.01955C22.4968 4.47624 21.794 4.05332 21.0457 3.9133C18.8463 3.49564 5.12518 3.49445 2.92698 3.9133C2.32693 4.02579 1.7926 4.29769 1.3336 4.72014C-0.600435 6.51522 0.00559942 16.1417 0.471777 17.701C0.667809 18.3759 0.921228 18.8627 1.24038 19.1822C1.65157 19.6047 2.21456 19.8956 2.86123 20.026C4.67215 20.4006 14.0016 20.61 21.0074 20.0822C21.6529 19.9698 22.2243 19.6695 22.6749 19.2291C24.4631 17.4412 24.3412 7.27417 22.9092 5.01955Z" fill="#191C38" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M9.58613 15.1029V8.36877C11.9768 9.49368 13.8283 10.5804 16.0181 11.752C14.212 12.7536 11.9768 13.8775 9.58613 15.1029ZM22.9092 5.01955C22.4968 4.47624 21.794 4.05332 21.0457 3.9133C18.8463 3.49564 5.12518 3.49445 2.92698 3.9133C2.32693 4.02579 1.7926 4.29769 1.3336 4.72014C-0.600435 6.51522 0.00559942 16.1417 0.471777 17.701C0.667809 18.3759 0.921228 18.8627 1.24038 19.1822C1.65157 19.6047 2.21456 19.8956 2.86123 20.026C4.67215 20.4006 14.0016 20.61 21.0074 20.0822C21.6529 19.9698 22.2243 19.6695 22.6749 19.2291C24.4631 17.4412 24.3412 7.27417 22.9092 5.01955Z"
+                                                          fill="#191C38"/>
                                                 </g>
                                                 <defs>
                                                     <clipPath id="clip0_908_6319">
-                                                        <rect width="24" height="24" fill="white" />
+                                                        <rect width="24" height="24" fill="white"/>
                                                     </clipPath>
                                                 </defs>
                                             </svg>}
                                         {member.social.linkedin &&
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M12 0C5.37188 0 0 5.37188 0 12C0 18.6281 5.37188 24 12 24C18.6281 24 24 18.6281 24 12C24 5.37188 18.6281 0 12 0ZM8.64375 17.0203H6.30469V9.53437H8.64375V17.0203ZM7.41094 8.59687H7.39219C6.54375 8.59687 5.99531 8.025 5.99531 7.29844C5.99531 6.55781 6.5625 6 7.425 6C8.2875 6 8.81719 6.55781 8.83594 7.29844C8.84063 8.02031 8.29219 8.59687 7.41094 8.59687ZM18 17.0203H15.3469V13.1484C15.3469 12.1359 14.9344 11.4422 14.0203 11.4422C13.3219 11.4422 12.9328 11.9109 12.7547 12.3609C12.6891 12.5203 12.6984 12.7453 12.6984 12.975V17.0203H10.0688C10.0688 17.0203 10.1016 10.1578 10.0688 9.53437H12.6984V10.7109C12.8531 10.1953 13.6922 9.46406 15.0328 9.46406C16.6969 9.46406 18 10.5422 18 12.8578V17.0203Z" fill="#191C38" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M12 0C5.37188 0 0 5.37188 0 12C0 18.6281 5.37188 24 12 24C18.6281 24 24 18.6281 24 12C24 5.37188 18.6281 0 12 0ZM8.64375 17.0203H6.30469V9.53437H8.64375V17.0203ZM7.41094 8.59687H7.39219C6.54375 8.59687 5.99531 8.025 5.99531 7.29844C5.99531 6.55781 6.5625 6 7.425 6C8.2875 6 8.81719 6.55781 8.83594 7.29844C8.84063 8.02031 8.29219 8.59687 7.41094 8.59687ZM18 17.0203H15.3469V13.1484C15.3469 12.1359 14.9344 11.4422 14.0203 11.4422C13.3219 11.4422 12.9328 11.9109 12.7547 12.3609C12.6891 12.5203 12.6984 12.7453 12.6984 12.975V17.0203H10.0688C10.0688 17.0203 10.1016 10.1578 10.0688 9.53437H12.6984V10.7109C12.8531 10.1953 13.6922 9.46406 15.0328 9.46406C16.6969 9.46406 18 10.5422 18 12.8578V17.0203Z"
+                                                    fill="#191C38"/>
                                             </svg>}
 
                                     </div>
-
                                 </div>
                             </div>
                         </Link>
@@ -321,7 +370,7 @@ function AboutUs() {
                 <div className="sets">
                     <div className="sets-content">
                         <div className="title">
-                            What sets us apart is our personalized approach
+                            {t("personalized_approach_title")}
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="177" height="177" viewBox="0 0 177 177"
                                  fill="none">
@@ -332,8 +381,8 @@ function AboutUs() {
                         </div>
 
                         <div className="text">
-                            <div>We recognize that each client has unique needs and aspirations, and we go above and beyond to cater to these individual requirements. </div>
-                            <div>Our extensive portfolio showcases a wide range of properties across Dubai, from luxurious villas to state-of-the-art apartments, catering to a diverse clientele. In a city known for its architectural wonders and innovative developments</div>
+                            <div>{t("personalized_approach_text1")}</div>
+                            <div>{t("personalized_approach_text2")}</div>
                         </div>
                     </div>
                 </div>
@@ -344,58 +393,59 @@ function AboutUs() {
                             <img src={box} alt=""/>
                             <img className="bh" src={boxBh} alt=""/>
                             <div className="descr">
-                                <div>Property Purchase</div>
-                                <div>Professional Real Estate Solutions</div>
+                                <div>{t("name911")}</div>
+                                <div>{t("name9011")}</div>
                             </div>
                         </div>
                         <div className="block">
                             <img src={world} alt=""/>
                             <img className="bh" src={worldBh} alt=""/>
                             <div className="descr">
-                                <div>Customs</div>
-                                <div>Hassle-Free Customs Clearance</div>
+                                <div>{t("name86")}</div>
+                                <div>{t("name87")}</div>
                             </div>
                         </div>
                         <div className="block">
                             <img src={document} alt=""/>
                             <img className="bh" src={groupBh} alt=""/>
                             <div className="descr">
-                                <div>Licensing</div>
-                                <div>Expertise in Licensing Procedures</div>
+                                <div>{t("name88")}</div>
+                                <div>{t("name89")}</div>
                             </div>
                         </div>
                         <div className="block">
                             <img src={legal} alt=""/>
                             <img className="bh" src={checkBh} alt=""/>
                             <div className="descr">
-                                <div>Legal in the UAE</div>
-                                <div>Knowledgeable Legal Support</div>
+                                <div>{t("name901")}</div>
+                                <div>{t("name91")}</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <GetAdvice
-                    title='Get in touch!'
+                    title={t("Get in touch!")}
                 />
 
                 <div className="lohachov">
-                    <div className="image" >
+                    <div className="image">
                         <img src="/src/assets/teams/alex-logachev-min.jpg" alt=""/>
                     </div>
                     <div className="content">
                         <div className="info">
                             <div className="info-title">
                                 <div className="name">
-                                    <div>OLEXANDER LOHACHOV</div>
-                                    <div>Founder, Investor</div>
+                                    <div>{t("OLEXANDER LOHACHOV")}</div>
+                                    <div>{t("Founder, Investor")}</div>
                                 </div>
 
                                 <div className="youtube">
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18"
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18"
+                                             viewBox="0 0 27 18"
                                              fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                            <path fill-rule="evenod" clip-rule="evenodd"
                                                   d="M10.7844 12.325V5.10981C13.4739 6.31508 15.5569 7.47939 18.0204 8.73467C15.9885 9.80787 13.4739 11.012 10.7844 12.325ZM25.7729 1.52136C25.3089 0.939245 24.5182 0.486114 23.6764 0.336097C21.2021 -0.111396 5.76583 -0.112669 3.29286 0.336097C2.6178 0.45662 2.01668 0.747941 1.5003 1.20056C-0.675489 3.12386 0.00629934 13.4379 0.530749 15.1086C0.751285 15.8318 1.03638 16.3533 1.39543 16.6957C1.85802 17.1483 2.49138 17.4599 3.21888 17.5997C5.25616 18.001 15.7519 18.2254 23.6334 17.66C24.3595 17.5394 25.0023 17.2178 25.5093 16.7459C27.521 14.8303 27.3839 3.93703 25.7729 1.52136Z"
                                                   fill="#FF4C4C"/>
                                         </svg>
@@ -414,16 +464,16 @@ function AboutUs() {
                                             <path
                                                 d="M2.44662 0.0796801C2.47661 -0.0261019 2.66438 -0.0267359 2.69508 0.0788411C2.83529 0.560953 3.09526 1.27357 3.48838 1.66405C3.88151 2.05453 4.59587 2.30968 5.07891 2.44662C5.1847 2.47661 5.18533 2.66438 5.07975 2.69508C4.59764 2.83529 3.88503 3.09526 3.49455 3.48838C3.10407 3.88151 2.84892 4.59587 2.71197 5.07891C2.68198 5.1847 2.49422 5.18533 2.46351 5.07975C2.32331 4.59764 2.06334 3.88503 1.67021 3.49455C1.27709 3.10407 0.562728 2.84892 0.0796801 2.71197C-0.026102 2.68198 -0.0267359 2.49422 0.0788411 2.46351C0.560953 2.32331 1.27357 2.06334 1.66405 1.67021C2.05453 1.27708 2.30968 0.562728 2.44662 0.0796801Z"
                                                 fill="white"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                            <path fill-rule="evenod" clip-rule="evenod"
                                                   d="M16.5793 0.829297C16.9935 0.829297 17.3293 1.16508 17.3293 1.5793V1.8293H17.5793C17.9935 1.8293 18.3293 2.16508 18.3293 2.5793C18.3293 2.99351 17.9935 3.3293 17.5793 3.3293H17.3293V3.5793C17.3293 3.99351 16.9935 4.3293 16.5793 4.3293C16.1651 4.3293 15.8293 3.99351 15.8293 3.5793V3.3293H15.5793C15.1651 3.3293 14.8293 2.99351 14.8293 2.5793C14.8293 2.16508 15.1651 1.8293 15.5793 1.8293H15.8293V1.5793C15.8293 1.16508 16.1651 0.829297 16.5793 0.829297Z"
                                                   fill="white"/>
                                         </svg>
 
-                                        Agency owner
+                                        {t("Agency owner")}
                                     </div>
 
                                     <div className="description">
-                                        12 years of continuous experience in real estate
+                                        {t("12 years of continuous experience in real estate")}
                                     </div>
                                 </div>
 
@@ -445,11 +495,11 @@ function AboutUs() {
                                                 fill="white"/>
                                         </svg>
 
-                                        Business Speaker
+                                        {t("Business Speaker")}
                                     </div>
 
                                     <div className="description">
-                                        12 years of continuous experience in real estate
+                                        {t("12 years of continuous experience in real estate")}
                                     </div>
                                 </div>
 
@@ -468,11 +518,11 @@ function AboutUs() {
                                                   fill="white"/>
                                         </svg>
 
-                                        Agency owner
+                                        {t("Agency owner")}
                                     </div>
 
                                     <div className="description">
-                                        12 years of continuous experience in real estate
+                                        {t("12 years of continuous experience in real estate")}
                                     </div>
                                 </div>
                             </div>
@@ -493,28 +543,33 @@ function AboutUs() {
                                 {t('company_registration')}
                             </div>
                             <div>
-                                Efficient and professional company registration services
+                                {t("Efficient and professional company registration services")}
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M21.1009 8.00353C21.0442 7.99996 20.9825 7.99998 20.9186 8L20.9026 8.00001H18.3941C16.3264 8.00001 14.5572 9.62757 14.5572 11.75C14.5572 13.8724 16.3264 15.5 18.3941 15.5H20.9026L20.9186 15.5C20.9825 15.5 21.0442 15.5001 21.1009 15.4965C21.9408 15.4434 22.6835 14.7862 22.746 13.8682C22.7501 13.808 22.75 13.7431 22.75 13.683L22.75 13.6667V9.83334L22.75 9.81702C22.75 9.75688 22.7501 9.69199 22.746 9.6318C22.6835 8.71381 21.9408 8.05657 21.1009 8.00353ZM18.1717 12.75C18.704 12.75 19.1355 12.3023 19.1355 11.75C19.1355 11.1977 18.704 10.75 18.1717 10.75C17.6394 10.75 17.2078 11.1977 17.2078 11.75C17.2078 12.3023 17.6394 12.75 18.1717 12.75Z" fill="#191C38" />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9179 17C21.067 16.9961 21.1799 17.1342 21.1394 17.2778C20.9387 17.9902 20.62 18.5975 20.1088 19.1088C19.3604 19.8571 18.4114 20.1892 17.239 20.3469C16.0998 20.5 14.6442 20.5 12.8064 20.5H10.6936C8.85583 20.5 7.40019 20.5 6.26098 20.3469C5.08856 20.1892 4.13961 19.8571 3.39124 19.1088C2.64288 18.3604 2.31076 17.4114 2.15314 16.239C1.99997 15.0998 1.99998 13.6442 2 11.8064V11.6936C1.99998 9.85583 1.99997 8.40019 2.15314 7.26098C2.31076 6.08856 2.64288 5.13961 3.39124 4.39124C4.13961 3.64288 5.08856 3.31076 6.26098 3.15314C7.40019 2.99997 8.85582 2.99998 10.6936 3L12.8064 3C14.6442 2.99998 16.0998 2.99997 17.239 3.15314C18.4114 3.31076 19.3604 3.64288 20.1088 4.39124C20.62 4.90252 20.9386 5.50974 21.1394 6.22218C21.1799 6.36575 21.067 6.50387 20.9179 6.5L18.394 6.50001C15.5574 6.50001 13.0571 8.74091 13.0571 11.75C13.0571 14.7591 15.5574 17 18.394 17L20.9179 17ZM5.75 7C5.33579 7 5 7.33579 5 7.75C5 8.16421 5.33579 8.5 5.75 8.5H9.75C10.1642 8.5 10.5 8.16421 10.5 7.75C10.5 7.33579 10.1642 7 9.75 7H5.75Z" fill="#191C38" />
+                                  d="M21.1009 8.00353C21.0442 7.99996 20.9825 7.99998 20.9186 8L20.9026 8.00001H18.3941C16.3264 8.00001 14.5572 9.62757 14.5572 11.75C14.5572 13.8724 16.3264 15.5 18.3941 15.5H20.9026L20.9186 15.5C20.9825 15.5 21.0442 15.5001 21.1009 15.4965C21.9408 15.4434 22.6835 14.7862 22.746 13.8682C22.7501 13.808 22.75 13.7431 22.75 13.683L22.75 13.6667V9.83334L22.75 9.81702C22.75 9.75688 22.7501 9.69199 22.746 9.6318C22.6835 8.71381 21.9408 8.05657 21.1009 8.00353ZM18.1717 12.75C18.704 12.75 19.1355 12.3023 19.1355 11.75C19.1355 11.1977 18.704 10.75 18.1717 10.75C17.6394 10.75 17.2078 11.1977 17.2078 11.75C17.2078 12.3023 17.6394 12.75 18.1717 12.75Z"
+                                  fill="#191C38"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M20.9179 17C21.067 16.9961 21.1799 17.1342 21.1394 17.2778C20.9387 17.9902 20.62 18.5975 20.1088 19.1088C19.3604 19.8571 18.4114 20.1892 17.239 20.3469C16.0998 20.5 14.6442 20.5 12.8064 20.5H10.6936C8.85583 20.5 7.40019 20.5 6.26098 20.3469C5.08856 20.1892 4.13961 19.8571 3.39124 19.1088C2.64288 18.3604 2.31076 17.4114 2.15314 16.239C1.99997 15.0998 1.99998 13.6442 2 11.8064V11.6936C1.99998 9.85583 1.99997 8.40019 2.15314 7.26098C2.31076 6.08856 2.64288 5.13961 3.39124 4.39124C4.13961 3.64288 5.08856 3.31076 6.26098 3.15314C7.40019 2.99997 8.85582 2.99998 10.6936 3L12.8064 3C14.6442 2.99998 16.0998 2.99997 17.239 3.15314C18.4114 3.31076 19.3604 3.64288 20.1088 4.39124C20.62 4.90252 20.9386 5.50974 21.1394 6.22218C21.1799 6.36575 21.067 6.50387 20.9179 6.5L18.394 6.50001C15.5574 6.50001 13.0571 8.74091 13.0571 11.75C13.0571 14.7591 15.5574 17 18.394 17L20.9179 17ZM5.75 7C5.33579 7 5 7.33579 5 7.75C5 8.16421 5.33579 8.5 5.75 8.5H9.75C10.1642 8.5 10.5 8.16421 10.5 7.75C10.5 7.33579 10.1642 7 9.75 7H5.75Z"
+                                  fill="#191C38"/>
                         </svg>
                         <div className="description">
                             <div className="title-med">
                                 {t('bank_account')}
                             </div>
                             <div>
-                                Open a corporate bank account effortlessly
+                                {t("Open a corporate bank account effortlessly")}
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V10C21 6.22876 21 4.34315 19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157ZM8 9.25C7.58579 9.25 7.25 9.58579 7.25 10C7.25 10.4142 7.58579 10.75 8 10.75H16C16.4142 10.75 16.75 10.4142 16.75 10C16.75 9.58579 16.4142 9.25 16 9.25H8ZM8 13.25C7.58579 13.25 7.25 13.5858 7.25 14C7.25 14.4142 7.58579 14.75 8 14.75H13C13.4142 14.75 13.75 14.4142 13.75 14C13.75 13.5858 13.4142 13.25 13 13.25H8Z" fill="#191C38" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V10C21 6.22876 21 4.34315 19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157ZM8 9.25C7.58579 9.25 7.25 9.58579 7.25 10C7.25 10.4142 7.58579 10.75 8 10.75H16C16.4142 10.75 16.75 10.4142 16.75 10C16.75 9.58579 16.4142 9.25 16 9.25H8ZM8 13.25C7.58579 13.25 7.25 13.5858 7.25 14C7.25 14.4142 7.58579 14.75 8 14.75H13C13.4142 14.75 13.75 14.4142 13.75 14C13.75 13.5858 13.4142 13.25 13 13.25H8Z"
+                                  fill="#191C38"/>
                         </svg>
 
                         <div className="description">
@@ -522,29 +577,37 @@ function AboutUs() {
                                 {t('attorney_power')}
                             </div>
                             <div>
-                                Legal support for your business needs in the UAE
+                                {t("Legal support for your business needs in the UAE")}
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M2.75458 14.715L3.27222 16.6469C3.87647 18.902 4.17859 20.0295 4.86351 20.7608C5.40432 21.3382 6.10421 21.7423 6.87466 21.9219C7.85044 22.1494 8.97798 21.8473 11.2331 21.2431C13.4881 20.6388 14.6157 20.3367 15.347 19.6518C15.4077 19.5949 15.4664 19.5363 15.5233 19.4761C15.1891 19.448 14.852 19.3942 14.5094 19.3261C13.8133 19.1877 12.9862 18.9661 12.008 18.704L11.9012 18.6753L11.8764 18.6687C10.8121 18.3835 9.92281 18.1448 9.21277 17.8883C8.46607 17.6185 7.7876 17.286 7.21148 16.7464C6.41753 16.0028 5.86193 15.0404 5.61491 13.9811C5.43567 13.2123 5.48691 12.4585 5.62666 11.6769C5.76058 10.928 6.00109 10.0305 6.28926 8.95515L6.28926 8.95514L6.82365 6.96077L6.84245 6.89062C4.9219 7.40799 3.91101 7.71408 3.23687 8.34548C2.65945 8.88629 2.25537 9.58617 2.07573 10.3566C1.84821 11.3324 2.15033 12.4599 2.75458 14.715Z" fill="#191C38" />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8293 10.7154L20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.3591 7.02654 8.43979 6.7254 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.7356 7.3328 21.4335 8.46034 20.8293 10.7154ZM11.0524 9.80589C11.1596 9.40579 11.5709 9.16835 11.971 9.27556L16.8006 10.5697C17.2007 10.6769 17.4381 11.0881 17.3309 11.4882C17.2237 11.8883 16.8125 12.1257 16.4124 12.0185L11.5827 10.7244C11.1826 10.6172 10.9452 10.206 11.0524 9.80589ZM10.2756 12.7033C10.3828 12.3032 10.794 12.0658 11.1941 12.173L14.0919 12.9495C14.492 13.0567 14.7294 13.4679 14.6222 13.868C14.515 14.2681 14.1038 14.5056 13.7037 14.3984L10.8059 13.6219C10.4058 13.5147 10.1683 13.1034 10.2756 12.7033Z" fill="#191C38" />
+                            <path
+                                d="M2.75458 14.715L3.27222 16.6469C3.87647 18.902 4.17859 20.0295 4.86351 20.7608C5.40432 21.3382 6.10421 21.7423 6.87466 21.9219C7.85044 22.1494 8.97798 21.8473 11.2331 21.2431C13.4881 20.6388 14.6157 20.3367 15.347 19.6518C15.4077 19.5949 15.4664 19.5363 15.5233 19.4761C15.1891 19.448 14.852 19.3942 14.5094 19.3261C13.8133 19.1877 12.9862 18.9661 12.008 18.704L11.9012 18.6753L11.8764 18.6687C10.8121 18.3835 9.92281 18.1448 9.21277 17.8883C8.46607 17.6185 7.7876 17.286 7.21148 16.7464C6.41753 16.0028 5.86193 15.0404 5.61491 13.9811C5.43567 13.2123 5.48691 12.4585 5.62666 11.6769C5.76058 10.928 6.00109 10.0305 6.28926 8.95515L6.28926 8.95514L6.82365 6.96077L6.84245 6.89062C4.9219 7.40799 3.91101 7.71408 3.23687 8.34548C2.65945 8.88629 2.25537 9.58617 2.07573 10.3566C1.84821 11.3324 2.15033 12.4599 2.75458 14.715Z"
+                                fill="#191C38"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M20.8293 10.7154L20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.3591 7.02654 8.43979 6.7254 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.7356 7.3328 21.4335 8.46034 20.8293 10.7154ZM11.0524 9.80589C11.1596 9.40579 11.5709 9.16835 11.971 9.27556L16.8006 10.5697C17.2007 10.6769 17.4381 11.0881 17.3309 11.4882C17.2237 11.8883 16.8125 12.1257 16.4124 12.0185L11.5827 10.7244C11.1826 10.6172 10.9452 10.206 11.0524 9.80589ZM10.2756 12.7033C10.3828 12.3032 10.794 12.0658 11.1941 12.173L14.0919 12.9495C14.492 13.0567 14.7294 13.4679 14.6222 13.868C14.515 14.2681 14.1038 14.5056 13.7037 14.3984L10.8059 13.6219C10.4058 13.5147 10.1683 13.1034 10.2756 12.7033Z"
+                                  fill="#191C38"/>
                         </svg>
                         <div className="description">
                             <div className="title-med">
                                 {t('resident_visa')}
                             </div>
                             <div>
-                                Secure your residency in the UAE with a good expert
+                                {t("Secure your residency in the UAE with a good expert")}
                             </div>
                         </div>
                     </div>
 
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V10C2 6.22876 2 4.34315 3.17157 3.17157C4.34315 2 6.23869 2 10.0298 2C10.6358 2 11.1214 2 11.53 2.01666C11.5166 2.09659 11.5095 2.17813 11.5092 2.26057L11.5 5.09497C11.4999 6.19207 11.4998 7.16164 11.6049 7.94316C11.7188 8.79028 11.9803 9.63726 12.6716 10.3285C13.3628 11.0198 14.2098 11.2813 15.0569 11.3952C15.8385 11.5003 16.808 11.5002 17.9051 11.5001L18 11.5001H21.9574C22 12.0344 22 12.6901 22 13.5629V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22Z" fill="black" />
-                            <path d="M19.3517 7.61665L15.3929 4.05375C14.2651 3.03868 13.7012 2.53114 13.0092 2.26562L13 5.00011C13 7.35713 13 8.53564 13.7322 9.26787C14.4645 10.0001 15.643 10.0001 18 10.0001H21.5801C21.2175 9.29588 20.5684 8.71164 19.3517 7.61665Z" fill="#191C38" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V10C2 6.22876 2 4.34315 3.17157 3.17157C4.34315 2 6.23869 2 10.0298 2C10.6358 2 11.1214 2 11.53 2.01666C11.5166 2.09659 11.5095 2.17813 11.5092 2.26057L11.5 5.09497C11.4999 6.19207 11.4998 7.16164 11.6049 7.94316C11.7188 8.79028 11.9803 9.63726 12.6716 10.3285C13.3628 11.0198 14.2098 11.2813 15.0569 11.3952C15.8385 11.5003 16.808 11.5002 17.9051 11.5001L18 11.5001H21.9574C22 12.0344 22 12.6901 22 13.5629V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22Z"
+                                  fill="black"/>
+                            <path
+                                d="M19.3517 7.61665L15.3929 4.05375C14.2651 3.03868 13.7012 2.53114 13.0092 2.26562L13 5.00011C13 7.35713 13 8.53564 13.7322 9.26787C14.4645 10.0001 15.643 10.0001 18 10.0001H21.5801C21.2175 9.29588 20.5684 8.71164 19.3517 7.61665Z"
+                                fill="#191C38"/>
                         </svg>
 
                         <div className="description">
@@ -552,27 +615,31 @@ function AboutUs() {
                                 {t('accounting')}
                             </div>
                             <div>
-                                Professional financial management services
+                                {t("Professional financial management services")}
                             </div>
                         </div>
                     </div>
 
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1.25C1.58579 1.25 1.25 1.58579 1.25 2C1.25 2.41421 1.58579 2.75 2 2.75H4V10.5C4 13.5641 4 15.0962 5.00421 16.0481C6.00841 17 7.62465 17 10.8571 17H11.25V20.5365L9.66459 21.3292C9.29411 21.5144 9.14394 21.9649 9.32918 22.3354C9.51442 22.7059 9.96493 22.8561 10.3354 22.6708L12 21.8385L13.6646 22.6708C14.0351 22.8561 14.4856 22.7059 14.6708 22.3354C14.8561 21.9649 14.7059 21.5144 14.3354 21.3292L12.75 20.5365V17H13.1429C16.3753 17 17.9916 17 18.9958 16.0481C20 15.0962 20 13.5641 20 10.5V2.75H22C22.4142 2.75 22.75 2.41421 22.75 2C22.75 1.58579 22.4142 1.25 22 1.25H2ZM15.5303 7.96967C15.8232 8.26256 15.8232 8.73744 15.5303 9.03033L14.2131 10.3476C14.0681 10.4927 13.9113 10.6496 13.7612 10.7642C13.5852 10.8984 13.3335 11.0429 13 11.0429C12.6665 11.0429 12.4148 10.8984 12.2388 10.7642C12.0887 10.6496 11.9319 10.4927 11.7869 10.3476L11.1768 9.73744C11.1067 9.66738 11.0499 9.61061 11 9.56229C10.9501 9.61061 10.8933 9.66738 10.8232 9.73744L9.53033 11.0303C9.23744 11.3232 8.76256 11.3232 8.46967 11.0303C8.17678 10.7374 8.17678 10.2626 8.46967 9.96967L9.78691 8.65241C9.9319 8.50732 10.0887 8.35042 10.2388 8.23584C10.4148 8.10161 10.6665 7.95711 11 7.95711C11.3335 7.95711 11.5852 8.10161 11.7612 8.23584C11.9113 8.35041 12.0681 8.50728 12.213 8.65235L12.8232 9.26256C12.8933 9.33262 12.9501 9.38939 13 9.43771C13.0499 9.38939 13.1067 9.33262 13.1768 9.26256L14.4697 7.96967C14.7626 7.67678 15.2374 7.67678 15.5303 7.96967Z" fill="#191C38" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M2 1.25C1.58579 1.25 1.25 1.58579 1.25 2C1.25 2.41421 1.58579 2.75 2 2.75H4V10.5C4 13.5641 4 15.0962 5.00421 16.0481C6.00841 17 7.62465 17 10.8571 17H11.25V20.5365L9.66459 21.3292C9.29411 21.5144 9.14394 21.9649 9.32918 22.3354C9.51442 22.7059 9.96493 22.8561 10.3354 22.6708L12 21.8385L13.6646 22.6708C14.0351 22.8561 14.4856 22.7059 14.6708 22.3354C14.8561 21.9649 14.7059 21.5144 14.3354 21.3292L12.75 20.5365V17H13.1429C16.3753 17 17.9916 17 18.9958 16.0481C20 15.0962 20 13.5641 20 10.5V2.75H22C22.4142 2.75 22.75 2.41421 22.75 2C22.75 1.58579 22.4142 1.25 22 1.25H2ZM15.5303 7.96967C15.8232 8.26256 15.8232 8.73744 15.5303 9.03033L14.2131 10.3476C14.0681 10.4927 13.9113 10.6496 13.7612 10.7642C13.5852 10.8984 13.3335 11.0429 13 11.0429C12.6665 11.0429 12.4148 10.8984 12.2388 10.7642C12.0887 10.6496 11.9319 10.4927 11.7869 10.3476L11.1768 9.73744C11.1067 9.66738 11.0499 9.61061 11 9.56229C10.9501 9.61061 10.8933 9.66738 10.8232 9.73744L9.53033 11.0303C9.23744 11.3232 8.76256 11.3232 8.46967 11.0303C8.17678 10.7374 8.17678 10.2626 8.46967 9.96967L9.78691 8.65241C9.9319 8.50732 10.0887 8.35042 10.2388 8.23584C10.4148 8.10161 10.6665 7.95711 11 7.95711C11.3335 7.95711 11.5852 8.10161 11.7612 8.23584C11.9113 8.35041 12.0681 8.50728 12.213 8.65235L12.8232 9.26256C12.8933 9.33262 12.9501 9.38939 13 9.43771C13.0499 9.38939 13.1067 9.33262 13.1768 9.26256L14.4697 7.96967C14.7626 7.67678 15.2374 7.67678 15.5303 7.96967Z"
+                                  fill="#191C38"/>
                         </svg>
                         <div className="description">
                             <div className="title-med">
                                 {t('trademark_registration')}
                             </div>
                             <div>
-                                Protect your business brand in the UAE market
+                                {t("Protect your business brand in the UAE market")}
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00691 9.10673L10.0069 3.7734C11.1436 2.76303 12.8564 2.76303 13.9931 3.7734L19.9931 9.10673C20.6336 9.67603 21 10.492 21 11.349V21.2518H22C22.4142 21.2518 22.75 21.5875 22.75 22.0018C22.75 22.416 22.4142 22.7518 22 22.7518H2C1.58579 22.7518 1.25 22.416 1.25 22.0018C1.25 21.5875 1.58579 21.2518 2 21.2518H3V11.349C3 10.492 3.36644 9.67603 4.00691 9.10673ZM9.25 9.00176C9.25 8.58755 9.58579 8.25176 10 8.25176H14C14.4142 8.25176 14.75 8.58755 14.75 9.00176C14.75 9.41597 14.4142 9.75176 14 9.75176H10C9.58579 9.75176 9.25 9.41597 9.25 9.00176ZM14.052 11.2518C14.9505 11.2517 15.6997 11.2517 16.2945 11.3317C16.9223 11.4161 17.4891 11.6017 17.9445 12.0572C18.4 12.5127 18.5857 13.0795 18.6701 13.7073C18.7501 14.3021 18.75 15.0513 18.75 15.9498L18.75 21.2518H17.25V16.0018C17.25 15.0377 17.2484 14.3902 17.1835 13.9072C17.1214 13.4457 17.0142 13.2482 16.8839 13.1179C16.7536 12.9876 16.5561 12.8803 16.0946 12.8183C15.6116 12.7534 14.964 12.7518 14 12.7518H10C9.03599 12.7518 8.38843 12.7534 7.90539 12.8183C7.44393 12.8803 7.24643 12.9876 7.11612 13.1179C6.9858 13.2482 6.87858 13.4457 6.81654 13.9072C6.75159 14.3902 6.75 15.0377 6.75 16.0018V21.2518H5.25L5.25 15.9498C5.24997 15.0513 5.24994 14.3021 5.32991 13.7073C5.41432 13.0795 5.59999 12.5127 6.05546 12.0572C6.51093 11.6017 7.07773 11.4161 7.70552 11.3317C8.3003 11.2517 9.04952 11.2517 9.948 11.2518H14.052ZM8.25 15.5018C8.25 15.0875 8.58579 14.7518 9 14.7518H15C15.4142 14.7518 15.75 15.0875 15.75 15.5018C15.75 15.916 15.4142 16.2518 15 16.2518H9C8.58579 16.2518 8.25 15.916 8.25 15.5018ZM8.25 18.5018C8.25 18.0875 8.58579 17.7518 9 17.7518H15C15.4142 17.7518 15.75 18.0875 15.75 18.5018C15.75 18.916 15.4142 19.2518 15 19.2518H9C8.58579 19.2518 8.25 18.916 8.25 18.5018Z" fill="#191C38" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.00691 9.10673L10.0069 3.7734C11.1436 2.76303 12.8564 2.76303 13.9931 3.7734L19.9931 9.10673C20.6336 9.67603 21 10.492 21 11.349V21.2518H22C22.4142 21.2518 22.75 21.5875 22.75 22.0018C22.75 22.416 22.4142 22.7518 22 22.7518H2C1.58579 22.7518 1.25 22.416 1.25 22.0018C1.25 21.5875 1.58579 21.2518 2 21.2518H3V11.349C3 10.492 3.36644 9.67603 4.00691 9.10673ZM9.25 9.00176C9.25 8.58755 9.58579 8.25176 10 8.25176H14C14.4142 8.25176 14.75 8.58755 14.75 9.00176C14.75 9.41597 14.4142 9.75176 14 9.75176H10C9.58579 9.75176 9.25 9.41597 9.25 9.00176ZM14.052 11.2518C14.9505 11.2517 15.6997 11.2517 16.2945 11.3317C16.9223 11.4161 17.4891 11.6017 17.9445 12.0572C18.4 12.5127 18.5857 13.0795 18.6701 13.7073C18.7501 14.3021 18.75 15.0513 18.75 15.9498L18.75 21.2518H17.25V16.0018C17.25 15.0377 17.2484 14.3902 17.1835 13.9072C17.1214 13.4457 17.0142 13.2482 16.8839 13.1179C16.7536 12.9876 16.5561 12.8803 16.0946 12.8183C15.6116 12.7534 14.964 12.7518 14 12.7518H10C9.03599 12.7518 8.38843 12.7534 7.90539 12.8183C7.44393 12.8803 7.24643 12.9876 7.11612 13.1179C6.9858 13.2482 6.87858 13.4457 6.81654 13.9072C6.75159 14.3902 6.75 15.0377 6.75 16.0018V21.2518H5.25L5.25 15.9498C5.24997 15.0513 5.24994 14.3021 5.32991 13.7073C5.41432 13.0795 5.59999 12.5127 6.05546 12.0572C6.51093 11.6017 7.07773 11.4161 7.70552 11.3317C8.3003 11.2517 9.04952 11.2517 9.948 11.2518H14.052ZM8.25 15.5018C8.25 15.0875 8.58579 14.7518 9 14.7518H15C15.4142 14.7518 15.75 15.0875 15.75 15.5018C15.75 15.916 15.4142 16.2518 15 16.2518H9C8.58579 16.2518 8.25 15.916 8.25 15.5018ZM8.25 18.5018C8.25 18.0875 8.58579 17.7518 9 17.7518H15C15.4142 17.7518 15.75 18.0875 15.75 18.5018C15.75 18.916 15.4142 19.2518 15 19.2518H9C8.58579 19.2518 8.25 18.916 8.25 18.5018Z"
+                                  fill="#191C38"/>
                         </svg>
 
                         <div className="description">
@@ -580,21 +647,25 @@ function AboutUs() {
                                 {t('mainland')}
                             </div>
                             <div>
-                                Navigating business regulations in the UAE mainland
+                                {t("Navigating business regulations in the UAE mainland")}
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z" fill="#191C38" />
-                            <path d="M2.72778 5.81803C2.62732 5.41619 2.22012 5.17186 1.81828 5.27233C1.41643 5.37279 1.17211 5.77999 1.27257 6.18184L1.65454 7.7097C2.3593 10.5287 4.49604 12.7495 7.25018 13.5787L7.25018 18.0519C7.25015 18.9504 7.25012 19.6996 7.33009 20.2944C7.41449 20.9222 7.60016 21.489 8.05563 21.9445C8.5111 22.3999 9.0779 22.5856 9.7057 22.67C10.3005 22.75 11.0497 22.75 11.9482 22.7499H12.0522C12.9507 22.75 13.6999 22.75 14.2947 22.67C14.9225 22.5856 15.4892 22.3999 15.9447 21.9445C16.4002 21.489 16.5859 20.9222 16.6703 20.2944C16.7502 19.6996 16.7502 18.9504 16.7502 18.052L16.7502 13.859C17.7313 14.1514 18.4808 15.0039 18.6058 16.067L19.2553 21.5876C19.3037 21.9989 19.6764 22.2932 20.0878 22.2448C20.4992 22.1964 20.7934 21.8237 20.745 21.4123L20.0956 15.8918C19.8512 13.815 18.0912 12.2499 16.0002 12.2499H8.0847C5.64125 11.6764 3.71957 9.78517 3.10975 7.3459L2.72778 5.81803Z" fill="#191C38" />
+                            <path
+                                d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z"
+                                fill="#191C38"/>
+                            <path
+                                d="M2.72778 5.81803C2.62732 5.41619 2.22012 5.17186 1.81828 5.27233C1.41643 5.37279 1.17211 5.77999 1.27257 6.18184L1.65454 7.7097C2.3593 10.5287 4.49604 12.7495 7.25018 13.5787L7.25018 18.0519C7.25015 18.9504 7.25012 19.6996 7.33009 20.2944C7.41449 20.9222 7.60016 21.489 8.05563 21.9445C8.5111 22.3999 9.0779 22.5856 9.7057 22.67C10.3005 22.75 11.0497 22.75 11.9482 22.7499H12.0522C12.9507 22.75 13.6999 22.75 14.2947 22.67C14.9225 22.5856 15.4892 22.3999 15.9447 21.9445C16.4002 21.489 16.5859 20.9222 16.6703 20.2944C16.7502 19.6996 16.7502 18.9504 16.7502 18.052L16.7502 13.859C17.7313 14.1514 18.4808 15.0039 18.6058 16.067L19.2553 21.5876C19.3037 21.9989 19.6764 22.2932 20.0878 22.2448C20.4992 22.1964 20.7934 21.8237 20.745 21.4123L20.0956 15.8918C19.8512 13.815 18.0912 12.2499 16.0002 12.2499H8.0847C5.64125 11.6764 3.71957 9.78517 3.10975 7.3459L2.72778 5.81803Z"
+                                fill="#191C38"/>
                         </svg>
                         <div className="description">
                             <div className="title-med">
                                 {t('uae_employment')}
                             </div>
                             <div>
-                                Hire skilled professionals for your business
+                                {t("Hire skilled professionals for your business")}
                             </div>
                         </div>
                     </div>
@@ -602,7 +673,8 @@ function AboutUs() {
                 </div>
 
                 <div className="pdf-files">
-                    <a className="pdf-file" href='https://propart-pdfs.s3.me-south-1.amazonaws.com/Pro+Part+RERA+Certificate.pdf' download>
+                    <a className="pdf-file"
+                       href='https://propart-pdfs.s3.me-south-1.amazonaws.com/Pro+Part+RERA+Certificate.pdf' download>
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="53" viewBox="0 0 44 53" fill="none">
                             <path
                                 d="M31.4041 35.4838C30.5433 35.432 28.4739 35.5546 26.4014 35.9484C25.2025 34.735 24.1643 33.2064 23.3942 31.9457C25.862 24.8499 24.2991 22.833 22.1953 22.833C20.5432 22.833 19.7184 24.5765 19.9019 26.5028C19.9948 27.4725 20.816 29.51 21.8268 31.4453C21.2067 33.0762 20.1001 35.8327 19.0016 37.8275C17.7158 38.2182 16.613 38.6524 15.8216 39.0187C11.8791 40.8521 11.5623 43.3002 12.3827 44.3375C13.9403 46.308 17.2589 44.6079 20.5889 38.6524C22.8687 38.0041 25.8682 37.1404 26.1386 37.1404C26.1697 37.1404 26.2125 37.1503 26.262 37.1663C27.9239 38.6318 29.8868 40.3098 31.5023 40.5307C33.8399 40.8521 35.1706 39.1567 35.0784 38.1024C34.9869 37.0475 34.3708 35.6619 31.4041 35.4838ZM16.6465 41.9077C15.683 43.0534 14.1246 44.1523 13.5746 43.7868C13.0239 43.4205 12.9325 42.3662 14.171 41.1735C15.4087 39.9822 17.4805 39.3638 17.792 39.248C18.16 39.1109 18.2514 39.248 18.2514 39.4315C18.2514 39.6151 17.6093 40.7607 16.6465 41.9077ZM20.8654 26.502C20.7732 25.3549 21.0017 24.2551 21.9652 24.118C22.9272 23.9794 23.3866 25.08 23.0201 26.8677C22.653 28.6576 22.4687 29.8482 22.2858 29.9876C22.1024 30.1247 21.9202 29.6653 21.9202 29.6653C21.5525 28.931 20.9568 27.6475 20.8654 26.502ZM21.2325 37.2767C21.736 36.4502 23.0202 33.105 23.0202 33.105C23.2952 33.6099 25.4492 36.1753 25.4492 36.1753C25.4492 36.1753 22.1481 36.9104 21.2325 37.2767ZM31.225 38.7422C29.8502 38.561 27.5126 36.908 27.5126 36.908C27.192 36.771 30.0741 36.3795 31.1808 36.4503C32.6029 36.5426 33.1071 37.1389 33.1071 37.7346C33.1071 38.3309 32.6029 38.9258 31.225 38.7422Z"
@@ -617,9 +689,10 @@ function AboutUs() {
                                 d="M11.7649 16.1404C11.8807 16.097 11.9805 16.027 12.0696 15.9264C12.1664 15.8183 12.2273 15.6629 12.2509 15.4641C12.2776 15.2378 12.2905 14.9423 12.2905 14.5858C12.2905 14.2286 12.2776 13.933 12.2509 13.7076C12.2273 13.5081 12.1664 13.3527 12.0703 13.2453C11.9813 13.1447 11.8784 13.0732 11.7657 13.0312C11.6446 12.9848 11.506 12.9619 11.3515 12.9619H10.6172V16.2089H11.3515C11.5052 16.209 11.6446 16.1862 11.7649 16.1404Z"
                                 fill="#B4B4B4"/>
                         </svg>
-                        RERA CERTIFICATE
+                        {t("VRERA CERTIFICATE")}
                     </a>
-                    <a className="pdf-file" href='https://propart-pdfs.s3.me-south-1.amazonaws.com/BROKER+ID.pdf' download>
+                    <a className="pdf-file" href='https://propart-pdfs.s3.me-south-1.amazonaws.com/BROKER+ID.pdf'
+                       download>
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="53" viewBox="0 0 44 53" fill="none">
                             <path
                                 d="M31.4041 35.4838C30.5433 35.432 28.4739 35.5546 26.4014 35.9484C25.2025 34.735 24.1643 33.2064 23.3942 31.9457C25.862 24.8499 24.2991 22.833 22.1953 22.833C20.5432 22.833 19.7184 24.5765 19.9019 26.5028C19.9948 27.4725 20.816 29.51 21.8268 31.4453C21.2067 33.0762 20.1001 35.8327 19.0016 37.8275C17.7158 38.2182 16.613 38.6524 15.8216 39.0187C11.8791 40.8521 11.5623 43.3002 12.3827 44.3375C13.9403 46.308 17.2589 44.6079 20.5889 38.6524C22.8687 38.0041 25.8682 37.1404 26.1386 37.1404C26.1697 37.1404 26.2125 37.1503 26.262 37.1663C27.9239 38.6318 29.8868 40.3098 31.5023 40.5307C33.8399 40.8521 35.1706 39.1567 35.0784 38.1024C34.9869 37.0475 34.3708 35.6619 31.4041 35.4838ZM16.6465 41.9077C15.683 43.0534 14.1246 44.1523 13.5746 43.7868C13.0239 43.4205 12.9325 42.3662 14.171 41.1735C15.4087 39.9822 17.4805 39.3638 17.792 39.248C18.16 39.1109 18.2514 39.248 18.2514 39.4315C18.2514 39.6151 17.6093 40.7607 16.6465 41.9077ZM20.8654 26.502C20.7732 25.3549 21.0017 24.2551 21.9652 24.118C22.9272 23.9794 23.3866 25.08 23.0201 26.8677C22.653 28.6576 22.4687 29.8482 22.2858 29.9876C22.1024 30.1247 21.9202 29.6653 21.9202 29.6653C21.5525 28.931 20.9568 27.6475 20.8654 26.502ZM21.2325 37.2767C21.736 36.4502 23.0202 33.105 23.0202 33.105C23.2952 33.6099 25.4492 36.1753 25.4492 36.1753C25.4492 36.1753 22.1481 36.9104 21.2325 37.2767ZM31.225 38.7422C29.8502 38.561 27.5126 36.908 27.5126 36.908C27.192 36.771 30.0741 36.3795 31.1808 36.4503C32.6029 36.5426 33.1071 37.1389 33.1071 37.7346C33.1071 38.3309 32.6029 38.9258 31.225 38.7422Z"
@@ -634,9 +707,10 @@ function AboutUs() {
                                 d="M11.7649 16.1404C11.8807 16.097 11.9805 16.027 12.0696 15.9264C12.1664 15.8183 12.2273 15.6629 12.2509 15.4641C12.2776 15.2378 12.2905 14.9423 12.2905 14.5858C12.2905 14.2286 12.2776 13.933 12.2509 13.7076C12.2273 13.5081 12.1664 13.3527 12.0703 13.2453C11.9813 13.1447 11.8784 13.0732 11.7657 13.0312C11.6446 12.9848 11.506 12.9619 11.3515 12.9619H10.6172V16.2089H11.3515C11.5052 16.209 11.6446 16.1862 11.7649 16.1404Z"
                                 fill="#B4B4B4"/>
                         </svg>
-                        OWNER BROKER ID
+                        {t("OWNER BROKER ID")}
                     </a>
-                    <a className="pdf-file" href='https://propart-pdfs.s3.me-south-1.amazonaws.com/Company+Trade+License.pdf' download>
+                    <a className="pdf-file"
+                       href='https://propart-pdfs.s3.me-south-1.amazonaws.com/Company+Trade+License.pdf' download>
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="53" viewBox="0 0 44 53" fill="none">
                             <path
                                 d="M31.4041 35.4838C30.5433 35.432 28.4739 35.5546 26.4014 35.9484C25.2025 34.735 24.1643 33.2064 23.3942 31.9457C25.862 24.8499 24.2991 22.833 22.1953 22.833C20.5432 22.833 19.7184 24.5765 19.9019 26.5028C19.9948 27.4725 20.816 29.51 21.8268 31.4453C21.2067 33.0762 20.1001 35.8327 19.0016 37.8275C17.7158 38.2182 16.613 38.6524 15.8216 39.0187C11.8791 40.8521 11.5623 43.3002 12.3827 44.3375C13.9403 46.308 17.2589 44.6079 20.5889 38.6524C22.8687 38.0041 25.8682 37.1404 26.1386 37.1404C26.1697 37.1404 26.2125 37.1503 26.262 37.1663C27.9239 38.6318 29.8868 40.3098 31.5023 40.5307C33.8399 40.8521 35.1706 39.1567 35.0784 38.1024C34.9869 37.0475 34.3708 35.6619 31.4041 35.4838ZM16.6465 41.9077C15.683 43.0534 14.1246 44.1523 13.5746 43.7868C13.0239 43.4205 12.9325 42.3662 14.171 41.1735C15.4087 39.9822 17.4805 39.3638 17.792 39.248C18.16 39.1109 18.2514 39.248 18.2514 39.4315C18.2514 39.6151 17.6093 40.7607 16.6465 41.9077ZM20.8654 26.502C20.7732 25.3549 21.0017 24.2551 21.9652 24.118C22.9272 23.9794 23.3866 25.08 23.0201 26.8677C22.653 28.6576 22.4687 29.8482 22.2858 29.9876C22.1024 30.1247 21.9202 29.6653 21.9202 29.6653C21.5525 28.931 20.9568 27.6475 20.8654 26.502ZM21.2325 37.2767C21.736 36.4502 23.0202 33.105 23.0202 33.105C23.2952 33.6099 25.4492 36.1753 25.4492 36.1753C25.4492 36.1753 22.1481 36.9104 21.2325 37.2767ZM31.225 38.7422C29.8502 38.561 27.5126 36.908 27.5126 36.908C27.192 36.771 30.0741 36.3795 31.1808 36.4503C32.6029 36.5426 33.1071 37.1389 33.1071 37.7346C33.1071 38.3309 32.6029 38.9258 31.225 38.7422Z"
@@ -651,7 +725,7 @@ function AboutUs() {
                                 d="M11.7649 16.1404C11.8807 16.097 11.9805 16.027 12.0696 15.9264C12.1664 15.8183 12.2273 15.6629 12.2509 15.4641C12.2776 15.2378 12.2905 14.9423 12.2905 14.5858C12.2905 14.2286 12.2776 13.933 12.2509 13.7076C12.2273 13.5081 12.1664 13.3527 12.0703 13.2453C11.9813 13.1447 11.8784 13.0732 11.7657 13.0312C11.6446 12.9848 11.506 12.9619 11.3515 12.9619H10.6172V16.2089H11.3515C11.5052 16.209 11.6446 16.1862 11.7649 16.1404Z"
                                 fill="#B4B4B4"/>
                         </svg>
-                        COMPANY TRADE LICENCE
+                        {t("COMPANY TRADE LICENCE")}
                     </a>
                 </div>
             </div>

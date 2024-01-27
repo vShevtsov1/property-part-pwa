@@ -371,8 +371,8 @@ const Employment = () => {
                             </div>
 
                             <div className="description">
-                                <div>Receiving documents</div>
-                                <div>At this stage, the employee receives the entire package of documents that are necessary for work and residence in the UAE.</div>
+                                <div>{t("j_title34")}</div>
+                                <div>{t('j_title35')}</div>
                             </div>
                         </div>
                         <div className="main-content">

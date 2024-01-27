@@ -4,27 +4,39 @@ import Footer from "../components/Footer.jsx";
 import areaMap from '../assets/Areas/map.png'
 import statisticsGraph from '../assets/Areas/statisticsInfo.png'
 import GetConsult from "../components/GetConsult.jsx";
+import AreaCard from "../components/AreaCard.jsx";
+
+
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Link } from "react-router-dom";
+import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
+import {useTranslation} from "react-i18next";
 
 const AboutAreas = () => {
-    const AreaCard = () => {
-        return (<div className='areas-card'>
-                <div className="header">
-                    <div className="name-price">
-                        <div>Business Bay</div>
-                        <div>$$$</div>
-                    </div>
-                    <div className="description">
-                        Best for business style of life
-                    </div>
-                </div>
-
-                <div className="map-img">
-                    <img src={areaMap} alt=""/>
-                </div>
-            </div>
-        )
-    }
-
+    const staticData = [
+        {
+            name: 'JUMEIRAH VILLAGE CIRCLE',
+            pv: 14345,
+        },
+        {
+            name: 'BUSINESS BAY',
+            pv: 10239,
+        },
+        {
+            name: 'DUBAI MARINA',
+            pv: 9853,
+        },
+        {
+            name: 'DUBAI HILLS',
+            pv: 5279,
+        },
+        {
+            name: 'JUMEIRHA LAKE TOWERS',
+            pv: 5119,
+        },
+    ];
+    const cardInfo = AreasCardsInfo();
+    const { t } = useTranslation();
     const TransactionBlock = () => {
         return (<div className='transaction-block'>
                 <div className="transaction-img">
@@ -65,36 +77,88 @@ const AboutAreas = () => {
         )
     }
 
+    function getIntroOfPage(label) {
+        if (label === 'JUMEIRAH VILLAGE CIRCLE') {
+            return (
+                <>
+                    <div>Volume: 14,345</div>
+                    <div>Sales Value: 15.4B</div>
+                    <div>Rank: 1</div>
+                </>
+            );
+        } if (label === 'BUSINESS BAY') {
+            return (
+                <>
+                    <div>Volume: 10,239</div>
+                    <div>Sales Value: 22.7B</div>
+                    <div>Rank: 2</div>
+                </>
+            );
+        } if (label === 'DUBAI MARINA') {
+            return (
+                <>
+                    <div>Volume: 9,853</div>
+                    <div>Sales Value: 40.4B</div>
+                    <div>Rank: 3</div>
+                </>
+            );
+        } if (label === 'DUBAI HILLS') {
+            return (
+                <>
+                    <div>Volume: 5,279</div>
+                    <div>Sales Value: 16.5B</div>
+                    <div>Rank: 4</div>
+                </>
+            );
+        } if (label === 'JUMEIRHA LAKE TOWERS') {
+            return (
+                <>
+                    <div>Volume: 5,119</div>
+                    <div>Sales Value: 7.9B</div>
+                    <div>Rank: 5</div>
+                </>
+            );
+        }
+    }
+
+    function CustomTooltip({ name, label, active, pv }) {
+        if (active) {
+            return (
+                <div className="custom-tooltip">
+                    <div className="desc">{getIntroOfPage(label)}</div>
+                </div>
+            );
+        }
+
+        return null;
+    }
+
     return (<div className='about-areas'>
             <Header></Header>
             <div className="about-areas-container">
                 <div className="about-dubai">
                     <div className="content">
-                        <div className="title">About Dubai areas: luxury, comfort and style</div>
+                        <div className="title">{t("About Dubai")}</div>
                         <div className="description">
-                            <div>Dubai, a glittering jewel in the United Arab Emirates, is renowned for its blend of
-                                modern luxury and traditional allure. The city's diverse areas each tell a unique story
-                                of opulence and grandeur, offering a living experience that caters to a range of
-                                lifestyles and preferences. From the palm-shaped islands of Palm Jumeirah to the
-                                bustling streets of Downtown Dubai, the city is a tapestry of exclusive residential
-                                enclaves, commercial hubs, and serene family neighborhoods.
-                            </div>
-                            <div>The iconic Burj Khalifa and the dancing Dubai Fountain are just the tip of the iceberg,
-                                with each area boasting its own landmarks and luxuries. The upscale marinas, sprawling
-                                malls like The Dubai Mall, and lush parks underscore the city's commitment to providing
-                                an unmatched urban experience.
-                            </div>
+                            <div>{t("About Dubai Descr1")}</div>
+                            <div>{t("About Dubai Descr2")}</div>
                         </div>
                     </div>
                 </div>
 
                 <div className="area-card-container">
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
+                    {cardInfo.slice(0, 6).map((card, index) => (
+                        <>
+                            <AreaCard
+                                key={index}
+                                name={card.name}
+                                description={card.description}
+                                price={card.price}
+                                image={card.image}
+                                area={card.area}
+                            />
+                        </>
+                    ))}
                 </div>
 
                 <div className="get-consult-box">
@@ -102,44 +166,69 @@ const AboutAreas = () => {
                 </div>
 
                 <div className="area-card-container">
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
-                    <AreaCard/>
+                    {cardInfo.slice(6, 12).map((card, index) => (
+                        <>
+                            <AreaCard
+                                key={index}
+                                name={card.name}
+                                description={card.description}
+                                price={card.price}
+                                image={card.image}
+                                area={card.area}
+                            />
+                        </>
+                    ))}
                 </div>
 
                 <div className="statistics">
                     <div className="text-content">
-                        <div className="title">Top 5 performing areas in Dubai </div>
+                        <div className="title">{t("Top 5 performing areas in Dubai")}</div>
                         <div className="description">
-                            <div>Dubai's property market is booming, especially in Jumeirah Village Circle (JVC), Business Bay, Dubai Marina, Dubai Hills, and Jumeirah Lakes Towers (JLT). JVC attracts those seeking affordable, family-friendly living, while Business Bay is a hub for professionals with its luxury residences and commercial spaces.
+                            <div>{t("Dubai's property market is booming")}
                             </div>
-                            <div> Dubai Marina and JLT are favorites for their luxurious waterfront lifestyles, and Dubai Hills is gaining popularity for its serene, upscale environment.
+                            <div> Dubai Marina and JLT are favorites for their luxurious waterfront lifestyles, and
+                                Dubai Hills is gaining popularity for its serene, upscale environment.
                             </div>
                         </div>
                     </div>
                     <div className="statistics-info">
-                        <img src={statisticsGraph} alt=""/>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart
+                                data={staticData}
+                                margin={{
+                                    top: 5,
+                                    right: 40,
+                                    left: 40,
+                                    bottom: 5,
+                                }}
+                                barSize={60}
+                            >
+                                <XAxis interval={0} style={{fontFamily: 'Onest', fontSize: 9}} dataKey="name"
+                                       scale="point" padding={{left: 90, right: 90}}/>
+                                <YAxis style={{fontFamily: 'Onest', fontSize: 9}}/>
+                                <Tooltip content={<CustomTooltip/>}/>
+                                <CartesianGrid strokeDasharray="3 3"/>
+                                <Bar dataKey="pv" fill="#191C38" background={{fill: 'transparent'}}/>
+                            </BarChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 
-                <div className="transaction">
-                    <div className="transaction-title">
-                        <div>Area wise transaction summary 2023 </div>
-                    </div>
+                {/*<div className="transaction">*/}
+                {/*    <div className="transaction-title">*/}
+                {/*        <div>Area wise transaction summary 2023 </div>*/}
+                {/*    </div>*/}
 
-                    <div className="transaction-blocks">
-                        <TransactionBlock/>
-                        <TransactionBlock/>
-                        <TransactionBlock/>
-                        <TransactionBlock/>
-                    </div>
-                    <div className="show-more">
-                        Show more
-                    </div>
-                </div>
+                {/*    <div className="transaction-blocks">*/}
+                {/*        <TransactionBlock/>*/}
+                {/*        <TransactionBlock/>*/}
+                {/*        <TransactionBlock/>*/}
+                {/*        <TransactionBlock/>*/}
+                {/*    </div>*/}
+                {/*    <div className="show-more">*/}
+                {/*        Show more*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
             <Footer></Footer>
         </div>

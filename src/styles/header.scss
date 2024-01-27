@@ -70,6 +70,10 @@ header {
     display: flex;
     gap: 64px;
 
+    &.menu-ua-ru {
+      gap: 40px;
+    }
+
 
     .menu-option {
       cursor: pointer;
@@ -105,7 +109,7 @@ header {
 
         .drop-down {
           position: absolute;
-          top: 289%;
+          top: 57px;
           padding: 21px 21px 0px 21px;
           display: flex;
           flex-direction: column;
@@ -182,7 +186,7 @@ header {
 
         .drop-down {
           position: absolute;
-          top: 289%;
+          top: 57px;
           padding: 21px;
           display: flex;
           flex-direction: column;
@@ -515,7 +519,7 @@ header {
 
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1300px) {
   header {
     .menu {
       display: none;
