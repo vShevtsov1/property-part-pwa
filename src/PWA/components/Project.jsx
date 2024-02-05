@@ -1,6 +1,7 @@
 import "../styles/Project.css"
 import collection1 from "../../assets/collection1.jpg"
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 const Project = ({projectData}) => {
     const [liked, setLiked] = useState([]);
     const [visited,setVisited] = useState([]);
@@ -42,6 +43,7 @@ const Project = ({projectData}) => {
 
     };
     const handleLikeClick = (e) => {
+        e.preventDefault();
         e.stopPropagation();
 
         const likedData = localStorage.getItem("liked");
@@ -59,6 +61,7 @@ const Project = ({projectData}) => {
         window.dispatchEvent(new Event("storage"));
     };
     return(<div className={"project"} onClick={handleProjectClick}>
+        <Link to="/phone/project" state={{ project: projectData }} >
         <div className="image">
             <img src={projectData.imageSrcMain} loading={"lazy"}/>
             <div className="like" onClick={handleLikeClick}>
@@ -86,6 +89,7 @@ const Project = ({projectData}) => {
             <div className="location">{projectData.selectedLocation||projectData.ownLocation}</div>
             <div className="price">From <span>${formatNumberWithCommas(projectData.priceFrom)}</span></div>
         </div>
+        </Link>
     </div>)
 }
 export default Project;

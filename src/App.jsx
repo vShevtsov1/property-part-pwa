@@ -28,6 +28,7 @@ import HomePage from "./PWA/pages/HomePage.jsx";
 import Map from "./PWA/pages/PhoneMap.jsx";
 import PhoneMap from "./PWA/pages/PhoneMap.jsx";
 import Properties from "./PWA/pages/Properties.jsx";
+import ProjectInfo from "./PWA/pages/ProjectInfo.jsx";
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
 
@@ -69,6 +70,7 @@ function App() {
         <Route path="/phone" element={<HomePage />} />
         <Route path="/phone/map" element={<PhoneMap />} />
         <Route path="/phone/properties" element={<Properties />} />
+        <Route path="/phone/project" element={<ProjectInfo />} />
       </Routes>
 
     </BrowserRouter>

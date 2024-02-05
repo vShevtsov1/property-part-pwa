@@ -1,3 +1,4 @@
+"use client";
 import "../styles/Map.css"
 import MenuProject from "../components/MenuProject.jsx";
 import Footer from "../components/Footer.jsx";
